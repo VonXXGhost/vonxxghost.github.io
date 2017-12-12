@@ -2,7 +2,7 @@
 layout: page
 title: About me
 menu: about
-subtitle:   <h3>Other SNS</h3>
+subtitle:   <h3>SNS</h3>
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://bgm.tv/user/a582192766" target="_blanks">
                 <span class="flag-icon flag-icon-bgm"></span> Bangumi
             </a>
