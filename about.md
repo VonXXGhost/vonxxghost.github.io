@@ -19,6 +19,9 @@ subtitle:
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="http://steamcommunity.com/id/VonXXGhost" target="_blank">
                 <span class="flag-icon flag-icon-steam"></span> Steam
             </a>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://ask.fm/vonxxghost" target="_blank">
+                <span class="flag-icon flag-icon-ask"></span> Ask.fm
+            </a>
                             
 css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
 ---
