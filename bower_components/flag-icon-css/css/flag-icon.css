@@ -1563,3 +1563,12 @@
 .flag-icon-wb {
   background-image: url(../flags/4x3/wb.svg);
 }
+.flag-icon-steam {
+  background-image: url(../flags/4x3/steam.svg);
+}
+.flag-icon-bilibili {
+  background-image: url(../flags/4x3/bilibili.svg);
+}
+.flag-icon-ask {
+  background-image: url(../flags/4x3/ask.svg);
+}
