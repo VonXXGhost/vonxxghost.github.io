@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Yummy Theme # ex. I m Chuan
-name: Your Name # ex. DONGChuan
-email: my_email_address@lalala.com
-location: My location # ex. Nice, France
-company: MyCompany
-company_url: my_company_website
-github_url: my_github_url # ex. https://github.com/DONGChuan
-github_username: # ex. DONGChuan
-description: description_of_your_web_site
+title: ん？
+name: VonXXGhost
+email: vonxxghost@foxmail.com
+location: 广东广州，广州大学城
+#company: MyCompany
+#company_url: my_company_website
+github_url: https://github.com/VonXXGhost
+github_username: VonXXGhost
+description: アニメを見て、ゲームをやって、プログラムを書いて
 favicon: favicon.png # Image must be in assets/images
-repository: github_username/github_username.github.io # ex. DONGChuan/DONGChuan.github.io
+repository: VonXXGhost/vonxxghost.github.io
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
@@ -48,7 +48,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
+#disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
 
 # Pagination
 paginate: 10
@@ -61,16 +61,16 @@ navs:
     label: Home
 
   -
-    href: /open-source
-    label: Open-Source
+    href: /works
+    label: Works
 
   -
     href: /blog
     label: Blog
 
   -
-    href: /bookmark
-    label: Bookmark
+    href: /open-source
+    label: Open-Source
 
   -
     href: /about
@@ -80,14 +80,14 @@ navs:
 side_bar_repo_limit: 5 # Number of repos to show
 
 # Google Analytics
-analytics :
-  provider : google
-  google :
-      tracking_id : 'tracking_id'  # ex. UA-72165600-X
+# analytics :
+  # provider : google
+  # google :
+      # tracking_id : 'tracking_id'  # ex. UA-72165600-X
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
-skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
-skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
-skill_mobile_app_keywords: [Android, Sketch UI Desgin]
+# skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
+# skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
+# skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
+# skill_mobile_app_keywords: [Android, Sketch UI Desgin]
