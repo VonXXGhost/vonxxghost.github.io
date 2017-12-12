@@ -22,7 +22,9 @@ menu: Works
 - [Aikatsu! #20&28/本多康之的构图和镜头构成](http://www.anitama.cn/article/8df485c71f9c48f5) - On Anitama。看别人写了老片演出文于是正好补一下当初一直惦记的坑。第一次写这个长度的演出文，经验还是不足啊。
 - [Gamers! #1/冈本学的时空演出](http://www.anitama.cn/article/d4961da210c93013) - On Anitama。尝试了一些新的切入点，虽然写完觉得还可以完善，不过大概已经算是自己写过的最好一篇了。
 
-# 视频（部分附文案）
+# 视频
+
+（部分附文案）
 
 - [作画集：野中正幸2015](http://www.bilibili.com/video/av3718663) - 纯资料性质。制作时间实际比江畑MAD晚。
 - [作画mad：江畑谅真](http://www.anitama.cn/article/7f2fa384cdb28abe) - On Anitama。高三时做的，在at发的第一篇稿，经验不足需要改进的地方很多。文案被全修。
