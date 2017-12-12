@@ -15,7 +15,7 @@ location: 广东广州，广州大学城
 github_url: https://github.com/VonXXGhost
 github_username: VonXXGhost
 description: アニメを見て、ゲームをやって、プログラムを書いて
-favicon: favicon.png # Image must be in assets/images
+favicon: v.png # Image must be in assets/images
 repository: VonXXGhost/vonxxghost.github.io
 
 # The base hostname & protocol for your site
