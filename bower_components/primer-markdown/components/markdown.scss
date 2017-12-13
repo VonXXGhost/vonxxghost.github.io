@@ -384,11 +384,7 @@ $margin: 16px;
     }
   }
 
-  p {
-    margin-top: 0;
-    margin-bottom: $margin;
-    text-indent: 2em;
-  }
+  p,
   blockquote,
   ul, ol, dl,
   table,

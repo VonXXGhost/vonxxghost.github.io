@@ -110,17 +110,13 @@
 .markdown-body h6 .anchor {
   line-height: 1.1;
 }
-.markdown-body blockquote,
-.markdown-body ul, .markdown-body ol, .markdown-body dl,
-.markdown-body table,
-.markdown-body pre {
+.markdown-body p,
+  .markdown-body blockquote,
+  .markdown-body ul, .markdown-body ol, .markdown-body dl,
+  .markdown-body table,
+  .markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
-}
-.markdown-body p {
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-indent: 2em;
 }
 .markdown-body hr {
   height: 4px;
