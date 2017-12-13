@@ -9,3 +9,7 @@
 .about .btn {
     margin-bottom: 5px;
 }
+
+.about img {
+    max-width: 100%;
+}
