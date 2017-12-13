@@ -22,6 +22,8 @@ subtitle:
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://ask.fm/vonxxghost" target="_blank">
                 <span class="flag-icon flag-icon-ask"></span> Ask.fm
             </a>
+            
+            ![](https://ws1.sinaimg.cn/large/97de980agy1fmfdt53uhxj20zk0k0akf.jpg)
                             
 css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
 ---
