@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 偶像的本质——Aikatsu stars! #80 观后感
+title: 偶像的本质——Aikatsu stars!#80 观后感
 category: 观后感
 tags: [偶像活动, 脚本]
 ---
