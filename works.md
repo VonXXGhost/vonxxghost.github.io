@@ -23,6 +23,8 @@ menu: Works
 - [Aikatsu! #20&28/本多康之的构图和镜头构成](http://www.anitama.cn/article/8df485c71f9c48f5) - On Anitama。看别人写了老片演出文于是正好补一下当初一直惦记的坑。第一次写这个长度的演出文，经验还是不足啊。
 - [Gamers! #1/冈本学的时空演出](http://www.anitama.cn/article/d4961da210c93013) - On Anitama。尝试了一些新的切入点，虽然写完觉得还可以完善，不过大概已经算是自己写过的最好一篇了。
 - [Aikatsu stars!#78 观后感](/观后感/2017/10/20/Aikatsu-stars!-78-观后感.html) - 依旧是安藤分镜回。
+- [演出活动的一番星/安藤尚也演出解析](http://www.anitama.cn/series/292) - On Anitama。想着是时候了于是写的总结，结果而言写得不怎么好吧，实际内容点挺少的。
+
 
 ### 其他
 
