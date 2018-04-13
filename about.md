@@ -22,7 +22,7 @@ subtitle:
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://ask.fm/vonxxghost" target="_blank">
                 <span class="flag-icon flag-icon-ask"></span> Ask.fm
             </a>
-            <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://twitter.com/vonxxghost" target="_blank">
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://twitter.com/vonxxxxghost" target="_blank">
                 <span class="flag-icon flag-icon-twitter"></span> Twitter
             </a>
 
