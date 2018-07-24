@@ -44,7 +44,7 @@ quiet:    false
 defaults: []
 
 kramdown:
-  input: kramdown
+  input: markdown
   enable_coderay: true
 
 # Disque
