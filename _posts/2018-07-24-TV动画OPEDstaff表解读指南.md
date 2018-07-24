@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TV动画OP/ED staff表解读指南
+title: 初心者向TV动画OP/ED staff表解读指南
 tags: [TVA]
 ---
 
