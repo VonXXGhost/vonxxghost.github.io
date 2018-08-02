@@ -28,4 +28,4 @@ bot定时每小时一次执行任务，如果留意过的话很容易发现每�
 
 ### 2018.08.02更新：
 
-此次更新在运行流程上主要是增加了作品名的名字获取途径。在上文MAL、BGM的流程基础上增加了辅助来源[Google Knowledge Graph Search](https://en.wikipedia.org/wiki/Knowledge_Graph)。在原流程查询不到译名的情况下将调用Google Knowledge Graph Search直接使用原来的英文名进行搜索匹配，一次性匹配到可能的日文名和中文名。经测试匹配效率比原先的流程高30%，只是对续作之类的title匹配不大好（x但总体而言，两种流程配合使用，作品名的匹配命中度应该会高很多。
+此次更新在运行流程上主要是增加了作品名的名字获取途径。在上文MAL、BGM的流程基础上增加了辅助来源[Google Knowledge Graph Search](https://en.wikipedia.org/wiki/Knowledge_Graph)。在原流程查询不到译名的情况下将调用Google Knowledge Graph Search直接使用原来的英文名进行搜索匹配，一次性匹配到可能的日文名和中文名。经测试匹配效率比原先的流程高不少，只是对续作之类的title匹配不大好（x但总体而言，两种流程配合使用，作品名的匹配命中度应该会高很多。
