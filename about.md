@@ -25,6 +25,9 @@ subtitle:
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://twitter.com/vonxxxxghost" target="_blank">
                 <span class="flag-icon flag-icon-twitter"></span> Twitter
             </a>
+            <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://www.zhihu.com/people/VonXXGhost/" target="_blank">
+                <span class="flag-icon flag-icon-zhihu"></span> 知乎
+            </a>
 
                             
 css: ['about.css', 'sidebar-popular-repo.css', '../../bower_components/flag-icon-css/css/flag-icon.min.css']
