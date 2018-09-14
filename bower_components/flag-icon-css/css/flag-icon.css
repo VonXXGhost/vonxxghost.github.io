@@ -1572,3 +1572,9 @@
 .flag-icon-ask {
   background-image: url(../flags/4x3/ask.svg);
 }
+.flag-icon-twitter {
+  background-image:url(../flags/4x3/twitter.svg)
+};
+.flag-icon-zhihu {
+  background-image:url(../flags/4x3/zhihu.svg)
+};
