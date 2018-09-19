@@ -47,12 +47,4 @@ menu: Works
 - [作画集：欢迎来到宇宙秀](http://www.anitama.cn/article/cdf8a40664b7efcb) - On Anitama。补片顺手做的，宇宙秀是部好片推荐一看。
 - [作画mad：渡边祐记](http://www.anitama.cn/article/67db75097a212971) - On Anitama。看在某人版本太水的份上结合新卡新做的一版。
 - [作画mad：冲田博文](http://www.anitama.cn/article/1a7753e8883f2ad6) - On Anitama。也是看在挺久没新版本的份上做的，做完这个后就不知道还有什么比较年轻的人可以做的了……
-
-### 作画担当
-
-- [偶像活动Stars! OP1 原画担当猜测](https://www.bilibili.com/video/av8390435)
-- [偶像活动Stars! OP3 原画担当](https://www.bilibili.com/video/av7464695)
-- [偶像活动Stars! OP4 原画担当](https://www.bilibili.com/video/av9814684)
-- [偶像活动Stars! OP5 原画担当](https://www.bilibili.com/video/av15343580)
-- [阿童木起源OP 作画担当](https://www.bilibili.com/video/av10026735)
-- [NEW GAME!! OP作画担当](https://www.bilibili.com/video/av12337747)
+- [作画mad：矶光雄](http://www.anitama.cn/article/93dd20e9385b182e) - On Anitama。[剪辑解说](/2018/09/19/isomad%E5%89%AA%E8%BE%91%E8%A7%A3%E8%AF%B4.html)
