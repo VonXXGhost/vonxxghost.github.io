@@ -19,14 +19,11 @@ subtitle:
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="http://steamcommunity.com/id/VonXXGhost" target="_blank">
                 <span class="flag-icon flag-icon-steam"></span> Steam
             </a>
-            <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://ask.fm/vonxxghost" target="_blank">
-                <span class="flag-icon flag-icon-ask"></span> Ask.fm
-            </a>
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://twitter.com/vonxxxxghost" target="_blank">
                 <span class="flag-icon flag-icon-twitter"></span> Twitter
             </a>
             <a role="button" class="btn btn-primary hvr-grow-shadow" href="https://www.zhihu.com/people/VonXXGhost/" target="_blank">
-                <span class="flag-icon flag-icon-zhihu"></span> 知乎
+                <span class="flag-icon flag-icon-zhihu"></span> Zhihu
             </a>
 
                             
