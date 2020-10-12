@@ -8,7 +8,7 @@ published: true
 tags:
     - 动画
 categories: [ Anime ]
-URL: "/posts/2017-11-04-偶像的本质"
+URL: "/post/2017-11-04-偶像的本质"
 ---
 
 * 第80話「騎咲レイの誓い！」

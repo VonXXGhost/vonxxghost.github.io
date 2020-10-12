@@ -6,14 +6,23 @@
     <description>Recent content in Home on V-ISLAND</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 12 Dec 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/categories/home/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/categories/home/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>——网站重构——</title>
+      <link>https://vonxxghost.xyz/post/2020-10-12-%E7%BD%91%E7%AB%99%E9%87%8D%E6%9E%84/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/post/2020-10-12-%E7%BD%91%E7%AB%99%E9%87%8D%E6%9E%84/</guid>
+      <description>&lt;p&gt;这两天把网站重构了一下，感觉比以前舒服多了。话说后来我才发现原来用的那个主题是真的满大街的人都在用……虽然现在也是用的别人的主题小改而成的就是了，&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>——网站开设——</title>
       <link>https://vonxxghost.xyz/post/2017-12-12-%E7%BD%91%E7%AB%99%E5%BC%80%E8%AE%BE/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://vonxxghost.xyz/post/2017-12-12-%E7%BD%91%E7%AB%99%E5%BC%80%E8%AE%BE/</guid>
-      <description>网站开设 弄了两天总算基本搭建好了，总之以此纪念。晚点再将旧blog文章迁移至此。本文日期以前的皆为旧blog的搬运。 &amp;mdash;&amp;mdash;x 今のアイコン↓</description>
+      <description>网站开设 弄了两天总算基本搭建好了，总之以此纪念。晚点再将旧blog文章迁移至此。本文日期以前的皆为旧blog的搬运。 今のアイコン↓</description>
     </item>
     
   </channel>
