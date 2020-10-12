@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on V-ISLAND</title>
+    <link>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on V-ISLAND</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>potplayer半全屏化(?)的自动排列触发问题</title>
+      <link>https://vonxxghost.xyz/post/2018-04-27-potplayer%E5%8D%8A%E5%85%A8%E5%B1%8F%E5%8C%96%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8E%92%E5%88%97%E8%A7%A6%E5%8F%91%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/post/2018-04-27-potplayer%E5%8D%8A%E5%85%A8%E5%B1%8F%E5%8C%96%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8E%92%E5%88%97%E8%A7%A6%E5%8F%91%E9%97%AE%E9%A2%98/</guid>
+      <description>简述 首先先解释一下标题的半全屏化是什么。因为个人习惯需要，电脑显示区域总是分成两部分，左边为主工作区，右边留下一小部分放置其他窗口，如qq之</description>
+    </item>
+    
+    <item>
+      <title>sakugabooru微博机器人是如何运作的</title>
+      <link>https://vonxxghost.xyz/post/2018-04-08-sakugabooru%E5%BE%AE%E5%8D%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/post/2018-04-08-sakugabooru%E5%BE%AE%E5%8D%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84/</guid>
+      <description>&lt;p&gt;首先得先说明，虽然笔者大概地看过源代码，但笔者并没有参与程序的编写，我是半年前才开始帮忙管理诸如tag翻译之类的琐事的。这里仅简单地给想了解的人讲解一下这个机器人的运行处理流程。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

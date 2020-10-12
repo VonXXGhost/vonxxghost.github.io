@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Searches on V-ISLAND</title>
+    <link>https://vonxxghost.xyz/search/</link>
+    <description>Recent content in Searches on V-ISLAND</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="https://vonxxghost.xyz/search/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://vonxxghost.xyz/search/placeholder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/search/placeholder/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

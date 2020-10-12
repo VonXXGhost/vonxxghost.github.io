@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tops on V-ISLAND</title>
+    <link>https://vonxxghost.xyz/top/</link>
+    <description>Recent content in Tops on V-ISLAND</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="https://vonxxghost.xyz/top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://vonxxghost.xyz/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/top/about/</guid>
+      <description>まいにち アニメと配信を見て、ゲームをやって、プログラムを書いて。 Find Me As a fan 主要是个动画宅，喜欢“纯粹”的片子。 关注一点作画演出和各种幕后八卦</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://vonxxghost.xyz/top/works/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/top/works/</guid>
+      <description>过去的一些文章、视频汇总 纯文章 作画类 可能是一些制作介绍 - 对一些制作进行、制作人的简单介绍，以16年5月高中写的版本为基础写的17年3月第二版</description>
+    </item>
+    
+  </channel>
+</rss>
