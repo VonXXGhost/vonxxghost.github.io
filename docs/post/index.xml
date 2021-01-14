@@ -6,7 +6,16 @@
     <description>Recent content in Posts on V-ISLAND</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 18 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cassandra CQL3文档</title>
+      <link>https://vonxxghost.xyz/post/2021-01-14-cassandra-cql3%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/post/2021-01-14-cassandra-cql3%E6%96%87%E6%A1%A3/</guid>
+      <description>&lt;p&gt;摘抄翻译自&lt;a href=&#34;https://cassandra.apache.org/doc/old/CQL-3.0.html&#34;&gt;官网文档&lt;/a&gt;。部分为机翻润色。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>秋季新番的遗憾</title>
       <link>https://vonxxghost.xyz/post/2020-10-18-%E7%A7%8B%E5%AD%A3%E6%96%B0%E7%95%AA%E7%9A%84%E9%81%97%E6%86%BE/</link>
