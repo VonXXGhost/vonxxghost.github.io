@@ -363,13 +363,13 @@
 <p><em>Syntax:</em></p>
 <pre><code>&lt;create-keyspace-stmt&gt; ::= CREATE KEYSPACE (IF NOT EXISTS)? &lt;identifier&gt; WITH &lt;properties
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE KEYSPACE Excelsior
-           WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 3};
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">KEYSPACE</span> Excelsior
+           <span style="color:#ff79c6">WITH</span> <span style="color:#ff79c6">replication</span> <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#39;class&#39;</span>: <span style="color:#f1fa8c">&#39;SimpleStrategy&#39;</span>, <span style="color:#f1fa8c">&#39;replication_factor&#39;</span> : <span style="color:#bd93f9">3</span>};
 
-CREATE KEYSPACE Excalibur
-           WITH replication = {'class': 'NetworkTopologyStrategy', 'DC1' : 1, 'DC2' : 3}
-            AND durable_writes = false;
-</code></pre><p>顶级的键空间，可以理解为RDB中的“库”，定义了一个副本策略（<em>replication strategy</em>）和一些表的配置。</p>
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">KEYSPACE</span> Excalibur
+           <span style="color:#ff79c6">WITH</span> <span style="color:#ff79c6">replication</span> <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#39;class&#39;</span>: <span style="color:#f1fa8c">&#39;NetworkTopologyStrategy&#39;</span>, <span style="color:#f1fa8c">&#39;DC1&#39;</span> : <span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#39;DC2&#39;</span> : <span style="color:#bd93f9">3</span>}
+            <span style="color:#ff79c6">AND</span> <span style="color:#ff79c6">durable_writes</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
+</code></pre></div><p>顶级的键空间，可以理解为RDB中的“库”，定义了一个副本策略（<em>replication strategy</em>）和一些表的配置。</p>
 <table>
 <thead>
 <tr>
@@ -407,20 +407,20 @@ CREATE KEYSPACE Excalibur
 <p><em>Syntax:</em></p>
 <pre><code>&lt;use-stmt&gt; ::= USE &lt;identifier&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>USE myApp;
-</code></pre><h3 id="alter-keyspace-修改键空间">ALTER KEYSPACE 修改键空间</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">USE</span> myApp;
+</code></pre></div><h3 id="alter-keyspace-修改键空间">ALTER KEYSPACE 修改键空间</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;create-keyspace-stmt&gt; ::= ALTER KEYSPACE &lt;identifier&gt; WITH &lt;properties&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>ALTER KEYSPACE Excelsior
-          WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 4};
-</code></pre><p>支持的 <code>&lt;properties&gt;</code> 与 <code>CREATE KEYSPACE</code> 相同。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">KEYSPACE</span> Excelsior
+          <span style="color:#ff79c6">WITH</span> <span style="color:#ff79c6">replication</span> <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#39;class&#39;</span>: <span style="color:#f1fa8c">&#39;SimpleStrategy&#39;</span>, <span style="color:#f1fa8c">&#39;replication_factor&#39;</span> : <span style="color:#bd93f9">4</span>};
+</code></pre></div><p>支持的 <code>&lt;properties&gt;</code> 与 <code>CREATE KEYSPACE</code> 相同。</p>
 <h3 id="drop-keyspace-删除键空间">DROP KEYSPACE 删除键空间</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;drop-keyspace-stmt&gt; ::= DROP KEYSPACE ( IF EXISTS )? &lt;identifier&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DROP KEYSPACE myApp;
-</code></pre><p><code>DROP KEYSPACE</code> 将会立刻完成，不可逆地删除掉一个键空间，包括键空间下的所有的键族和这些键族中的数据。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">KEYSPACE</span> myApp;
+</code></pre></div><p><code>DROP KEYSPACE</code> 将会立刻完成，不可逆地删除掉一个键空间，包括键空间下的所有的键族和这些键族中的数据。</p>
 <p>如果键空间不存在，且没有加上 <code>IF EXISTS</code>，执行将会报错；加上则为无操作。</p>
 <h3 id="create-table-创建表">CREATE TABLE 创建表</h3>
 <p><em>Syntax:</em></p>
@@ -438,23 +438,23 @@ CREATE KEYSPACE Excalibur
            | COMPACT STORAGE
            | CLUSTERING ORDER
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE TABLE monkeySpecies (
-    species text PRIMARY KEY,
-    common_name text,
-    population varint,
-    average_size int
-) WITH comment='Important biological records'
-   AND read_repair_chance = 1.0;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> monkeySpecies (
+    species <span style="color:#8be9fd;font-style:italic">text</span> <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
+    common_name <span style="color:#8be9fd;font-style:italic">text</span>,
+    population <span style="color:#8be9fd;font-style:italic">varint</span>,
+    average_size <span style="color:#8be9fd;font-style:italic">int</span>
+) <span style="color:#ff79c6">WITH</span> comment<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;Important biological records&#39;</span>
+   <span style="color:#ff79c6">AND</span> read_repair_chance <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1.0</span>;
 
-CREATE TABLE timeline (
-    userid uuid,
-    posted_month int,
-    posted_time uuid,
-    body text,
-    posted_by text,
-    PRIMARY KEY (userid, posted_month, posted_time)
-) WITH compaction = { 'class' : 'LeveledCompactionStrategy' };
-</code></pre><p>出于历史原因，<code>CREATE COLUMNFAMILY</code> 为 <code>CREATE TABLE</code> 的别名。</p>
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> timeline (
+    userid <span style="color:#8be9fd;font-style:italic">uuid</span>,
+    posted_month <span style="color:#8be9fd;font-style:italic">int</span>,
+    posted_time <span style="color:#8be9fd;font-style:italic">uuid</span>,
+    body <span style="color:#8be9fd;font-style:italic">text</span>,
+    posted_by <span style="color:#8be9fd;font-style:italic">text</span>,
+    <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span> (userid, posted_month, posted_time)
+) <span style="color:#ff79c6">WITH</span> compaction <span style="color:#ff79c6">=</span> { <span style="color:#f1fa8c">&#39;class&#39;</span> : <span style="color:#f1fa8c">&#39;LeveledCompactionStrategy&#39;</span> };
+</code></pre></div><p>出于历史原因，<code>CREATE COLUMNFAMILY</code> 为 <code>CREATE TABLE</code> 的别名。</p>
 <h4 id="tablename"><code>&lt;tablename&gt;</code></h4>
 <p>与键空间命名相同规则，最大32位的字母数字标识符。如果建表时未提供键空间，则在当前的键空间下创建；否则在指定的键空间下创建，但不会切换当前键空间。</p>
 <h4 id="column-definition"><code>&lt;column-definition&gt;</code></h4>
@@ -462,19 +462,19 @@ CREATE TABLE timeline (
 <p><code>PRIMARY KEY</code>中的其他栏则被称为聚集键（<em>clustering columns</em>）。在一个给定的物理节点上，一个给定分区键的行是按照聚集键的顺序存储的，这使得按照该集群顺序检索行特别高效(参见SELECT)。</p>
 <h4 id="static-columns"><code>STATIC</code> columns</h4>
 <p><code>STATIC</code> 静态栏会使同一个分区键的每一行共享同一个数据。</p>
-<pre><code>CREATE TABLE test (
-    pk int,
-    t int,
-    v text,
-    s text static,
-    PRIMARY KEY (pk, t)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> test (
+    pk <span style="color:#8be9fd;font-style:italic">int</span>,
+    t <span style="color:#8be9fd;font-style:italic">int</span>,
+    v <span style="color:#8be9fd;font-style:italic">text</span>,
+    s <span style="color:#8be9fd;font-style:italic">text</span> <span style="color:#ff79c6">static</span>,
+    <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span> (pk, t)
 );
-INSERT INTO test(pk, t, v, s) VALUES (0, 0, 'val0', 'static0');
-INSERT INTO test(pk, t, v, s) VALUES (0, 1, 'val1', 'static1');
-SELECT * FROM test WHERE pk=0 AND t=0;
+<span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> test(pk, t, v, s) <span style="color:#ff79c6">VALUES</span> (<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#f1fa8c">&#39;val0&#39;</span>, <span style="color:#f1fa8c">&#39;static0&#39;</span>);
+<span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> test(pk, t, v, s) <span style="color:#ff79c6">VALUES</span> (<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#39;val1&#39;</span>, <span style="color:#f1fa8c">&#39;static1&#39;</span>);
+<span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> test <span style="color:#ff79c6">WHERE</span> pk<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span> <span style="color:#ff79c6">AND</span> t<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>;
 
-// 结果：s='static1'
-</code></pre><p>对于不同的分区键，则不会共享同样的数据。</p>
+<span style="color:#6272a4">// 结果：s=&#39;static1&#39;
+</span></code></pre></div><p>对于不同的分区键，则不会共享同样的数据。</p>
 <p>如果使用静态栏，则会存在以下这些限制：</p>
 <ul>
 <li>使用 <code>COMPACT STORAGE</code> 选项的表不支持</li>
@@ -711,16 +711,16 @@ SELECT * FROM test WHERE pk=0 AND t=0;
                 | DROP  &lt;identifier&gt;
                 | WITH  &lt;option&gt; ( AND &lt;option&gt; )*
 </code></pre><p><em>Sample:</em></p>
-<pre><code>ALTER TABLE addamsFamily
-ALTER lastKnownLocation TYPE uuid;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">TABLE</span> addamsFamily
+<span style="color:#ff79c6">ALTER</span> lastKnownLocation <span style="color:#ff79c6">TYPE</span> <span style="color:#8be9fd;font-style:italic">uuid</span>;
 
-ALTER TABLE addamsFamily
-ADD gravesite varchar;
+<span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">TABLE</span> addamsFamily
+<span style="color:#ff79c6">ADD</span> gravesite <span style="color:#8be9fd;font-style:italic">varchar</span>;
 
-ALTER TABLE addamsFamily
-WITH comment = 'A most excellent and useful column family'
- AND read_repair_chance = 0.2;
-</code></pre><p><code>&lt;instruction&gt;</code> 的不同语句的功能：</p>
+<span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">TABLE</span> addamsFamily
+<span style="color:#ff79c6">WITH</span> comment <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;A most excellent and useful column family&#39;</span>
+ <span style="color:#ff79c6">AND</span> read_repair_chance <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0.2</span>;
+</code></pre></div><p><code>&lt;instruction&gt;</code> 的不同语句的功能：</p>
 <ul>
 <li>
 <p><code>ALTER</code>：更新某一栏的类型。注意，不能修改聚集键的类型和位于二级索引下的列。更新类型时不会进行类型校验，但最好不要将一种类型转换为其不兼容的类型，除非此栏中没有数据，不然会导致 CQL 驱动、工具混乱。</p>
@@ -739,13 +739,13 @@ WITH comment = 'A most excellent and useful column family'
 <p><em>Syntax:</em></p>
 <pre><code>&lt;drop-table-stmt&gt; ::= DROP TABLE ( IF EXISTS )? &lt;tablename&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DROP TABLE worldSeriesAttendees;
-</code></pre><h3 id="truncate-清空表">TRUNCATE 清空表</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">TABLE</span> worldSeriesAttendees;
+</code></pre></div><h3 id="truncate-清空表">TRUNCATE 清空表</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;truncate-stmt&gt; ::= TRUNCATE ( TABLE | COLUMNFAMILY )? &lt;tablename&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>TRUNCATE superImportantData;
-</code></pre><h3 id="create-index-创建二级索引">CREATE INDEX 创建二级索引</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">TRUNCATE</span> superImportantData;
+</code></pre></div><h3 id="create-index-创建二级索引">CREATE INDEX 创建二级索引</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;create-index-stmt&gt; ::= CREATE ( CUSTOM )? INDEX ( IF NOT EXISTS )? ( &lt;indexname&gt; )?
                             ON &lt;tablename&gt; '(' &lt;index-identifier&gt; ')'
@@ -754,21 +754,21 @@ WITH comment = 'A most excellent and useful column family'
 &lt;index-identifier&gt; ::= &lt;identifier&gt;
                      | keys( &lt;identifier&gt; )
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE INDEX userIndex ON NerdMovies (user);
-CREATE INDEX ON Mutants (abilityId);
-CREATE INDEX ON users (keys(favs));
-CREATE CUSTOM INDEX ON users (email) USING 'path.to.the.IndexClass';
-CREATE CUSTOM INDEX ON users (email) USING 'path.to.the.IndexClass' WITH OPTIONS = {'storage': '/mnt/ssd/indexes/'};
-</code></pre><p>如果需要，可以在ON关键字之前指定索引本身的名称。如果该列的数据已经存在，则将对其进行异步索引。创建索引之后，列的新数据将在插入时自动建立索引。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">INDEX</span> userIndex <span style="color:#ff79c6">ON</span> NerdMovies (<span style="color:#ff79c6">user</span>);
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">INDEX</span> <span style="color:#ff79c6">ON</span> Mutants (abilityId);
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">INDEX</span> <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">users</span> (<span style="color:#ff79c6">keys</span>(favs));
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">CUSTOM</span> <span style="color:#ff79c6">INDEX</span> <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">users</span> (email) <span style="color:#ff79c6">USING</span> <span style="color:#f1fa8c">&#39;path.to.the.IndexClass&#39;</span>;
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">CUSTOM</span> <span style="color:#ff79c6">INDEX</span> <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">users</span> (email) <span style="color:#ff79c6">USING</span> <span style="color:#f1fa8c">&#39;path.to.the.IndexClass&#39;</span> <span style="color:#ff79c6">WITH</span> <span style="color:#ff79c6">OPTIONS</span> <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#39;storage&#39;</span>: <span style="color:#f1fa8c">&#39;/mnt/ssd/indexes/&#39;</span>};
+</code></pre></div><p>如果需要，可以在ON关键字之前指定索引本身的名称。如果该列的数据已经存在，则将对其进行异步索引。创建索引之后，列的新数据将在插入时自动建立索引。</p>
 <p>在map列上创建索引时，可以对键或值建立索引。如果列标识符位于 <code>keys() </code> 函数内，则索引将位于map键上，从而允许在 WHERE 子句中使用 <code>CONTAINS KEY</code>。否则，索引将位于map值上。</p>
 <h3 id="drop-index-删除索引">DROP INDEX 删除索引</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;drop-index-stmt&gt; ::= DROP INDEX ( IF EXISTS )? ( &lt;keyspace&gt; '.' )? &lt;identifier&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DROP INDEX userIndex;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">INDEX</span> userIndex;
 
-DROP INDEX userkeyspace.address_index;
-</code></pre><h3 id="materialized-view-物化视图">MATERIALIZED VIEW 物化视图</h3>
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">INDEX</span> userkeyspace.address_index;
+</code></pre></div><h3 id="materialized-view-物化视图">MATERIALIZED VIEW 物化视图</h3>
 <p>此处暂略相关内容。</p>
 <h3 id="create-type-创建类型">CREATE TYPE 创建类型</h3>
 <p><em>Syntax:</em></p>
@@ -779,19 +779,19 @@ DROP INDEX userkeyspace.address_index;
 
 &lt;field-definition&gt; ::= &lt;identifier&gt; &lt;type&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE TYPE address (
-    street_name text,
-    street_number int,
-    city text,
-    state text,
-    zip int
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TYPE</span> address (
+    street_name <span style="color:#8be9fd;font-style:italic">text</span>,
+    street_number <span style="color:#8be9fd;font-style:italic">int</span>,
+    city <span style="color:#8be9fd;font-style:italic">text</span>,
+    state <span style="color:#8be9fd;font-style:italic">text</span>,
+    zip <span style="color:#8be9fd;font-style:italic">int</span>
 )
 
-CREATE TYPE work_and_home_addresses (
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TYPE</span> work_and_home_addresses (
     home_address address,
     work_address address
 )
-</code></pre><p>创建自定义类型，每个类型都是一组明确命名、明确类型的字段集合。字段类型可以是任何有效的类型，包括集合和其他已存在的用户自定义类型。</p>
+</code></pre></div><p>创建自定义类型，每个类型都是一组明确命名、明确类型的字段集合。字段类型可以是任何有效的类型，包括集合和其他已存在的用户自定义类型。</p>
 <h4 id="typename"><code>&lt;typename&gt;</code></h4>
 <p>有效的类型名是标识符。不能使用现有的CQL类型名和保留类型名。</p>
 <p>如果只提供类型名，则使用当前键空间创建类型（参考 <code>USE</code>）。如果以存在的键空间名称作为前缀，则该类型将在指定的键空间中创建，而不是在当前键空间中创建。</p>
@@ -803,12 +803,12 @@ CREATE TYPE work_and_home_addresses (
                 | ADD &lt;field-name&gt; &lt;type&gt;
                 | RENAME &lt;field-name&gt; TO &lt;field-name&gt; ( AND &lt;field-name&gt; TO &lt;field-name&gt; )*
 </code></pre><p><em>Sample:</em></p>
-<pre><code>ALTER TYPE address ALTER zip TYPE varint
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">TYPE</span> address <span style="color:#ff79c6">ALTER</span> zip <span style="color:#ff79c6">TYPE</span> <span style="color:#8be9fd;font-style:italic">varint</span>
 
-ALTER TYPE address ADD country text
+<span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">TYPE</span> address <span style="color:#ff79c6">ADD</span> country <span style="color:#8be9fd;font-style:italic">text</span>
 
-ALTER TYPE address RENAME zip TO zipcode AND street_name TO street
-</code></pre><p>允许添加新字段、重命名现有字段或更改现有字段的类型。更改列的类型时，新类型必须与旧类型兼容。</p>
+<span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">TYPE</span> address <span style="color:#ff79c6">RENAME</span> zip <span style="color:#ff79c6">TO</span> zipcode <span style="color:#ff79c6">AND</span> street_name <span style="color:#ff79c6">TO</span> street
+</code></pre></div><p>允许添加新字段、重命名现有字段或更改现有字段的类型。更改列的类型时，新类型必须与旧类型兼容。</p>
 <h3 id="drop-type-删除类型">DROP TYPE 删除类型</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;drop-type-stmt&gt; ::= DROP TYPE ( IF EXISTS )? &lt;typename&gt;
@@ -819,15 +819,15 @@ ALTER TYPE address RENAME zip TO zipcode AND street_name TO street
                             ON &lt;tablename&gt; 
                             USING &lt;string&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE TRIGGER myTrigger ON myTable USING 'org.apache.cassandra.triggers.InvertedIndex';
-</code></pre><p>触发器的实际逻辑可以用任何 JVM 语言编写，并且存放在数据库之外。将触发器代码放在Cassandra安装目录的lib/triggers 子目录中，在集群启动期间将会加载，并存在于集群的各个节点上。在表上定义的触发器会在请求的DML 语句触发之前触发，从而确保了事务的原子性。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TRIGGER</span> myTrigger <span style="color:#ff79c6">ON</span> myTable <span style="color:#ff79c6">USING</span> <span style="color:#f1fa8c">&#39;org.apache.cassandra.triggers.InvertedIndex&#39;</span>;
+</code></pre></div><p>触发器的实际逻辑可以用任何 JVM 语言编写，并且存放在数据库之外。将触发器代码放在Cassandra安装目录的lib/triggers 子目录中，在集群启动期间将会加载，并存在于集群的各个节点上。在表上定义的触发器会在请求的DML 语句触发之前触发，从而确保了事务的原子性。</p>
 <h3 id="drop-trigger-删除触发器">DROP TRIGGER 删除触发器</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;drop-trigger-stmt&gt; ::= DROP TRIGGER ( IF EXISTS )? ( &lt;triggername&gt; )?
                             ON &lt;tablename&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DROP TRIGGER myTrigger ON myTable;
-</code></pre><h3 id="create-function-创建函数">CREATE FUNCTION 创建函数</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">TRIGGER</span> myTrigger <span style="color:#ff79c6">ON</span> myTable;
+</code></pre></div><h3 id="create-function-创建函数">CREATE FUNCTION 创建函数</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;create-function-stmt&gt; ::= CREATE ( OR REPLACE )? 
                             FUNCTION ( IF NOT EXISTS )?
@@ -838,34 +838,34 @@ ALTER TYPE address RENAME zip TO zipcode AND street_name TO street
                             LANGUAGE &lt;language&gt;
                             AS &lt;body&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE OR REPLACE FUNCTION somefunction
-    ( somearg int, anotherarg text, complexarg frozen&lt;someUDT&gt;, listarg list&lt;bigint&gt; )
-    RETURNS NULL ON NULL INPUT
-    RETURNS text
-    LANGUAGE java
-    AS $$
-       // some Java code
-    $$;
-CREATE FUNCTION akeyspace.fname IF NOT EXISTS
-    ( someArg int )
-    CALLED ON NULL INPUT
-    RETURNS text
-    LANGUAGE java
-    AS $$
-       // some Java code
-    $$;
-</code></pre><p>暂略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">OR</span> <span style="color:#ff79c6">REPLACE</span> <span style="color:#ff79c6">FUNCTION</span> somefunction
+    ( somearg <span style="color:#8be9fd;font-style:italic">int</span>, anotherarg <span style="color:#8be9fd;font-style:italic">text</span>, complexarg <span style="color:#8be9fd;font-style:italic">frozen</span><span style="color:#ff79c6">&lt;</span>someUDT<span style="color:#ff79c6">&gt;</span>, listarg <span style="color:#8be9fd;font-style:italic">list</span><span style="color:#ff79c6">&lt;</span><span style="color:#8be9fd;font-style:italic">bigint</span><span style="color:#ff79c6">&gt;</span> )
+    <span style="color:#ff79c6">RETURNS</span> <span style="color:#ff79c6">NULL</span> <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">NULL</span> <span style="color:#ff79c6">INPUT</span>
+    <span style="color:#ff79c6">RETURNS</span> <span style="color:#8be9fd;font-style:italic">text</span>
+    <span style="color:#ff79c6">LANGUAGE</span> <span style="color:#8be9fd;font-style:italic">java</span>
+    <span style="color:#ff79c6">AS</span> <span style="color:#f1fa8c">$$</span>
+       <span style="color:#6272a4">// some Java code
+</span><span style="color:#6272a4"></span>    <span style="color:#f1fa8c">$$</span>;
+<span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">FUNCTION</span> akeyspace.fname <span style="color:#ff79c6">IF</span> <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">EXISTS</span>
+    ( someArg <span style="color:#8be9fd;font-style:italic">int</span> )
+    <span style="color:#ff79c6">CALLED</span> <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">NULL</span> <span style="color:#ff79c6">INPUT</span>
+    <span style="color:#ff79c6">RETURNS</span> <span style="color:#8be9fd;font-style:italic">text</span>
+    <span style="color:#ff79c6">LANGUAGE</span> <span style="color:#8be9fd;font-style:italic">java</span>
+    <span style="color:#ff79c6">AS</span> <span style="color:#f1fa8c">$$</span>
+       <span style="color:#6272a4">// some Java code
+</span><span style="color:#6272a4"></span>    <span style="color:#f1fa8c">$$</span>;
+</code></pre></div><p>暂略。</p>
 <h3 id="drop-function-删除函数">DROP FUNCTION 删除函数</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;drop-function-stmt&gt; ::= DROP FUNCTION ( IF EXISTS )?
                          ( &lt;keyspace&gt; '.' )? &lt;function-name&gt;
                          ( '(' &lt;arg-type&gt; ( ',' &lt;arg-type&gt; )* ')' )?
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DROP FUNCTION myfunction;
-DROP FUNCTION mykeyspace.afunction;
-DROP FUNCTION afunction ( int );
-DROP FUNCTION afunction ( text );
-</code></pre><p>暂略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">FUNCTION</span> myfunction;
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">FUNCTION</span> mykeyspace.afunction;
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">FUNCTION</span> afunction ( <span style="color:#8be9fd;font-style:italic">int</span> );
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">FUNCTION</span> afunction ( <span style="color:#8be9fd;font-style:italic">text</span> );
+</code></pre></div><p>暂略。</p>
 <h3 id="create-aggregate-创建聚合函数">CREATE AGGREGATE 创建聚合函数</h3>
 <p><em>Syntax:</em></p>
 <pre><code>&lt;create-aggregate-stmt&gt; ::= CREATE ( OR REPLACE )? 
@@ -877,12 +877,12 @@ DROP FUNCTION afunction ( text );
                             ( FINALFUNC &lt;final-functionname&gt; )?
                             ( INITCOND &lt;init-cond&gt; )?
 </code></pre><p><em>Sample:</em></p>
-<pre><code>CREATE AGGREGATE myaggregate ( val text )
-  SFUNC myaggregate_state
-  STYPE text
-  FINALFUNC myaggregate_final
-  INITCOND 'foo';
-</code></pre><p>可以创建或替换用户自定义聚合函数。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">AGGREGATE</span> myaggregate ( val <span style="color:#8be9fd;font-style:italic">text</span> )
+  <span style="color:#ff79c6">SFUNC</span> myaggregate_state
+  <span style="color:#ff79c6">STYPE</span> <span style="color:#8be9fd;font-style:italic">text</span>
+  <span style="color:#ff79c6">FINALFUNC</span> myaggregate_final
+  <span style="color:#ff79c6">INITCOND</span> <span style="color:#f1fa8c">&#39;foo&#39;</span>;
+</code></pre></div><p>可以创建或替换用户自定义聚合函数。</p>
 <p>暂略。</p>
 <h3 id="drop-aggregate-删除聚合函数">DROP AGGREGATE 删除聚合函数</h3>
 <p><em>Syntax:</em></p>
@@ -890,11 +890,11 @@ DROP FUNCTION afunction ( text );
                          ( &lt;keyspace&gt; '.' )? &lt;aggregate-name&gt;
                          ( '(' &lt;arg-type&gt; ( ',' &lt;arg-type&gt; )* ')' )?
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DROP AGGREGATE myAggregate;
-DROP AGGREGATE myKeyspace.anAggregate;
-DROP AGGREGATE someAggregate ( int );
-DROP AGGREGATE someAggregate ( text );
-</code></pre><p>暂略。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">AGGREGATE</span> myAggregate;
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">AGGREGATE</span> myKeyspace.anAggregate;
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">AGGREGATE</span> someAggregate ( <span style="color:#8be9fd;font-style:italic">int</span> );
+<span style="color:#ff79c6">DROP</span> <span style="color:#ff79c6">AGGREGATE</span> someAggregate ( <span style="color:#8be9fd;font-style:italic">text</span> );
+</code></pre></div><p>暂略。</p>
 <h2 id="数据操作">数据操作</h2>
 <h3 id="insert-插入数据">INSERT 插入数据</h3>
 <p><em>Syntax:</em></p>
@@ -914,12 +914,12 @@ DROP AGGREGATE someAggregate ( text );
 &lt;option&gt; ::= TIMESTAMP &lt;integer&gt;
            | TTL &lt;integer&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>INSERT INTO NerdMovies (movie, director, main_actor, year)
-                VALUES ('Serenity', 'Joss Whedon', 'Nathan Fillion', 2005)
-USING TTL 86400;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> NerdMovies (movie, director, main_actor, year)
+                <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;Serenity&#39;</span>, <span style="color:#f1fa8c">&#39;Joss Whedon&#39;</span>, <span style="color:#f1fa8c">&#39;Nathan Fillion&#39;</span>, <span style="color:#bd93f9">2005</span>)
+<span style="color:#ff79c6">USING</span> <span style="color:#ff79c6">TTL</span> <span style="color:#bd93f9">86400</span>;
 
-INSERT INTO NerdMovies JSON '{&quot;movie&quot;: &quot;Serenity&quot;, &quot;director&quot;: &quot;Joss Whedon&quot;, &quot;year&quot;: 2005}'
-</code></pre><ul>
+<span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> NerdMovies <span style="color:#ff79c6">JSON</span> <span style="color:#f1fa8c">&#39;{&#34;movie&#34;: &#34;Serenity&#34;, &#34;director&#34;: &#34;Joss Whedon&#34;, &#34;year&#34;: 2005}&#39;</span>
+</code></pre></div><ul>
 <li>插入数据必须指定所有的主键</li>
 <li>当使用 <code>VALUES</code> 语法时，必须提供要插入的数据列表；当使用 <code>JSON</code> 语法时，这是可选的。</li>
 <li>与 SQL 不同，<code>INSERT</code> 默认不会检查此行是否已经存在。如果主键不存在，插入将会新增；否则则更新。此外，也无法知道实际上是进行了创建还是更新。</li>
@@ -960,14 +960,14 @@ INSERT INTO NerdMovies JSON '{&quot;movie&quot;: &quot;Serenity&quot;, &quot;dir
 &lt;option&gt; ::= TIMESTAMP &lt;integer&gt;
            | TTL &lt;integer&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>UPDATE NerdMovies USING TTL 400
-SET director = 'Joss Whedon',
-    main_actor = 'Nathan Fillion',
-    year = 2005
-WHERE movie = 'Serenity';
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">UPDATE</span> NerdMovies <span style="color:#ff79c6">USING</span> <span style="color:#ff79c6">TTL</span> <span style="color:#bd93f9">400</span>
+<span style="color:#8be9fd;font-style:italic">SET</span> director <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Joss Whedon&#39;</span>,
+    main_actor <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Nathan Fillion&#39;</span>,
+    year <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2005</span>
+<span style="color:#ff79c6">WHERE</span> movie <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Serenity&#39;</span>;
 
-UPDATE UserActions SET total = total + 2 WHERE user = B70DE1D0-9908-4AE3-BE34-5573E5B09F14 AND action = 'click';
-</code></pre><ul>
+<span style="color:#ff79c6">UPDATE</span> UserActions <span style="color:#8be9fd;font-style:italic">SET</span> total <span style="color:#ff79c6">=</span> total <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">user</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">B70DE1D0-9908-4AE3-BE34-5573E5B09F14</span> <span style="color:#ff79c6">AND</span> action <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;click&#39;</span>;
+</code></pre></div><ul>
 <li>可以更新指定一行的一或多列数据。</li>
 <li><code>&lt;where-clause&gt;</code> 必须包含所有的主键。</li>
 <li>与 SQL 不同，<code>UPDATE</code> 默认不会检查此行是否已经存在。如果主键不存在，将会新增行；否则则更新。此外，也无法知道实际上是进行了创建还是更新。</li>
@@ -1008,10 +1008,10 @@ UPDATE UserActions SET total = total + 2 WHERE user = B70DE1D0-9908-4AE3-BE34-55
               | &lt;identifier&gt; '[' &lt;term&gt; ']' (&lt;op&gt; | '!=') &lt;term&gt;
               | &lt;identifier&gt; '[' &lt;term&gt; ']' IN &lt;term&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>DELETE FROM NerdMovies USING TIMESTAMP 1240003134 WHERE movie = 'Serenity';
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DELETE</span> <span style="color:#ff79c6">FROM</span> NerdMovies <span style="color:#ff79c6">USING</span> <span style="color:#8be9fd;font-style:italic">TIMESTAMP</span> <span style="color:#bd93f9">1240003134</span> <span style="color:#ff79c6">WHERE</span> movie <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Serenity&#39;</span>;
 
-DELETE phone FROM Users WHERE userid IN (C73DE1D3-AF08-40F3-B124-3FF3E5109F22, B70DE1D0-9908-4AE3-BE34-5573E5B09F14);
-</code></pre><ul>
+<span style="color:#ff79c6">DELETE</span> phone <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">Users</span> <span style="color:#ff79c6">WHERE</span> userid <span style="color:#ff79c6">IN</span> (<span style="color:#bd93f9">C73DE1D3-AF08-40F3-B124-3FF3E5109F22</span>, <span style="color:#bd93f9">B70DE1D0-9908-4AE3-BE34-5573E5B09F14</span>);
+</code></pre></div><ul>
 <li>使用 <code>IN</code> 语法和范围操作符（如 &gt;=）可以批量删除</li>
 <li>支持<code>TIMESTAMP</code>选项，其语义与<code>UPDATE</code>语句相同。</li>
 <li>同一个分区键内的所有删除都是原子且独立地应用的。</li>
@@ -1030,13 +1030,13 @@ DELETE phone FROM Users WHERE userid IN (C73DE1D3-AF08-40F3-B124-3FF3E5109F22, B
 
 &lt;option&gt; ::= TIMESTAMP &lt;integer&gt;
 </code></pre><p><em>Sample:</em></p>
-<pre><code>BEGIN BATCH
-  INSERT INTO users (userid, password, name) VALUES ('user2', 'ch@ngem3b', 'second user');
-  UPDATE users SET password = 'ps22dhds' WHERE userid = 'user3';
-  INSERT INTO users (userid, password) VALUES ('user4', 'ch@ngem3c');
-  DELETE name FROM users WHERE userid = 'user1';
-APPLY BATCH;
-</code></pre><p><code>BATCH</code> 可以将多条语句封装成一条语句执行，主要是以下作用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">BEGIN</span> <span style="color:#ff79c6">BATCH</span>
+  <span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> <span style="color:#ff79c6">users</span> (userid, <span style="color:#ff79c6">password</span>, name) <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;user2&#39;</span>, <span style="color:#f1fa8c">&#39;ch@ngem3b&#39;</span>, <span style="color:#f1fa8c">&#39;second user&#39;</span>);
+  <span style="color:#ff79c6">UPDATE</span> <span style="color:#ff79c6">users</span> <span style="color:#8be9fd;font-style:italic">SET</span> <span style="color:#ff79c6">password</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;ps22dhds&#39;</span> <span style="color:#ff79c6">WHERE</span> userid <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;user3&#39;</span>;
+  <span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> <span style="color:#ff79c6">users</span> (userid, <span style="color:#ff79c6">password</span>) <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;user4&#39;</span>, <span style="color:#f1fa8c">&#39;ch@ngem3c&#39;</span>);
+  <span style="color:#ff79c6">DELETE</span> name <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> userid <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;user1&#39;</span>;
+<span style="color:#ff79c6">APPLY</span> <span style="color:#ff79c6">BATCH</span>;
+</code></pre></div><p><code>BATCH</code> 可以将多条语句封装成一条语句执行，主要是以下作用：</p>
 <ul>
 <li>节省网络成本</li>
 <li>一条 <code>BATCH</code> 中的所有对同一个分区键的更新是独立执行的</li>
@@ -1088,22 +1088,22 @@ APPLY BATCH;
 &lt;ordering&gt; ::= &lt;identifer&gt; ( ASC | DESC )?
 &lt;term-tuple&gt; ::= '(' &lt;term&gt; (',' &lt;term&gt;)* ')'
 </code></pre><p><em>Sample:</em></p>
-<pre><code>SELECT name, occupation FROM users WHERE userid IN (199, 200, 207);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> name, occupation <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> userid <span style="color:#ff79c6">IN</span> (<span style="color:#bd93f9">199</span>, <span style="color:#bd93f9">200</span>, <span style="color:#bd93f9">207</span>);
 
-SELECT JSON name, occupation FROM users WHERE userid = 199;
+<span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">JSON</span> name, occupation <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> userid <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">199</span>;
 
-SELECT name AS user_name, occupation AS user_occupation FROM users;
+<span style="color:#ff79c6">SELECT</span> name <span style="color:#ff79c6">AS</span> user_name, occupation <span style="color:#ff79c6">AS</span> user_occupation <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span>;
 
-SELECT time, value
-FROM events
-WHERE event_type = 'myEvent'
-  AND time &gt; '2011-02-03'
-  AND time &lt;= '2012-01-01'
+<span style="color:#ff79c6">SELECT</span> <span style="color:#8be9fd;font-style:italic">time</span>, value
+<span style="color:#ff79c6">FROM</span> events
+<span style="color:#ff79c6">WHERE</span> event_type <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;myEvent&#39;</span>
+  <span style="color:#ff79c6">AND</span> <span style="color:#8be9fd;font-style:italic">time</span> <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;2011-02-03&#39;</span>
+  <span style="color:#ff79c6">AND</span> <span style="color:#8be9fd;font-style:italic">time</span> <span style="color:#ff79c6">&lt;=</span> <span style="color:#f1fa8c">&#39;2012-01-01&#39;</span>
 
-SELECT COUNT(*) FROM users;
+<span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">COUNT</span>(<span style="color:#ff79c6">*</span>) <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span>;
 
-SELECT COUNT(*) AS user_count FROM users;
-</code></pre><p>返回符合查询条件的结果集。如果使用了 <code>JSON</code> 关键字，那么结果将只会包括一栏名为 “json” 的列。具体请参考 <code>SELECT JSON</code>。</p>
+<span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">COUNT</span>(<span style="color:#ff79c6">*</span>) <span style="color:#ff79c6">AS</span> user_count <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span>;
+</code></pre></div><p>返回符合查询条件的结果集。如果使用了 <code>JSON</code> 关键字，那么结果将只会包括一栏名为 “json” 的列。具体请参考 <code>SELECT JSON</code>。</p>
 <h4 id="select-clause"><code>&lt;select-clause&gt;</code></h4>
 <p><code>&lt;select-clause&gt;</code> 决定了哪些列需要在结果集中被返回，其为逗号分隔的列表，或代表全部列的通配符（<code>*</code>）。</p>
 <p>一个 <code>&lt;selector&gt;</code> 可以是一个列名，也可以是一个包含了一或多个  @@s 的 <code>&lt;function&gt;</code>。允许的函数与  <code>&lt;term&gt;</code>  相同，具体请参考函数相关章节。除了这些通用函数以外，还支持 <code>WRITETIME</code> 函数选择此栏被插入时的时间戳，类似地还有 <code>TTL</code> 函数对应其生存时间。</p>
@@ -1112,30 +1112,30 @@ SELECT COUNT(*) AS user_count FROM users;
 <h4 id="where-clause"><code>&lt;where-clause&gt;</code></h4>
 <p><code>&lt;where-clause&gt;</code> 指明了哪些行一定会被查询到。其由列上的关系组成，并且这些列为主键的一部分，或存在一个二级索引。</p>
 <p>并非所有关系都允许在查询中使用。比如不支持在分区键上使用“不等于”关系（但是可以参考下文的 <code>TOKEN</code> 方法对分区键执行不等于查询）。以及，对于一个给定的分区键，其聚集键仅允许选择一组连续行的关系。比如对于以下表：</p>
-<pre><code>CREATE TABLE posts (
-    userid text,
-    blog_title text,
-    posted_at timestamp,
-    entry_title text,
-    content text,
-    category int,
-    PRIMARY KEY (userid, blog_title, posted_at)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> posts (
+    userid <span style="color:#8be9fd;font-style:italic">text</span>,
+    blog_title <span style="color:#8be9fd;font-style:italic">text</span>,
+    posted_at <span style="color:#8be9fd;font-style:italic">timestamp</span>,
+    entry_title <span style="color:#8be9fd;font-style:italic">text</span>,
+    content <span style="color:#8be9fd;font-style:italic">text</span>,
+    category <span style="color:#8be9fd;font-style:italic">int</span>,
+    <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span> (userid, blog_title, posted_at)
 )
-</code></pre><p>这一句查询是可行的：</p>
-<pre><code>SELECT entry_title, content FROM posts WHERE userid='john doe' AND blog_title='John''s Blog' AND posted_at &gt;= '2012-01-01' AND posted_at &lt; '2012-01-31'
-</code></pre><p>但以下这一句不可行，因为其没有选择一组连续的行（假设没有设置二级索引）：</p>
-<pre><code>// Needs a blog_title to be set to select ranges of posted_at
-SELECT entry_title, content FROM posts WHERE userid='john doe' AND posted_at &gt;= '2012-01-01' AND posted_at &lt; '2012-01-31'
-</code></pre><p>在指定关系时，<code>TOKEN</code> 函数可以被用于分区键的查询。在这种情况下，将根据分区键的 token 而不是它们的值来进行选择。注意，键的 token 依赖于被使用的分区器，尤其是， RandomPartitioner 不会产生有意义的顺序。同时还要注意，排序分区器总是根据字节来进行 token 值的排序，所以即便分区键的值是 int 型，实际上却是<code>token(-1) &gt; token(0)</code>。比如：</p>
-<pre><code>SELECT * FROM posts WHERE token(userid) &gt; token('tom') AND token(userid) &lt; token('bob')
-</code></pre><p>并且，<code>IN</code> 关系只允许使用在分区键的最后一列和完整主键的最后一列上。</p>
+</code></pre></div><p>这一句查询是可行的：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> entry_title, content <span style="color:#ff79c6">FROM</span> posts <span style="color:#ff79c6">WHERE</span> userid<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;john doe&#39;</span> <span style="color:#ff79c6">AND</span> blog_title<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;John&#39;&#39;s Blog&#39;</span> <span style="color:#ff79c6">AND</span> posted_at <span style="color:#ff79c6">&gt;=</span> <span style="color:#f1fa8c">&#39;2012-01-01&#39;</span> <span style="color:#ff79c6">AND</span> posted_at <span style="color:#ff79c6">&lt;</span> <span style="color:#f1fa8c">&#39;2012-01-31&#39;</span>
+</code></pre></div><p>但以下这一句不可行，因为其没有选择一组连续的行（假设没有设置二级索引）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#6272a4">// Needs a blog_title to be set to select ranges of posted_at
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">SELECT</span> entry_title, content <span style="color:#ff79c6">FROM</span> posts <span style="color:#ff79c6">WHERE</span> userid<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;john doe&#39;</span> <span style="color:#ff79c6">AND</span> posted_at <span style="color:#ff79c6">&gt;=</span> <span style="color:#f1fa8c">&#39;2012-01-01&#39;</span> <span style="color:#ff79c6">AND</span> posted_at <span style="color:#ff79c6">&lt;</span> <span style="color:#f1fa8c">&#39;2012-01-31&#39;</span>
+</code></pre></div><p>在指定关系时，<code>TOKEN</code> 函数可以被用于分区键的查询。在这种情况下，将根据分区键的 token 而不是它们的值来进行选择。注意，键的 token 依赖于被使用的分区器，尤其是， RandomPartitioner 不会产生有意义的顺序。同时还要注意，排序分区器总是根据字节来进行 token 值的排序，所以即便分区键的值是 int 型，实际上却是<code>token(-1) &gt; token(0)</code>。比如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> posts <span style="color:#ff79c6">WHERE</span> <span style="color:#ff79c6">token</span>(userid) <span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">token</span>(<span style="color:#f1fa8c">&#39;tom&#39;</span>) <span style="color:#ff79c6">AND</span> <span style="color:#ff79c6">token</span>(userid) <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">token</span>(<span style="color:#f1fa8c">&#39;bob&#39;</span>)
+</code></pre></div><p>并且，<code>IN</code> 关系只允许使用在分区键的最后一列和完整主键的最后一列上。</p>
 <p>可以对聚集键使用元组标识进行组合查询，比如：</p>
-<pre><code>SELECT * FROM posts WHERE userid='john doe' AND (blog_title, posted_at) &gt; ('John''s Blog', '2012-01-01')
-</code></pre><p>这会返回排序在 <code>blog_tile</code> = <code>John's Blog</code> 且  <code>posted_at</code>  = <code>2012-01-01</code> 之后的行。事实上，只要这些行的r <code>blog_title &gt; 'John''s Blog'</code>，即便其 <code>post_at &lt;= '2012-01-01'</code> ，结果依然会返回。如果不想出现这种结果，那应该使用以下这种：</p>
-<pre><code>SELECT * FROM posts WHERE userid='john doe' AND blog_title &gt; 'John''s Blog' AND posted_at &gt; '2012-01-01'
-</code></pre><p>元组标识同样可以用于聚集键的 <code>IN</code> 子句中：</p>
-<pre><code>SELECT * FROM posts WHERE userid='john doe' AND (blog_title, posted_at) IN (('John''s Blog', '2012-01-01), ('Extreme Chess', '2014-06-01'))
-</code></pre><p><code>CONTAINS</code> 操作符只作用在集合类的列中。为 map 的情况下， <code>CONTAINS</code> 指向 map 的值；若想指向 map 的键，应该使用 <code>CONTAINS KEY</code> 。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> posts <span style="color:#ff79c6">WHERE</span> userid<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;john doe&#39;</span> <span style="color:#ff79c6">AND</span> (blog_title, posted_at) <span style="color:#ff79c6">&gt;</span> (<span style="color:#f1fa8c">&#39;John&#39;&#39;s Blog&#39;</span>, <span style="color:#f1fa8c">&#39;2012-01-01&#39;</span>)
+</code></pre></div><p>这会返回排序在 <code>blog_tile</code> = <code>John's Blog</code> 且  <code>posted_at</code>  = <code>2012-01-01</code> 之后的行。事实上，只要这些行的r <code>blog_title &gt; 'John''s Blog'</code>，即便其 <code>post_at &lt;= '2012-01-01'</code> ，结果依然会返回。如果不想出现这种结果，那应该使用以下这种：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> posts <span style="color:#ff79c6">WHERE</span> userid<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;john doe&#39;</span> <span style="color:#ff79c6">AND</span> blog_title <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;John&#39;&#39;s Blog&#39;</span> <span style="color:#ff79c6">AND</span> posted_at <span style="color:#ff79c6">&gt;</span> <span style="color:#f1fa8c">&#39;2012-01-01&#39;</span>
+</code></pre></div><p>元组标识同样可以用于聚集键的 <code>IN</code> 子句中：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> posts <span style="color:#ff79c6">WHERE</span> userid<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#39;john doe&#39;</span> <span style="color:#ff79c6">AND</span> (blog_title, posted_at) <span style="color:#ff79c6">IN</span> ((<span style="color:#f1fa8c">&#39;John&#39;&#39;s Blog&#39;</span>, <span style="color:#f1fa8c">&#39;2012-01-01), (&#39;</span>Extreme Chess<span style="color:#f1fa8c">&#39;, &#39;</span><span style="color:#bd93f9">2014</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">06</span><span style="color:#ff79c6">-</span><span style="color:#bd93f9">01</span><span style="color:#f1fa8c">&#39;))
+</span></code></pre></div><p><code>CONTAINS</code> 操作符只作用在集合类的列中。为 map 的情况下， <code>CONTAINS</code> 指向 map 的值；若想指向 map 的键，应该使用 <code>CONTAINS KEY</code> 。</p>
 <h4 id="order-by"><code>&lt;order-by&gt;</code></h4>
 <p><code>ORDER BY</code> 选项可以指定返回结果的顺序。<code>ASC</code> 升序，<code>DESC</code> 降序，默认升序。依赖于表的 <code>CLUSTERING ORDER</code> 配置，存在以下限制：</p>
 <ul>
@@ -1162,10 +1162,10 @@ SELECT entry_title, content FROM posts WHERE userid='john doe' AND posted_at &gt
 <span style="color:#ff79c6">SELECT</span> firstname, lastname <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> birth_year <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1981</span>;
 </code></pre></div><p>Cassandra 保证这些查询的性能与返回的数据量成比例。实际上，如果没有1981年出生的用户，那么第二个查询的性能并不会依赖于数据库中存储的用户数据（至少不会是直接依赖。考虑到二级索引的实现，该查询可能仍然依赖于集群中的节点数量，而节点数量间接依赖于存储的数据量。）。当然，这两个查询实际上都可能返回非常大的结果集，但是都可以通过添加一个 <code>LIMIT</code> 参数来控制返回的数据量。</p>
 <p>不过下面这种就会被拒绝执行：</p>
-<pre><code>SELECT firstname, lastname FROM users WHERE birth_year = 1981 AND country = 'FR';
-</code></pre><p>因为 Cassandra 不能保证它不会扫描大量数据，即使实际的结果量其实很小。一般来说，即使只有少数人真正来自法国，它依然会扫描所有1981年出生用户的索引条目。但如果你确实知道你在做什么，那么可以加上 <code>ALLOW FILTERING</code> 让查询变得合法：</p>
-<pre><code>SELECT firstname, lastname FROM users WHERE birth_year = 1981 AND country = 'FR' ALLOW FILTERING;
-</code></pre><h2 id="数据库角色权限控制">数据库角色/权限控制</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> firstname, lastname <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> birth_year <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1981</span> <span style="color:#ff79c6">AND</span> country <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;FR&#39;</span>;
+</code></pre></div><p>因为 Cassandra 不能保证它不会扫描大量数据，即使实际的结果量其实很小。一般来说，即使只有少数人真正来自法国，它依然会扫描所有1981年出生用户的索引条目。但如果你确实知道你在做什么，那么可以加上 <code>ALLOW FILTERING</code> 让查询变得合法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> firstname, lastname <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> birth_year <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1981</span> <span style="color:#ff79c6">AND</span> country <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;FR&#39;</span> <span style="color:#ff79c6">ALLOW</span> <span style="color:#ff79c6">FILTERING</span>;
+</code></pre></div><h2 id="数据库角色权限控制">数据库角色/权限控制</h2>
 <p>暂时接触不上，以后再补充。</p>
 <h2 id="数据类型">数据类型</h2>
 <p>CQL 支持丰富的类型来定义表中的列，其中包括集合类型和用户自定义类型（通过继承 Cassandra 提供。</p>
@@ -1369,64 +1369,64 @@ SELECT entry_title, content FROM posts WHERE userid='john doe' AND posted_at &gt
 </ul>
 <h4 id="maps">Maps</h4>
 <p><code>map</code> 是一组键值对，且键是唯一的。此外，map 在内部是按键排序的，并且总是按照这个顺序返回。创建 map 的例子：</p>
-<pre><code>CREATE TABLE users (
-    id text PRIMARY KEY,
-    given text,
-    surname text,
-    favs map&lt;text, text&gt;   // A map of text keys, and text values
-)
-</code></pre><p>写入 map 数据使用的是 JSON 式的语法。如果要使用 <code>INSERT</code> 写入一条数据，则将整个 map 指定为 json 风格的关联数组（注意，这种会替换掉整个 map）：</p>
-<pre><code>// Inserting (or Updating)
-INSERT INTO users (id, given, surname, favs)
-           VALUES ('jsmith', 'John', 'Smith', { 'fruit' : 'apple', 'band' : 'Beatles' })
-</code></pre><p>可以使用 <code>UPDATE</code> 更新 map 中的部分数据或添加新数据：</p>
-<pre><code>// Updating (or inserting)
-UPDATE users SET favs['author'] = 'Ed Poe' WHERE id = 'jsmith'
-UPDATE users SET favs = favs +  { 'movie' : 'Cassablanca' } WHERE id = 'jsmith'
-</code></pre><p><code>TTL</code> 可以用于 <code>INSERT</code> 和 <code>UPDATE</code>，但都只对新插入/更新的值有效。比如：</p>
-<pre><code>// Updating (or inserting)
-UPDATE users USING TTL 10 SET favs['color'] = 'green' WHERE id = 'jsmith'
-</code></pre><p>TTL 只作用在  <code>{ 'color' : 'green' }</code>  中，map 的其他值则不会受到影响。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> <span style="color:#ff79c6">users</span> (
+    id <span style="color:#8be9fd;font-style:italic">text</span> <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
+    given <span style="color:#8be9fd;font-style:italic">text</span>,
+    surname <span style="color:#8be9fd;font-style:italic">text</span>,
+    favs <span style="color:#8be9fd;font-style:italic">map</span><span style="color:#ff79c6">&lt;</span><span style="color:#8be9fd;font-style:italic">text</span>, <span style="color:#8be9fd;font-style:italic">text</span><span style="color:#ff79c6">&gt;</span>   <span style="color:#6272a4">// A map of text keys, and text values
+</span><span style="color:#6272a4"></span>)
+</code></pre></div><p>写入 map 数据使用的是 JSON 式的语法。如果要使用 <code>INSERT</code> 写入一条数据，则将整个 map 指定为 json 风格的关联数组（注意，这种会替换掉整个 map）：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#6272a4">// Inserting (or Updating)
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> <span style="color:#ff79c6">users</span> (id, given, surname, favs)
+           <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;jsmith&#39;</span>, <span style="color:#f1fa8c">&#39;John&#39;</span>, <span style="color:#f1fa8c">&#39;Smith&#39;</span>, { <span style="color:#f1fa8c">&#39;fruit&#39;</span> : <span style="color:#f1fa8c">&#39;apple&#39;</span>, <span style="color:#f1fa8c">&#39;band&#39;</span> : <span style="color:#f1fa8c">&#39;Beatles&#39;</span> })
+</code></pre></div><p>可以使用 <code>UPDATE</code> 更新 map 中的部分数据或添加新数据：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#6272a4">// Updating (or inserting)
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">UPDATE</span> <span style="color:#ff79c6">users</span> <span style="color:#8be9fd;font-style:italic">SET</span> favs[<span style="color:#f1fa8c">&#39;author&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Ed Poe&#39;</span> <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;jsmith&#39;</span>
+<span style="color:#ff79c6">UPDATE</span> <span style="color:#ff79c6">users</span> <span style="color:#8be9fd;font-style:italic">SET</span> favs <span style="color:#ff79c6">=</span> favs <span style="color:#ff79c6">+</span>  { <span style="color:#f1fa8c">&#39;movie&#39;</span> : <span style="color:#f1fa8c">&#39;Cassablanca&#39;</span> } <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;jsmith&#39;</span>
+</code></pre></div><p><code>TTL</code> 可以用于 <code>INSERT</code> 和 <code>UPDATE</code>，但都只对新插入/更新的值有效。比如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#6272a4">// Updating (or inserting)
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">UPDATE</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">USING</span> <span style="color:#ff79c6">TTL</span> <span style="color:#bd93f9">10</span> <span style="color:#8be9fd;font-style:italic">SET</span> favs[<span style="color:#f1fa8c">&#39;color&#39;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;green&#39;</span> <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;jsmith&#39;</span>
+</code></pre></div><p>TTL 只作用在  <code>{ 'color' : 'green' }</code>  中，map 的其他值则不会受到影响。</p>
 <p>删除一个 map 记录：</p>
-<pre><code>DELETE favs['author'] FROM users WHERE id = 'jsmith'
-</code></pre><h4 id="sets">Sets</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">DELETE</span> favs[<span style="color:#f1fa8c">&#39;author&#39;</span>] <span style="color:#ff79c6">FROM</span> <span style="color:#ff79c6">users</span> <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;jsmith&#39;</span>
+</code></pre></div><h4 id="sets">Sets</h4>
 <p>Set 是唯一值的类型化集合，由其中的值进行排序。创建一个 set：</p>
-<pre><code>CREATE TABLE images (
-    name text PRIMARY KEY,
-    owner text,
-    date timestamp,
-    tags set&lt;text&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> images (
+    name <span style="color:#8be9fd;font-style:italic">text</span> <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
+    owner <span style="color:#8be9fd;font-style:italic">text</span>,
+    <span style="color:#8be9fd;font-style:italic">date</span> <span style="color:#8be9fd;font-style:italic">timestamp</span>,
+    tags <span style="color:#8be9fd;font-style:italic">set</span><span style="color:#ff79c6">&lt;</span><span style="color:#8be9fd;font-style:italic">text</span><span style="color:#ff79c6">&gt;</span>
 );
-</code></pre><p>写入一个 set：</p>
-<pre><code>INSERT INTO images (name, owner, date, tags)
-            VALUES ('cat.jpg', 'jsmith', 'now', { 'kitten', 'cat', 'pet' });
-</code></pre><p>注意：<code>INSERT</code> 总是会替换掉整个 set。</p>
+</code></pre></div><p>写入一个 set：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> images (name, owner, <span style="color:#8be9fd;font-style:italic">date</span>, tags)
+            <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;cat.jpg&#39;</span>, <span style="color:#f1fa8c">&#39;jsmith&#39;</span>, <span style="color:#f1fa8c">&#39;now&#39;</span>, { <span style="color:#f1fa8c">&#39;kitten&#39;</span>, <span style="color:#f1fa8c">&#39;cat&#39;</span>, <span style="color:#f1fa8c">&#39;pet&#39;</span> });
+</code></pre></div><p>注意：<code>INSERT</code> 总是会替换掉整个 set。</p>
 <p>可以通过 <code>UPDATE</code> 在现有 set 中添加/删除新 set 值来添加和删除集合的值。</p>
-<pre><code>UPDATE images SET tags = tags + { 'cute', 'cuddly' } WHERE name = 'cat.jpg';
-UPDATE images SET tags = tags - { 'lame' } WHERE name = 'cat.jpg';
-</code></pre><p>跟 map 一样，TTL 只作用在新插入/更新的值上。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">UPDATE</span> images <span style="color:#8be9fd;font-style:italic">SET</span> tags <span style="color:#ff79c6">=</span> tags <span style="color:#ff79c6">+</span> { <span style="color:#f1fa8c">&#39;cute&#39;</span>, <span style="color:#f1fa8c">&#39;cuddly&#39;</span> } <span style="color:#ff79c6">WHERE</span> name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;cat.jpg&#39;</span>;
+<span style="color:#ff79c6">UPDATE</span> images <span style="color:#8be9fd;font-style:italic">SET</span> tags <span style="color:#ff79c6">=</span> tags <span style="color:#ff79c6">-</span> { <span style="color:#f1fa8c">&#39;lame&#39;</span> } <span style="color:#ff79c6">WHERE</span> name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;cat.jpg&#39;</span>;
+</code></pre></div><p>跟 map 一样，TTL 只作用在新插入/更新的值上。</p>
 <h4 id="lists">Lists</h4>
 <p>List 是一种非唯一值的类型化集合，其中元素按 list 中的位置排序。创建一个 list：</p>
-<pre><code>CREATE TABLE plays (
-    id text PRIMARY KEY,
-    game text,
-    players int,
-    scores list&lt;int&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> plays (
+    id <span style="color:#8be9fd;font-style:italic">text</span> <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
+    game <span style="color:#8be9fd;font-style:italic">text</span>,
+    players <span style="color:#8be9fd;font-style:italic">int</span>,
+    scores <span style="color:#8be9fd;font-style:italic">list</span><span style="color:#ff79c6">&lt;</span><span style="color:#8be9fd;font-style:italic">int</span><span style="color:#ff79c6">&gt;</span>
 )
-</code></pre><p>需要注意，list 存在一些限制和需要考虑的性能约束，比起 list 应尽可能优先使用 set。</p>
+</code></pre></div><p>需要注意，list 存在一些限制和需要考虑的性能约束，比起 list 应尽可能优先使用 set。</p>
 <p>写入 list ：</p>
-<pre><code>INSERT INTO plays (id, game, players, scores)
-           VALUES ('123-afde', 'quake', 3, [17, 4, 2]);
-</code></pre><p>注意：<code>INSERT</code> 总是会替换掉整个 list。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">INSERT</span> <span style="color:#ff79c6">INTO</span> plays (id, game, players, scores)
+           <span style="color:#ff79c6">VALUES</span> (<span style="color:#f1fa8c">&#39;123-afde&#39;</span>, <span style="color:#f1fa8c">&#39;quake&#39;</span>, <span style="color:#bd93f9">3</span>, [<span style="color:#bd93f9">17</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">2</span>]);
+</code></pre></div><p>注意：<code>INSERT</code> 总是会替换掉整个 list。</p>
 <p>在已存在 list 的头部或尾部插入部分新的数据：</p>
-<pre><code>UPDATE plays SET players = 5, scores = scores + [ 14, 21 ] WHERE id = '123-afde';
-UPDATE plays SET players = 5, scores = [ 12 ] + scores WHERE id = '123-afde';
-</code></pre><p>注意：添加操作并非幂等的，因此如果采用失败重试的策略，有可能会往 list 中重复插入相同的值。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">UPDATE</span> plays <span style="color:#8be9fd;font-style:italic">SET</span> players <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>, scores <span style="color:#ff79c6">=</span> scores <span style="color:#ff79c6">+</span> [ <span style="color:#bd93f9">14</span>, <span style="color:#bd93f9">21</span> ] <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;123-afde&#39;</span>;
+<span style="color:#ff79c6">UPDATE</span> plays <span style="color:#8be9fd;font-style:italic">SET</span> players <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>, scores <span style="color:#ff79c6">=</span> [ <span style="color:#bd93f9">12</span> ] <span style="color:#ff79c6">+</span> scores <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;123-afde&#39;</span>;
+</code></pre></div><p>注意：添加操作并非幂等的，因此如果采用失败重试的策略，有可能会往 list 中重复插入相同的值。</p>
 <p>List 还提供了以下操作：根据元素在 list 中的位置设置、删除元素；删除列表中给定值的所有出现项。然而，与所有其他集合操作不同，这三种操作会在更新之前触发内部读取，导致性能通常较慢。</p>
-<pre><code>UPDATE plays SET scores[1] = 7 WHERE id = '123-afde';                // sets the 2nd element of scores to 7 (raises an error is scores has less than 2 elements)
-DELETE scores[1] FROM plays WHERE id = '123-afde';                   // deletes the 2nd element of scores (raises an error is scores has less than 2 elements)
-UPDATE plays SET scores = scores - [ 12, 21 ] WHERE id = '123-afde'; // removes all occurrences of 12 and 21 from scores
-</code></pre><p>与 map 相同，TTL 仅作用在新插入/更新的值上。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">UPDATE</span> plays <span style="color:#8be9fd;font-style:italic">SET</span> scores[<span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">7</span> <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;123-afde&#39;</span>;                <span style="color:#6272a4">// sets the 2nd element of scores to 7 (raises an error is scores has less than 2 elements)
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">DELETE</span> scores[<span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">FROM</span> plays <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;123-afde&#39;</span>;                   <span style="color:#6272a4">// deletes the 2nd element of scores (raises an error is scores has less than 2 elements)
+</span><span style="color:#6272a4"></span><span style="color:#ff79c6">UPDATE</span> plays <span style="color:#8be9fd;font-style:italic">SET</span> scores <span style="color:#ff79c6">=</span> scores <span style="color:#ff79c6">-</span> [ <span style="color:#bd93f9">12</span>, <span style="color:#bd93f9">21</span> ] <span style="color:#ff79c6">WHERE</span> id <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;123-afde&#39;</span>; <span style="color:#6272a4">// removes all occurrences of 12 and 21 from scores
+</span></code></pre></div><p>与 map 相同，TTL 仅作用在新插入/更新的值上。</p>
 <h2 id="函数">函数</h2>
 <p>CQL3 区分了内置函数（也称本地函数 native functions）和用户自定义函数。CQL3 包括了以下几种本地函数：</p>
 <h3 id="token">Token</h3>
@@ -1438,23 +1438,23 @@ UPDATE plays SET scores = scores - [ 12, 21 ] WHERE id = '123-afde'; // removes 
 <li>ByteOrderedPartitioner： <code>blob</code></li>
 </ul>
 <p>举个例子，在使用默认 Murmur3Partitioner 分区器的集群中，如果表被定义为：</p>
-<pre><code>CREATE TABLE users (
-    userid text PRIMARY KEY,
-    username text,
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">TABLE</span> <span style="color:#ff79c6">users</span> (
+    userid <span style="color:#8be9fd;font-style:italic">text</span> <span style="color:#ff79c6">PRIMARY</span> <span style="color:#ff79c6">KEY</span>,
+    username <span style="color:#8be9fd;font-style:italic">text</span>,
     ...
 )
-</code></pre><p>token 函数则将接受单独一个 <code>text</code> 类型的入参，然后返回的类型为 <code>bigint</code>。</p>
+</code></pre></div><p>token 函数则将接受单独一个 <code>text</code> 类型的入参，然后返回的类型为 <code>bigint</code>。</p>
 <h3 id="uuid">Uuid</h3>
 <p><code>uuid</code> 函数不需要入参，生成一个随机的 Version 4 UUID 用于 <code>INSERT</code> 或 <code>SET</code> 语句中。</p>
 <h3 id="timeuuid-functions">Timeuuid functions</h3>
 <h4 id="now"><code>now</code></h4>
 <p><code>now</code> 函数不需要入参，会在执行语句时，在协调器节点上生成一个唯一的 timeuuid。注意虽然这个函数对于插入有用，但对于 <code>WHERE</code> 子句来说几乎毫无意义，比如：</p>
-<pre><code>SELECT * FROM myTable WHERE t = now()
-</code></pre><p>在设计上这条查询永远不会返回任何结果，因为 <code>now()</code> 生成的值是唯一的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> myTable <span style="color:#ff79c6">WHERE</span> t <span style="color:#ff79c6">=</span> now()
+</code></pre></div><p>在设计上这条查询永远不会返回任何结果，因为 <code>now()</code> 生成的值是唯一的。</p>
 <h4 id="mintimeuuid-与-maxtimeuuid"><code>minTimeuuid</code> 与 <code>maxTimeuuid</code></h4>
 <p><code>minTimeuuid</code>函数接收一个 <code>timestamp</code> 类型的入参 t （可以是长整数也可以是字符串），然后返回一个假造的 <code>timeuuid</code> ，对应此时间戳 t 可能的最小值 <code>timeuuid</code>。<code>maxTimeuuid</code> 则相反对应其最大值。例如：</p>
-<pre><code>SELECT * FROM myTable WHERE t &gt; maxTimeuuid('2013-01-01 00:05+0000') AND t &lt; minTimeuuid('2013-02-02 10:00+0000')
-</code></pre><p>这条会选择所有  <code>timeuuid</code> 列 t 中严格地比 ‘2013-01-01 00:05+0000’  晚但比 ‘2013-02-02 10:00+0000’ 早的所有行。请注意， <code>t &gt;= maxTimeuuid('2013-01-01 00:05+0000')</code> 依然不会选择精确地在 ‘2013-01-01 00:05+0000’  时生成的 <code>timeuuid</code> ，本质上等同于  <code>t &gt; maxTimeuuid('2013-01-01 00:05+0000')</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">FROM</span> myTable <span style="color:#ff79c6">WHERE</span> t <span style="color:#ff79c6">&gt;</span> maxTimeuuid(<span style="color:#f1fa8c">&#39;2013-01-01 00:05+0000&#39;</span>) <span style="color:#ff79c6">AND</span> t <span style="color:#ff79c6">&lt;</span> minTimeuuid(<span style="color:#f1fa8c">&#39;2013-02-02 10:00+0000&#39;</span>)
+</code></pre></div><p>这条会选择所有  <code>timeuuid</code> 列 t 中严格地比 ‘2013-01-01 00:05+0000’  晚但比 ‘2013-02-02 10:00+0000’ 早的所有行。请注意， <code>t &gt;= maxTimeuuid('2013-01-01 00:05+0000')</code> 依然不会选择精确地在 ‘2013-01-01 00:05+0000’  时生成的 <code>timeuuid</code> ，本质上等同于  <code>t &gt; maxTimeuuid('2013-01-01 00:05+0000')</code>。</p>
 <p>注意：我们称 <code>minTimeuuid</code> 和 <code>maxTimeuuid</code> 生成的值为假的 UUID，是因为它们并没有遵循 <a href="http://www.ietf.org/rfc/rfc4122.txt">RFC 4122</a> 的基于时间的UUID生成进程。特别是这两个函数返回的值并不是唯一的，因此你应该只能使用这些函数进行类似上文例子的查询。不要在插入数据时使用这些函数。</p>
 <h3 id="时间转换函数">时间转换函数</h3>
 <p>有一系列函数用于转换  <code>timeuuid</code>、 <code>timestamp</code>  或 <code>date</code> 类型值为另一种  <code>native</code>  类型。</p>
@@ -1521,20 +1521,20 @@ UPDATE plays SET scores = scores - [ 12, 21 ] WHERE id = '123-afde'; // removes 
 <p>CQL3区分了内置聚合（本地聚合）和用户自定义聚合，内置聚合函数有以下几种：</p>
 <h3 id="count">Count</h3>
 <p>用于计数返回的条数。</p>
-<pre><code>SELECT COUNT(*) FROM plays;
-SELECT COUNT(1) FROM plays;
-</code></pre><p>也可以用于计数给定列的非空值：</p>
-<pre><code>SELECT COUNT(scores) FROM plays;
-</code></pre><h3 id="max-和-min">Max 和 Min</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">COUNT</span>(<span style="color:#ff79c6">*</span>) <span style="color:#ff79c6">FROM</span> plays;
+<span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">COUNT</span>(<span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">FROM</span> plays;
+</code></pre></div><p>也可以用于计数给定列的非空值：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> <span style="color:#ff79c6">COUNT</span>(scores) <span style="color:#ff79c6">FROM</span> plays;
+</code></pre></div><h3 id="max-和-min">Max 和 Min</h3>
 <p>计算给定列在返回数据中的最大值、最小值。</p>
-<pre><code>SELECT MIN(players), MAX(players) FROM plays WHERE game = 'quake';
-</code></pre><h3 id="sum">Sum</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> MIN(players), MAX(players) <span style="color:#ff79c6">FROM</span> plays <span style="color:#ff79c6">WHERE</span> game <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;quake&#39;</span>;
+</code></pre></div><h3 id="sum">Sum</h3>
 <p>计算累加值。</p>
-<pre><code>SELECT SUM(players) FROM plays;
-</code></pre><h3 id="avg">Avg</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> SUM(players) <span style="color:#ff79c6">FROM</span> plays;
+</code></pre></div><h3 id="avg">Avg</h3>
 <p>计算平均值。</p>
-<pre><code>SELECT AVG(players) FROM plays;
-</code></pre><h2 id="用户自定义函数聚合">用户自定义函数/聚合</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CQL" data-lang="CQL"><span style="color:#ff79c6">SELECT</span> AVG(players) <span style="color:#ff79c6">FROM</span> plays;
+</code></pre></div><h2 id="用户自定义函数聚合">用户自定义函数/聚合</h2>
 <p>暂略。</p>
 <h2 id="json-支持">JSON 支持</h2>
 <p>Cassandra 2.2 开始引入了 <code>SELECT</code> 和 <code>INSERT</code> 语句的 JSON 支持。这种支持并没有从根本上改变 CQL API，只是提供了一种简便的方法去与 JSON 文档协作。</p>

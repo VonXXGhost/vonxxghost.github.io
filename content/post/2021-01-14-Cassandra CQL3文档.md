@@ -103,7 +103,7 @@ categories: [ tech ]
 
 *Sample:*
 
-```
+```CQL
 CREATE KEYSPACE Excelsior
            WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 3};
 
@@ -135,7 +135,7 @@ CREATE KEYSPACE Excalibur
 
 *Sample:*
 
-```
+```CQL
 USE myApp;
 ```
 
@@ -149,7 +149,7 @@ USE myApp;
 
 *Sample:*
 
-```
+```CQL
 ALTER KEYSPACE Excelsior
           WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 4};
 ```
@@ -166,7 +166,7 @@ ALTER KEYSPACE Excelsior
 
 *Sample:*
 
-```
+```CQL
 DROP KEYSPACE myApp;
 ```
 
@@ -196,7 +196,7 @@ DROP KEYSPACE myApp;
 
 *Sample:*
 
-```
+```CQL
 CREATE TABLE monkeySpecies (
     species text PRIMARY KEY,
     common_name text,
@@ -231,7 +231,7 @@ CREATE TABLE timeline (
 
 `STATIC` 静态栏会使同一个分区键的每一行共享同一个数据。
 
-```
+```CQL
 CREATE TABLE test (
     pk int,
     t int,
@@ -331,7 +331,7 @@ SELECT * FROM test WHERE pk=0 AND t=0;
 
 *Sample:*
 
-```
+```CQL
 ALTER TABLE addamsFamily
 ALTER lastKnownLocation TYPE uuid;
 
@@ -361,7 +361,7 @@ WITH comment = 'A most excellent and useful column family'
 
 *Sample:*
 
-```
+```CQL
 DROP TABLE worldSeriesAttendees;
 ```
 
@@ -375,7 +375,7 @@ DROP TABLE worldSeriesAttendees;
 
 *Sample:*
 
-```
+```CQL
 TRUNCATE superImportantData;
 ```
 
@@ -394,7 +394,7 @@ TRUNCATE superImportantData;
 
 *Sample:*
 
-```
+```CQL
 CREATE INDEX userIndex ON NerdMovies (user);
 CREATE INDEX ON Mutants (abilityId);
 CREATE INDEX ON users (keys(favs));
@@ -416,7 +416,7 @@ CREATE CUSTOM INDEX ON users (email) USING 'path.to.the.IndexClass' WITH OPTIONS
 
 *Sample:*
 
-```
+```CQL
 DROP INDEX userIndex;
 
 DROP INDEX userkeyspace.address_index;
@@ -441,7 +441,7 @@ DROP INDEX userkeyspace.address_index;
 
 *Sample:*
 
-```
+```CQL
 CREATE TYPE address (
     street_name text,
     street_number int,
@@ -478,7 +478,7 @@ CREATE TYPE work_and_home_addresses (
 
 *Sample:*
 
-```
+```CQL
 ALTER TYPE address ALTER zip TYPE varint
 
 ALTER TYPE address ADD country text
@@ -510,7 +510,7 @@ ALTER TYPE address RENAME zip TO zipcode AND street_name TO street
 
 *Sample:*
 
-```
+```CQL
 CREATE TRIGGER myTrigger ON myTable USING 'org.apache.cassandra.triggers.InvertedIndex';
 ```
 
@@ -527,7 +527,7 @@ CREATE TRIGGER myTrigger ON myTable USING 'org.apache.cassandra.triggers.Inverte
 
 *Sample:*
 
-```
+```CQL
 DROP TRIGGER myTrigger ON myTable;
 ```
 
@@ -548,7 +548,7 @@ DROP TRIGGER myTrigger ON myTable;
 
 *Sample:*
 
-```
+```CQL
 CREATE OR REPLACE FUNCTION somefunction
     ( somearg int, anotherarg text, complexarg frozen<someUDT>, listarg list<bigint> )
     RETURNS NULL ON NULL INPUT
@@ -581,7 +581,7 @@ CREATE FUNCTION akeyspace.fname IF NOT EXISTS
 
 *Sample:*
 
-```
+```CQL
 DROP FUNCTION myfunction;
 DROP FUNCTION mykeyspace.afunction;
 DROP FUNCTION afunction ( int );
@@ -607,7 +607,7 @@ DROP FUNCTION afunction ( text );
 
 *Sample:*
 
-```
+```CQL
 CREATE AGGREGATE myaggregate ( val text )
   SFUNC myaggregate_state
   STYPE text
@@ -631,7 +631,7 @@ CREATE AGGREGATE myaggregate ( val text )
 
 *Sample:*
 
-```
+```CQL
 DROP AGGREGATE myAggregate;
 DROP AGGREGATE myKeyspace.anAggregate;
 DROP AGGREGATE someAggregate ( int );
@@ -666,7 +666,7 @@ DROP AGGREGATE someAggregate ( text );
 
 *Sample:*
 
-```
+```CQL
 INSERT INTO NerdMovies (movie, director, main_actor, year)
                 VALUES ('Serenity', 'Joss Whedon', 'Nathan Fillion', 2005)
 USING TTL 86400;
@@ -720,7 +720,7 @@ INSERT INTO NerdMovies JSON '{"movie": "Serenity", "director": "Joss Whedon", "y
 
 *Sample:*
 
-```
+```CQL
 UPDATE NerdMovies USING TTL 400
 SET director = 'Joss Whedon',
     main_actor = 'Nathan Fillion',
@@ -777,7 +777,7 @@ UPDATE UserActions SET total = total + 2 WHERE user = B70DE1D0-9908-4AE3-BE34-55
 
 *Sample:*
 
-```
+```CQL
 DELETE FROM NerdMovies USING TIMESTAMP 1240003134 WHERE movie = 'Serenity';
 
 DELETE phone FROM Users WHERE userid IN (C73DE1D3-AF08-40F3-B124-3FF3E5109F22, B70DE1D0-9908-4AE3-BE34-5573E5B09F14);
@@ -807,7 +807,7 @@ DELETE phone FROM Users WHERE userid IN (C73DE1D3-AF08-40F3-B124-3FF3E5109F22, B
 
 *Sample:*
 
-```
+```CQL
 BEGIN BATCH
   INSERT INTO users (userid, password, name) VALUES ('user2', 'ch@ngem3b', 'second user');
   UPDATE users SET password = 'ps22dhds' WHERE userid = 'user3';
@@ -882,7 +882,7 @@ APPLY BATCH;
 
 *Sample:*
 
-```
+```CQL
 SELECT name, occupation FROM users WHERE userid IN (199, 200, 207);
 
 SELECT JSON name, occupation FROM users WHERE userid = 199;
@@ -918,7 +918,7 @@ SELECT COUNT(*) AS user_count FROM users;
 
 并非所有关系都允许在查询中使用。比如不支持在分区键上使用“不等于”关系（但是可以参考下文的 `TOKEN` 方法对分区键执行不等于查询）。以及，对于一个给定的分区键，其聚集键仅允许选择一组连续行的关系。比如对于以下表：
 
-```
+```CQL
 CREATE TABLE posts (
     userid text,
     blog_title text,
@@ -932,20 +932,20 @@ CREATE TABLE posts (
 
 这一句查询是可行的：
 
-```
+```CQL
 SELECT entry_title, content FROM posts WHERE userid='john doe' AND blog_title='John''s Blog' AND posted_at >= '2012-01-01' AND posted_at < '2012-01-31'
 ```
 
 但以下这一句不可行，因为其没有选择一组连续的行（假设没有设置二级索引）：
 
-```
+```CQL
 // Needs a blog_title to be set to select ranges of posted_at
 SELECT entry_title, content FROM posts WHERE userid='john doe' AND posted_at >= '2012-01-01' AND posted_at < '2012-01-31'
 ```
 
 在指定关系时，`TOKEN` 函数可以被用于分区键的查询。在这种情况下，将根据分区键的 token 而不是它们的值来进行选择。注意，键的 token 依赖于被使用的分区器，尤其是， RandomPartitioner 不会产生有意义的顺序。同时还要注意，排序分区器总是根据字节来进行 token 值的排序，所以即便分区键的值是 int 型，实际上却是`token(-1) > token(0)`。比如：
 
-```
+```CQL
 SELECT * FROM posts WHERE token(userid) > token('tom') AND token(userid) < token('bob')
 ```
 
@@ -953,19 +953,19 @@ SELECT * FROM posts WHERE token(userid) > token('tom') AND token(userid) < token
 
 可以对聚集键使用元组标识进行组合查询，比如：
 
-```
+```CQL
 SELECT * FROM posts WHERE userid='john doe' AND (blog_title, posted_at) > ('John''s Blog', '2012-01-01')
 ```
 
 这会返回排序在 `blog_tile` = `John's Blog` 且  `posted_at`  = `2012-01-01` 之后的行。事实上，只要这些行的r `blog_title > 'John''s Blog'`，即便其 `post_at <= '2012-01-01'` ，结果依然会返回。如果不想出现这种结果，那应该使用以下这种：
 
-```
+```CQL
 SELECT * FROM posts WHERE userid='john doe' AND blog_title > 'John''s Blog' AND posted_at > '2012-01-01'
 ```
 
 元组标识同样可以用于聚集键的 `IN` 子句中：
 
-```
+```CQL
 SELECT * FROM posts WHERE userid='john doe' AND (blog_title, posted_at) IN (('John''s Blog', '2012-01-01), ('Extreme Chess', '2014-06-01'))
 ```
 
@@ -1013,13 +1013,13 @@ Cassandra 保证这些查询的性能与返回的数据量成比例。实际上�
 
 不过下面这种就会被拒绝执行：
 
-```
+```CQL
 SELECT firstname, lastname FROM users WHERE birth_year = 1981 AND country = 'FR';
 ```
 
 因为 Cassandra 不能保证它不会扫描大量数据，即使实际的结果量其实很小。一般来说，即使只有少数人真正来自法国，它依然会扫描所有1981年出生用户的索引条目。但如果你确实知道你在做什么，那么可以加上 `ALLOW FILTERING` 让查询变得合法：
 
-```
+```CQL
 SELECT firstname, lastname FROM users WHERE birth_year = 1981 AND country = 'FR' ALLOW FILTERING;
 ```
 
@@ -1160,7 +1160,7 @@ CQL 中日期可以使用一个无符号整数也可以使用以下格式的字�
 
  `map` 是一组键值对，且键是唯一的。此外，map 在内部是按键排序的，并且总是按照这个顺序返回。创建 map 的例子：
 
-```
+```CQL
 CREATE TABLE users (
     id text PRIMARY KEY,
     given text,
@@ -1171,7 +1171,7 @@ CREATE TABLE users (
 
 写入 map 数据使用的是 JSON 式的语法。如果要使用 `INSERT` 写入一条数据，则将整个 map 指定为 json 风格的关联数组（注意，这种会替换掉整个 map）：
 
-```
+```CQL
 // Inserting (or Updating)
 INSERT INTO users (id, given, surname, favs)
            VALUES ('jsmith', 'John', 'Smith', { 'fruit' : 'apple', 'band' : 'Beatles' })
@@ -1179,7 +1179,7 @@ INSERT INTO users (id, given, surname, favs)
 
 可以使用 `UPDATE` 更新 map 中的部分数据或添加新数据：
 
-```
+```CQL
 // Updating (or inserting)
 UPDATE users SET favs['author'] = 'Ed Poe' WHERE id = 'jsmith'
 UPDATE users SET favs = favs +  { 'movie' : 'Cassablanca' } WHERE id = 'jsmith'
@@ -1187,7 +1187,7 @@ UPDATE users SET favs = favs +  { 'movie' : 'Cassablanca' } WHERE id = 'jsmith'
 
 `TTL` 可以用于 `INSERT` 和 `UPDATE`，但都只对新插入/更新的值有效。比如：
 
-```
+```CQL
 // Updating (or inserting)
 UPDATE users USING TTL 10 SET favs['color'] = 'green' WHERE id = 'jsmith'
 ```
@@ -1196,7 +1196,7 @@ TTL 只作用在  `{ 'color' : 'green' }`  中，map 的其他值则不会受到
 
 删除一个 map 记录：
 
-```
+```CQL
 DELETE favs['author'] FROM users WHERE id = 'jsmith'
 ```
 
@@ -1204,7 +1204,7 @@ DELETE favs['author'] FROM users WHERE id = 'jsmith'
 
 Set 是唯一值的类型化集合，由其中的值进行排序。创建一个 set：
 
-```
+```CQL
 CREATE TABLE images (
     name text PRIMARY KEY,
     owner text,
@@ -1215,7 +1215,7 @@ CREATE TABLE images (
 
 写入一个 set：
 
-```
+```CQL
 INSERT INTO images (name, owner, date, tags)
             VALUES ('cat.jpg', 'jsmith', 'now', { 'kitten', 'cat', 'pet' });
 ```
@@ -1224,7 +1224,7 @@ INSERT INTO images (name, owner, date, tags)
 
 可以通过 `UPDATE` 在现有 set 中添加/删除新 set 值来添加和删除集合的值。
 
-```
+```CQL
 UPDATE images SET tags = tags + { 'cute', 'cuddly' } WHERE name = 'cat.jpg';
 UPDATE images SET tags = tags - { 'lame' } WHERE name = 'cat.jpg';
 ```
@@ -1235,7 +1235,7 @@ UPDATE images SET tags = tags - { 'lame' } WHERE name = 'cat.jpg';
 
 List 是一种非唯一值的类型化集合，其中元素按 list 中的位置排序。创建一个 list：
 
-```
+```CQL
 CREATE TABLE plays (
     id text PRIMARY KEY,
     game text,
@@ -1248,7 +1248,7 @@ CREATE TABLE plays (
 
 写入 list ：
 
-```
+```CQL
 INSERT INTO plays (id, game, players, scores)
            VALUES ('123-afde', 'quake', 3, [17, 4, 2]);
 ```
@@ -1257,7 +1257,7 @@ INSERT INTO plays (id, game, players, scores)
 
 在已存在 list 的头部或尾部插入部分新的数据：
 
-```
+```CQL
 UPDATE plays SET players = 5, scores = scores + [ 14, 21 ] WHERE id = '123-afde';
 UPDATE plays SET players = 5, scores = [ 12 ] + scores WHERE id = '123-afde';
 ```
@@ -1266,7 +1266,7 @@ UPDATE plays SET players = 5, scores = [ 12 ] + scores WHERE id = '123-afde';
 
 List 还提供了以下操作：根据元素在 list 中的位置设置、删除元素；删除列表中给定值的所有出现项。然而，与所有其他集合操作不同，这三种操作会在更新之前触发内部读取，导致性能通常较慢。
 
-```
+```CQL
 UPDATE plays SET scores[1] = 7 WHERE id = '123-afde';                // sets the 2nd element of scores to 7 (raises an error is scores has less than 2 elements)
 DELETE scores[1] FROM plays WHERE id = '123-afde';                   // deletes the 2nd element of scores (raises an error is scores has less than 2 elements)
 UPDATE plays SET scores = scores - [ 12, 21 ] WHERE id = '123-afde'; // removes all occurrences of 12 and 21 from scores
@@ -1290,7 +1290,7 @@ token 的参数类型取决于分区键列的类型，返回类型取决于所�
 
 举个例子，在使用默认 Murmur3Partitioner 分区器的集群中，如果表被定义为：
 
-```
+```CQL
 CREATE TABLE users (
     userid text PRIMARY KEY,
     username text,
@@ -1310,7 +1310,7 @@ token 函数则将接受单独一个 `text` 类型的入参，然后返回的类
 
 `now` 函数不需要入参，会在执行语句时，在协调器节点上生成一个唯一的 timeuuid。注意虽然这个函数对于插入有用，但对于 `WHERE` 子句来说几乎毫无意义，比如：
 
-```
+```CQL
 SELECT * FROM myTable WHERE t = now()
 ```
 
@@ -1320,7 +1320,7 @@ SELECT * FROM myTable WHERE t = now()
 
 `minTimeuuid`函数接收一个 `timestamp` 类型的入参 t （可以是长整数也可以是字符串），然后返回一个假造的 `timeuuid` ，对应此时间戳 t 可能的最小值 `timeuuid`。`maxTimeuuid` 则相反对应其最大值。例如：
 
-```
+```CQL
 SELECT * FROM myTable WHERE t > maxTimeuuid('2013-01-01 00:05+0000') AND t < minTimeuuid('2013-02-02 10:00+0000')
 ```
 
@@ -1358,14 +1358,14 @@ CQL3区分了内置聚合（本地聚合）和用户自定义聚合，内置聚�
 
 用于计数返回的条数。
 
-```
+```CQL
 SELECT COUNT(*) FROM plays;
 SELECT COUNT(1) FROM plays;
 ```
 
 也可以用于计数给定列的非空值：
 
-```
+```CQL
 SELECT COUNT(scores) FROM plays;
 ```
 
@@ -1373,7 +1373,7 @@ SELECT COUNT(scores) FROM plays;
 
 计算给定列在返回数据中的最大值、最小值。
 
-```
+```CQL
 SELECT MIN(players), MAX(players) FROM plays WHERE game = 'quake';
 ```
 
@@ -1381,7 +1381,7 @@ SELECT MIN(players), MAX(players) FROM plays WHERE game = 'quake';
 
 计算累加值。
 
-```
+```CQL
 SELECT SUM(players) FROM plays;
 ```
 
@@ -1389,7 +1389,7 @@ SELECT SUM(players) FROM plays;
 
 计算平均值。
 
-```
+```CQL
 SELECT AVG(players) FROM plays;
 ```
 
