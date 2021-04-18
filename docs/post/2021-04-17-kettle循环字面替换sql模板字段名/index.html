@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="V-ISLAND">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://vonxxghost.xyz/img/home-bg.jpg">
+    <meta property="twitter:image" content="https://vonxxghost.xyz/img/home-bg.jpg" />
+    
+
+    
+    <meta name="title" content="Kettle循环字面替换SQL模板字段名" />
+    <meta property="og:title" content="Kettle循环字面替换SQL模板字段名" />
+    <meta property="twitter:title" content="Kettle循环字面替换SQL模板字段名" />
+    
+
+    
+    <meta name="description" content="VonXXGhostのつぶやき">
+    <meta property="og:description" content="VonXXGhostのつぶやき" />
+    <meta property="twitter:description" content="VonXXGhostのつぶやき" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Kettle循环字面替换SQL模板字段名-VonXXGhost Blog</title>
+
+    <link rel="canonical" href="/post/2021-04-17-kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2sql%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">V-ISLAND</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="/top/works/">WORKS</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+		    <li>
+                        <a href="/search">SEARCH <img src="/img/search.png" height="15" style="cursor: pointer;" alt="Search"></a>
+		    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E6%8A%80%E6%9C%AF" title="技术">
+                            技术
+                        </a>
+                        
+                        <a class="tag" href="/tags/kettle" title="Kettle">
+                            Kettle
+                        </a>
+                        
+                    </div>
+                    <h1>Kettle循环字面替换SQL模板字段名</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                VonXXGhost
+                         
+                        on 
+                        April 17, 2021
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h2>本文目录</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#实现">实现</a>
+          <ul>
+            <li><a href="#tldr">TL;DR</a></li>
+            <li><a href="#作业的整体结构">作业的整体结构</a></li>
+            <li><a href="#字段名输出">字段名输出</a></li>
+            <li><a href="#sql变量赋值">SQL变量赋值</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                
+                <p>近日遇到的一个需求，需要对 10+ 张表的所有字段做定期的统计分析，将几张表的统计结果汇总到单独一张汇报表里，并且尽量基于 Kettle 完成。因此，需要在 Kettle 的“表输入”组件中，实现 SQL 模板字面替换变量值的功能，也就是能实现 <code>SELECT ${field} from table where ${field} &gt; 0</code> 这种替换，而并非自动处理成字符串的一般占位符替换： <code>SELECT field FROM table where id = ?</code>，并且这个变量值是可以循环赋值的，一次流程要跑几百上千条这种对应不同字段名模板。</p>
+<p>这个需求每一点单独拿出来做其实都很简单的，字面替换可以使用“变量替换”实现、循环赋值可以使用“执行每一条”实现，但结合在一起就不太好搞了，因为 Kettle 的变量作用域是非常大的，没办法直接在一个 klr 里完成 “读取字段集 → 将每一行赋值为变量 → 替换 SQL 模板中的变量值 → 完成 ETL 操作” 这一系列的操作（或者也许有，但我没发现）。查阅了很多资料，大部分人的需求都只是需要替换右值，需要依赖前一步骤的结果集进行字段名本身的替换的非常少，Kettle 也不算使用热度非常高的软件，因此搜了很久也没搜到想要的答案。</p>
+<p>平心而论，如果不是因为还有其他因素的存在，在经过这样的大致了解之后，我是倾向于自己编码实现 ETL 过程而非在这工具上一直耗下去的。不过总归觉得本软件的完成度还是不算低的，没理由这么简单的功能都实现不了，于是继续试错了一段时间，总算研究出了实现的方法……试错的过程就不提了，直接说下实现方法。</p>
+<p><strong>需要注意的是，我从第一次接触软件到研究出实现方法前后间隔不超过 8 小时，所以可能是有更简单的方法只是我没搜到资料而已。以下提到的一些问题点也可能并非真正的问题点，时间有限我也没太过去细究。</strong></p>
+<h2 id="实现">实现</h2>
+<h3 id="tldr">TL;DR</h3>
+<blockquote>
+<p>将赋值过程拆分成“字段名输出”和“SQL模板替换执行”两个 ktr 转换，在 kjb 作业层串联起来，通过结果记录传递 + “设置变量”的方式达到串行循环赋值变量的效果，进而可以正常地对 SQL 模板进行变量的字面替换。</p>
+</blockquote>
+<h3 id="作业的整体结构">作业的整体结构</h3>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418193814332.png" alt="image-20210418193814332">
+
+</p>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418194047222.png" alt="image-20210418194047222">
+
+</p>
+<p>在这里我因为要对数值型字段和字符型字段做不同的处理，所以有 4 个转换，两者除了一些细节差异以外整体结构都是相同的。这里的设置关键点是 ETL 步骤需要勾选“执行每一个输入行”。</p>
+<p>需要注意的一点是，因为变量的作用域广度问题，这个作业的两个 select 部分不能都连在 <code>Start</code> 节点上并行执行，会出现变量并发问题，需要串行流程，等上一类的任务跑完再跑下一类。</p>
+<h3 id="字段名输出">字段名输出</h3>
+<p>整体：</p>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418195701767.png" alt="image-20210418195701767">
+
+</p>
+<p>获取字段列表：</p>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418195750404.png" alt="image-20210418195750404">
+
+</p>
+<p>因为我的数据源是 Impala，所以可以直接用 <code>SHOW COLUMN STATS</code> 拿到字段集。这里的 <code>table_name</code> 是全局的命名参数，非动态的（作业层可以修改），也无需多说了。不同的数据库使用不同的 SQL 即可，差不了太多。再不济，也可以直接定义一个常量列表在这里。</p>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418200203094.png" alt="image-20210418200203094">
+
+</p>
+<p>“分流选择”定义了一个新字段，根据上一步拿到的字段结果进行对应的赋值，顺便把 <code>Column</code> 重命名了一下（没太大意义，之前试错留下来的结果）。后面的“过滤记录”判断 <code>sql_type</code> ，这两步其实应该也可以通过 <code>Switch / Case</code> 组件实现。</p>
+<p>其他都无需多言，关键是最后的“复制记录到结果”，将前面处理过的结果集在作业层中传递给下一步转换。</p>
+<h3 id="sql变量赋值">SQL变量赋值</h3>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418201114228.png" alt="image-20210418201114228">
+
+</p>
+<p>
+  <img src="imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418201223804.png" alt="image-20210418201223804">
+
+</p>
+<p>承上启下，首先自然是“从结果获取记录”，然后把字段值设为环境变量。到这里，我们便实现了将前一个结果集无冲突地循环赋值变量这一根本目的。之后的事就非常简单了。</p>
+<p>
+  <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418201436839.png" alt="image-20210418201436839">
+
+</p>
+<blockquote>
+<p>示例，实际上我要跑的 SQL 比这个还要多一些东西</p>
+</blockquote>
+<p>SQL 的表输入开始执行真正的 ETL 步骤，关键点是要勾上“替换 SQL 语句里的变量”，把前面设置的环境变量替换进来。此外，这里的“从步骤插入数据”是不需要配置的，因为对于这个转换步骤本身来说，它的输入值只有一行数据，循环执行是在父层的作业层实现的。</p>
+<p>最后一步数据写入常规操作也不必多说了。</p>
+<p>整个流程就是这样子，还是相当简单的，不然我也没法一天内就研究出来。而这套流程的缺陷也是很明显的——完全串行执行，失去了自带的并行执行的优点。但是因为作业本身是可以并行跑的，因此可以通过拆分字段输出步骤的逻辑同样地来达到并行执行的效果，不算太麻烦不过总归本无必要。</p>
+<p>个人对 Kettle 的接触时间与经验都非常少，以上仅供参考。</p>
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2021-02-10-2021%E5%86%AC%E5%AD%A3%E7%95%AA%E6%9D%82%E8%B0%88/" data-toggle="tooltip" data-placement="top" title="2021冬季番杂谈">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E4%BD%9C%E7%94%BB" title="作画">
+                            作画
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E5%8A%A8%E7%94%BB" title="动画">
+                            动画
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF" title="技术">
+                            技术
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E6%BC%94%E5%87%BA" title="演出">
+                            演出
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E8%B5%84%E6%96%99" title="资料">
+                            资料
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/%E9%87%8C%E7%A8%8B%E7%A2%91" title="里程碑">
+                            里程碑
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/%E9%9A%8F%E7%AC%94" title="随笔">
+                            随笔
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="V-ISLAND" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fa fa-circle fa-stack-2x"></i>
+                               <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+                    <li>
+                        <a href="mailto:me#vonxxghost.xyz">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/VonXXGhost">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; V-ISLAND 2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>

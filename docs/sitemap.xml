@@ -3,32 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://vonxxghost.xyz/categories/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/tags/kettle/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/post/2021-04-17-kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2sql%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/post/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/tags/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/categories/tech/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vonxxghost.xyz/post/2021-02-10-2021%E5%86%AC%E5%AD%A3%E7%95%AA%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://vonxxghost.xyz/categories/anime/</loc>
-    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vonxxghost.xyz/categories/</loc>
-    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vonxxghost.xyz/post/</loc>
-    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vonxxghost.xyz/tags/</loc>
-    <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vonxxghost.xyz/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,16 +64,6 @@
   
   <url>
     <loc>https://vonxxghost.xyz/post/2021-01-14-cassandra-cql3%E6%96%87%E6%A1%A3/</loc>
-    <lastmod>2021-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vonxxghost.xyz/categories/tech/</loc>
-    <lastmod>2021-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-01-14T00:00:00+00:00</lastmod>
   </url>
   
