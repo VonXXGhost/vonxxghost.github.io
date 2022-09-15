@@ -6,7 +6,25 @@
     <description>Recent content in Tags on V-ISLAND</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coding</title>
+      <link>https://vonxxghost.xyz/tags/coding/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>里程碑</title>
       <link>https://vonxxghost.xyz/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/</link>
@@ -49,15 +67,6 @@
       <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://vonxxghost.xyz/tags/kettle/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>技术</title>
-      <link>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     

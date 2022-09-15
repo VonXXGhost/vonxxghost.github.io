@@ -14,7 +14,6 @@ categories: [ tech ]
 
 <!--more-->
 
-
 ## CQL 语法
 
 ### 约定
@@ -63,8 +62,8 @@ categories: [ tech ]
                | <uuid>
                | <boolean>
                | <hex>
-  <variable> ::= '?'	// 匿名变量
-               | ':' <identifier>	// 命名变量
+  <variable> ::= '?'    // 匿名变量
+               | ':' <identifier>    // 命名变量
       <term> ::= <constant>
                | <collection-literal>
                | <variable>
@@ -114,10 +113,10 @@ CREATE KEYSPACE Excalibur
 
 顶级的键空间，可以理解为RDB中的“库”，定义了一个副本策略（*replication strategy*）和一些表的配置。
 
-| name             | kind     | 必需 | default | description                          |
-| ---------------- | -------- | ---- | ------- | ------------------------------------ |
-| `replication`    | *map*    | yes  |         | 键空间的副本策略和选项               |
-| `durable_writes` | *simple* | no   | true    | 是否对该键空间上的更新使用commit日志 |
+| name             | kind     | 必需  | default | description           |
+| ---------------- | -------- | --- | ------- | --------------------- |
+| `replication`    | *map*    | yes |         | 键空间的副本策略和选项           |
+| `durable_writes` | *simple* | no  | true    | 是否对该键空间上的更新使用commit日志 |
 
 `replication` 参数至少必须包含一个 `class` 子选项，定义要使用的副本策略。Cassandra 默认支持以下几种：
 
@@ -262,54 +261,54 @@ SELECT * FROM test WHERE pk=0 AND t=0;
 
 以下表格显示了其他支持的 `<property>`：
 
-| option                       | kind     | default     | description                                                  |
-| ---------------------------- | -------- | ----------- | ------------------------------------------------------------ |
-| `comment`                    | *simple* | none        | 注释。                                                       |
-| `read_repair_chance`         | *simple* | 0.1         | 为读取修复而查询额外节点（例如超过一致性级别所需的节点）的概率。 |
+| option                       | kind     | default     | description                               |
+| ---------------------------- | -------- | ----------- | ----------------------------------------- |
+| `comment`                    | *simple* | none        | 注释。                                       |
+| `read_repair_chance`         | *simple* | 0.1         | 为读取修复而查询额外节点（例如超过一致性级别所需的节点）的概率。          |
 | `dclocal_read_repair_chance` | *simple* | 0           | 为读取修复而查询属于同一数据中心的额外节点（例如多于一致性级别所需的节点）的概率。 |
-| `gc_grace_seconds`           | *simple* | 864000      | 垃圾收集墓碑（删除标记）之前等待的时间。                     |
-| `bloom_filter_fp_chance`     | *simple* | 0.00075     | SSTable布隆过滤器的目标误判率。将参考此值调整布隆过滤器的大小。 |
-| `default_time_to_live`       | *simple* | 0           | 一张表的默认TTL秒数。                                        |
-| `compaction`                 | *map*    | *see below* | 压实选项，见下文。                                           |
-| `compression`                | *map*    | *see below* | 压缩选项，见下文。                                           |
-| `caching`                    | *map*    | *see below* | 缓存选项，见下文。                                           |
+| `gc_grace_seconds`           | *simple* | 864000      | 垃圾收集墓碑（删除标记）之前等待的时间。                      |
+| `bloom_filter_fp_chance`     | *simple* | 0.00075     | SSTable布隆过滤器的目标误判率。将参考此值调整布隆过滤器的大小。       |
+| `default_time_to_live`       | *simple* | 0           | 一张表的默认TTL秒数。                              |
+| `compaction`                 | *map*    | *see below* | 压实选项，见下文。                                 |
+| `compression`                | *map*    | *see below* | 压缩选项，见下文。                                 |
+| `caching`                    | *map*    | *see below* | 缓存选项，见下文。                                 |
 
 #### Compaction options
 
 至少需要定义 `class` 子选项，定义了要使用的压实策略。默认支持`'SizeTieredCompactionStrategy'`, `'LeveledCompactionStrategy'` 和 `'DateTieredCompactionStrategy'`。可以通过将完整类名指定为字符串常量来提供自定义策略。其余的子选项取决于所选的类。默认类支持的子选项包括：
 
-| option                           | supported compaction strategy | default      | description                                                  |
-| -------------------------------- | ----------------------------- | ------------ | ------------------------------------------------------------ |
-| `enabled`                        | *all*                         | true         | A boolean denoting whether compaction should be enabled or not. |
-| `tombstone_threshold`            | *all*                         | 0.2          | A ratio such that if a sstable has more than this ratio of gcable tombstones over all contained columns, the sstable will be compacted (with no other sstables) for the purpose of purging those tombstones. |
-| `tombstone_compaction_interval`  | *all*                         | 1 day        | The minimum time to wait after an sstable creation time before considering it for “tombstone compaction”, where “tombstone compaction” is the compaction triggered if the sstable has more gcable tombstones than `tombstone_threshold`. |
-| `unchecked_tombstone_compaction` | *all*                         | false        | Setting this to true enables more aggressive tombstone compactions – single sstable tombstone compactions will run without checking how likely it is that they will be successful. |
+| option                           | supported compaction strategy | default      | description                                                                                                                                                                                                                                                                                                                        |
+| -------------------------------- | ----------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enabled`                        | *all*                         | true         | A boolean denoting whether compaction should be enabled or not.                                                                                                                                                                                                                                                                    |
+| `tombstone_threshold`            | *all*                         | 0.2          | A ratio such that if a sstable has more than this ratio of gcable tombstones over all contained columns, the sstable will be compacted (with no other sstables) for the purpose of purging those tombstones.                                                                                                                       |
+| `tombstone_compaction_interval`  | *all*                         | 1 day        | The minimum time to wait after an sstable creation time before considering it for “tombstone compaction”, where “tombstone compaction” is the compaction triggered if the sstable has more gcable tombstones than `tombstone_threshold`.                                                                                           |
+| `unchecked_tombstone_compaction` | *all*                         | false        | Setting this to true enables more aggressive tombstone compactions – single sstable tombstone compactions will run without checking how likely it is that they will be successful.                                                                                                                                                 |
 | `min_sstable_size`               | SizeTieredCompactionStrategy  | 50MB         | The size tiered strategy groups SSTables to compact in buckets. A bucket groups SSTables that differs from less than 50% in size. However, for small sizes, this would result in a bucketing that is too fine grained. `min_sstable_size` defines a size threshold (in bytes) below which all SSTables belong to one unique bucket |
-| `min_threshold`                  | SizeTieredCompactionStrategy  | 4            | Minimum number of SSTables needed to start a minor compaction. |
-| `max_threshold`                  | SizeTieredCompactionStrategy  | 32           | Maximum number of SSTables processed by one minor compaction. |
-| `bucket_low`                     | SizeTieredCompactionStrategy  | 0.5          | Size tiered consider sstables to be within the same bucket if their size is within [average_size * `bucket_low`, average_size * `bucket_high` ] (i.e the default groups sstable whose sizes diverges by at most 50%) |
-| `bucket_high`                    | SizeTieredCompactionStrategy  | 1.5          | Size tiered consider sstables to be within the same bucket if their size is within [average_size * `bucket_low`, average_size * `bucket_high` ] (i.e the default groups sstable whose sizes diverges by at most 50%). |
-| `sstable_size_in_mb`             | LeveledCompactionStrategy     | 5MB          | The target size (in MB) for sstables in the leveled strategy. Note that while sstable sizes should stay less or equal to `sstable_size_in_mb`, it is possible to exceptionally have a larger sstable as during compaction, data for a given partition key are never split into 2 sstables |
-| `timestamp_resolution`           | DateTieredCompactionStrategy  | MICROSECONDS | The timestamp resolution used when inserting data, could be MILLISECONDS, MICROSECONDS etc (should be understandable by Java TimeUnit) - don’t change this unless you do mutations with USING TIMESTAMP (or equivalent directly in the client) |
-| `base_time_seconds`              | DateTieredCompactionStrategy  | 60           | The base size of the time windows.                           |
-| `max_sstable_age_days`           | DateTieredCompactionStrategy  | 365          | SSTables only containing data that is older than this will never be compacted. |
+| `min_threshold`                  | SizeTieredCompactionStrategy  | 4            | Minimum number of SSTables needed to start a minor compaction.                                                                                                                                                                                                                                                                     |
+| `max_threshold`                  | SizeTieredCompactionStrategy  | 32           | Maximum number of SSTables processed by one minor compaction.                                                                                                                                                                                                                                                                      |
+| `bucket_low`                     | SizeTieredCompactionStrategy  | 0.5          | Size tiered consider sstables to be within the same bucket if their size is within [average_size * `bucket_low`, average_size * `bucket_high` ] (i.e the default groups sstable whose sizes diverges by at most 50%)                                                                                                               |
+| `bucket_high`                    | SizeTieredCompactionStrategy  | 1.5          | Size tiered consider sstables to be within the same bucket if their size is within [average_size * `bucket_low`, average_size * `bucket_high` ] (i.e the default groups sstable whose sizes diverges by at most 50%).                                                                                                              |
+| `sstable_size_in_mb`             | LeveledCompactionStrategy     | 5MB          | The target size (in MB) for sstables in the leveled strategy. Note that while sstable sizes should stay less or equal to `sstable_size_in_mb`, it is possible to exceptionally have a larger sstable as during compaction, data for a given partition key are never split into 2 sstables                                          |
+| `timestamp_resolution`           | DateTieredCompactionStrategy  | MICROSECONDS | The timestamp resolution used when inserting data, could be MILLISECONDS, MICROSECONDS etc (should be understandable by Java TimeUnit) - don’t change this unless you do mutations with USING TIMESTAMP (or equivalent directly in the client)                                                                                     |
+| `base_time_seconds`              | DateTieredCompactionStrategy  | 60           | The base size of the time windows.                                                                                                                                                                                                                                                                                                 |
+| `max_sstable_age_days`           | DateTieredCompactionStrategy  | 365          | SSTables only containing data that is older than this will never be compacted.                                                                                                                                                                                                                                                     |
 
 #### Compression options
 
 有以下这些子选项：
 
-| option               | default       | description                                                  |
-| -------------------- | ------------- | ------------------------------------------------------------ |
-| `class`              | LZ4Compressor | The compression algorithm to use. Default compressor are: LZ4Compressor, SnappyCompressor and DeflateCompressor. Use `'enabled' : false` to disable compression. Custom compressor can be provided by specifying the full class name as a [string constant](https://cassandra.apache.org/doc/old/CQL-3.0.html#constants). |
-| `enabled`            | true          | By default compression is enabled. To disable it, set `enabled` to `false` |
-| `chunk_length_in_kb` | 64KB          | On disk SSTables are compressed by block (to allow random reads). This defines the size (in KB) of said block. Bigger values may improve the compression rate, but increases the minimum size of data to be read from disk for a read |
+| option               | default       | description                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `class`              | LZ4Compressor | The compression algorithm to use. Default compressor are: LZ4Compressor, SnappyCompressor and DeflateCompressor. Use `'enabled' : false` to disable compression. Custom compressor can be provided by specifying the full class name as a [string constant](https://cassandra.apache.org/doc/old/CQL-3.0.html#constants).                                                                                           |
+| `enabled`            | true          | By default compression is enabled. To disable it, set `enabled` to `false`                                                                                                                                                                                                                                                                                                                                          |
+| `chunk_length_in_kb` | 64KB          | On disk SSTables are compressed by block (to allow random reads). This defines the size (in KB) of said block. Bigger values may improve the compression rate, but increases the minimum size of data to be read from disk for a read                                                                                                                                                                               |
 | `crc_check_chance`   | 1.0           | When compression is enabled, each compressed block includes a checksum of that block for the purpose of detecting disk bitrot and avoiding the propagation of corruption to other replica. This option defines the probability with which those checksums are checked during read. By default they are always checked. Set to 0 to disable checksum checking and to 0.5 for instance to check them every other read |
 
 #### Caching options
 
-| option               | default | description                                                  |
-| -------------------- | ------- | ------------------------------------------------------------ |
-| `keys`               | ALL     | Whether to cache keys (“key cache”) for this table. Valid values are: `ALL` and `NONE`. |
+| option               | default | description                                                                                                                                                                                                                                                      |
+| -------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `keys`               | ALL     | Whether to cache keys (“key cache”) for this table. Valid values are: `ALL` and `NONE`.                                                                                                                                                                          |
 | `rows_per_partition` | NONE    | The amount of rows to cache per partition (“row cache”). If an integer `n` is specified, the first `n` queried rows of a partition will be cached. Other possible options are `ALL`, to cache all rows of a queried partition, or `NONE` to disable row caching. |
 
 #### 其他注意事项
@@ -348,7 +347,9 @@ WITH comment = 'A most excellent and useful column family'
 - `ALTER`：更新某一栏的类型。注意，不能修改聚集键的类型和位于二级索引下的列。更新类型时不会进行类型校验，但最好不要将一种类型转换为其不兼容的类型，除非此栏中没有数据，不然会导致 CQL 驱动、工具混乱。
 
 - `ADD`：添加一列新栏。不能与已存在的冲突；使用 `COMPACT STORAGE` 选项的表无法添加。
+
 - `DROP`：移除某一栏。删除的列将立即在查询中不可用，将来也不会包含在压缩的sstable中。如果一列被读取，查询将不会返回在最后删除该列之前写入的值。使用 `COMPACT STORAGE` 选项的表无法删除列。
+
 - `WITH`：更新表的选项。支持的选项与建表语句相同，但是 `COMPACT STORAGE` 除外。需要注意的是，设置任何压实子选项都会删除以前所有的压实选项，因此如果想保留它们，就需要重新指定所有的子选项。压缩子选项集也一样。
 
 ### DROP TABLE 删除表
@@ -736,7 +737,7 @@ UPDATE UserActions SET total = total + 2 WHERE user = B70DE1D0-9908-4AE3-BE34-55
 - 但是可以使用 `IF` 在列上使用条件来决定是否要更新。但这会导致不可忽视的性能损失（内部会使用 Paxos），所以应该谨慎使用。
 - 同一个分区键内的所有更新都是原子且独立地应用的。
 - `<assignment>` 的 `c=c+3` 形式用于递增/递减计数器。“=” 前后的标识符必须相同（计数器只支持递增/递减，不支持赋值特定值）。
--   `<assignment>`  中的 `id = id + <collection-literal>` 和 `id[value1] = value2` 用于集合，具体请参考相关章节。
+- `<assignment>`  中的 `id = id + <collection-literal>` 和 `id[value1] = value2` 用于集合，具体请参考相关章节。
 
 #### `<options>`
 
@@ -824,8 +825,8 @@ APPLY BATCH;
 
 注意：
 
--  `BATCH` 只能包含 `UPDATE`, `INSERT` 和 `DELETE` 语句。
--  批处理并**不是** SQL 事务的完全类似物。
+- `BATCH` 只能包含 `UPDATE`, `INSERT` 和 `DELETE` 语句。
+- 批处理并**不是** SQL 事务的完全类似物。
 - 如果没有为每个操作指定时间戳，那么所有操作都将应用相同的时间戳。时间戳与 Cassandra 的冲突解决策略相关，详情请参考时间戳相关章节。
 
 #### `UNLOGGED`
@@ -878,7 +879,6 @@ APPLY BATCH;
 <ordering> ::= <identifer> ( ASC | DESC )?
 <term-tuple> ::= '(' <term> (',' <term>)* ')'
 ```
-
 
 *Sample:*
 
@@ -1068,28 +1068,28 @@ CQL 支持丰富的类型来定义表中的列，其中包括集合类型和用�
 
 下表给出了原始类型的附加信息以及其支持的常量类型：
 
-| type        | constants supported | description                                                  |
-| ----------- | ------------------- | ------------------------------------------------------------ |
-| `ascii`     | strings             | ASCII character string                                       |
-| `bigint`    | integers            | 64-bit signed long                                           |
-| `blob`      | blobs               | Arbitrary bytes (no validation)                              |
-| `boolean`   | booleans            | true or false                                                |
-| `counter`   | integers            | Counter column (64-bit signed value). See [Counters](https://cassandra.apache.org/doc/old/CQL-3.0.html#counters) for details |
-| `date`      | integers, strings   | A date (with no corresponding time value). See [Working with dates](https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates) below for more information. |
-| `decimal`   | integers, floats    | Variable-precision decimal                                   |
-| `double`    | integers            | 64-bit IEEE-754 floating point                               |
-| `float`     | integers, floats    | 32-bit IEEE-754 floating point                               |
-| `inet`      | strings             | An IP address. It can be either 4 bytes long (IPv4) or 16 bytes long (IPv6). There is no `inet` constant, IP address should be inputed as strings |
-| `int`       | integers            | 32-bit signed int                                            |
-| `smallint`  | integers            | 16-bit signed int                                            |
-| `text`      | strings             | UTF8 encoded string                                          |
-| `time`      | integers, strings   | A time with nanosecond precision. See [Working with time](https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtime) below for more information. |
+| type        | constants supported | description                                                                                                                                                                                        |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ascii`     | strings             | ASCII character string                                                                                                                                                                             |
+| `bigint`    | integers            | 64-bit signed long                                                                                                                                                                                 |
+| `blob`      | blobs               | Arbitrary bytes (no validation)                                                                                                                                                                    |
+| `boolean`   | booleans            | true or false                                                                                                                                                                                      |
+| `counter`   | integers            | Counter column (64-bit signed value). See [Counters](https://cassandra.apache.org/doc/old/CQL-3.0.html#counters) for details                                                                       |
+| `date`      | integers, strings   | A date (with no corresponding time value). See [Working with dates](https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates) below for more information.                                      |
+| `decimal`   | integers, floats    | Variable-precision decimal                                                                                                                                                                         |
+| `double`    | integers            | 64-bit IEEE-754 floating point                                                                                                                                                                     |
+| `float`     | integers, floats    | 32-bit IEEE-754 floating point                                                                                                                                                                     |
+| `inet`      | strings             | An IP address. It can be either 4 bytes long (IPv4) or 16 bytes long (IPv6). There is no `inet` constant, IP address should be inputed as strings                                                  |
+| `int`       | integers            | 32-bit signed int                                                                                                                                                                                  |
+| `smallint`  | integers            | 16-bit signed int                                                                                                                                                                                  |
+| `text`      | strings             | UTF8 encoded string                                                                                                                                                                                |
+| `time`      | integers, strings   | A time with nanosecond precision. See [Working with time](https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtime) below for more information.                                                 |
 | `timestamp` | integers, strings   | A timestamp. Strings constant are allow to input timestamps as dates, see [Working with timestamps](https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtimestamps) below for more information. |
-| `timeuuid`  | uuids               | Type 1 UUID. This is generally used as a “conflict-free” timestamp. Also see the [functions on Timeuuid](https://cassandra.apache.org/doc/old/CQL-3.0.html#timeuuidFun) |
-| `tinyint`   | integers            | 8-bit signed int                                             |
-| `uuid`      | uuids               | Type 1 or type 4 UUID                                        |
-| `varchar`   | strings             | UTF8 encoded string                                          |
-| `varint`    | integers            | Arbitrary-precision integer                                  |
+| `timeuuid`  | uuids               | Type 1 UUID. This is generally used as a “conflict-free” timestamp. Also see the [functions on Timeuuid](https://cassandra.apache.org/doc/old/CQL-3.0.html#timeuuidFun)                            |
+| `tinyint`   | integers            | 8-bit signed int                                                                                                                                                                                   |
+| `uuid`      | uuids               | Type 1 or type 4 UUID                                                                                                                                                                              |
+| `varchar`   | strings             | UTF8 encoded string                                                                                                                                                                                |
+| `varint`    | integers            | Arbitrary-precision integer                                                                                                                                                                        |
 
 ### 关于时间戳 timestamps
 
@@ -1425,34 +1425,34 @@ Cassandra 会尽可能地以原生 JSON 表现去展现或接收数据。Cassand
 
 下表展示了 Cassandra 可以接受的 `INSERT JSON` 值（包括 `fromJson()` 的参数），以及 Cassandra 在使用 `SELECT JSON` 语句和 `fromJson()` 函数会返回的数据格式。（PS：后面那个应该是 `toJson()` 吧）
 
-| type        | formats accepted       | return format | notes                                                        |
-| ----------- | ---------------------- | ------------- | ------------------------------------------------------------ |
-| `ascii`     | string                 | string        | Uses JSON’s `\u` character escape                            |
-| `bigint`    | integer, string        | integer       | String must be valid 64 bit integer                          |
-| `blob`      | string                 | string        | String should be 0x followed by an even number of hex digits |
-| `boolean`   | boolean, string        | boolean       | String must be “true” or "false"                             |
-| `date`      | string                 | string        | Date in format `YYYY-MM-DD`, timezone UTC                    |
-| `decimal`   | integer, float, string | float         | May exceed 32 or 64-bit IEEE-754 floating point precision in client-side decoder |
-| `double`    | integer, float, string | float         | String must be valid integer or float                        |
-| `float`     | integer, float, string | float         | String must be valid integer or float                        |
-| `inet`      | string                 | string        | IPv4 or IPv6 address                                         |
-| `int`       | integer, string        | integer       | String must be valid 32 bit integer                          |
-| `list`      | list, string           | list          | Uses JSON’s native list representation                       |
-| `map`       | map, string            | map           | Uses JSON’s native map representation                        |
-| `smallint`  | integer, string        | integer       | String must be valid 16 bit integer                          |
-| `set`       | list, string           | list          | Uses JSON’s native list representation                       |
-| `text`      | string                 | string        | Uses JSON’s `\u` character escape                            |
-| `time`      | string                 | string        | Time of day in format `HH-MM-SS[.fffffffff]`                 |
+| type        | formats accepted       | return format | notes                                                                                                                                                                                                                                                   |
+| ----------- | ---------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ascii`     | string                 | string        | Uses JSON’s `\u` character escape                                                                                                                                                                                                                       |
+| `bigint`    | integer, string        | integer       | String must be valid 64 bit integer                                                                                                                                                                                                                     |
+| `blob`      | string                 | string        | String should be 0x followed by an even number of hex digits                                                                                                                                                                                            |
+| `boolean`   | boolean, string        | boolean       | String must be “true” or "false"                                                                                                                                                                                                                        |
+| `date`      | string                 | string        | Date in format `YYYY-MM-DD`, timezone UTC                                                                                                                                                                                                               |
+| `decimal`   | integer, float, string | float         | May exceed 32 or 64-bit IEEE-754 floating point precision in client-side decoder                                                                                                                                                                        |
+| `double`    | integer, float, string | float         | String must be valid integer or float                                                                                                                                                                                                                   |
+| `float`     | integer, float, string | float         | String must be valid integer or float                                                                                                                                                                                                                   |
+| `inet`      | string                 | string        | IPv4 or IPv6 address                                                                                                                                                                                                                                    |
+| `int`       | integer, string        | integer       | String must be valid 32 bit integer                                                                                                                                                                                                                     |
+| `list`      | list, string           | list          | Uses JSON’s native list representation                                                                                                                                                                                                                  |
+| `map`       | map, string            | map           | Uses JSON’s native map representation                                                                                                                                                                                                                   |
+| `smallint`  | integer, string        | integer       | String must be valid 16 bit integer                                                                                                                                                                                                                     |
+| `set`       | list, string           | list          | Uses JSON’s native list representation                                                                                                                                                                                                                  |
+| `text`      | string                 | string        | Uses JSON’s `\u` character escape                                                                                                                                                                                                                       |
+| `time`      | string                 | string        | Time of day in format `HH-MM-SS[.fffffffff]`                                                                                                                                                                                                            |
 | `timestamp` | integer, string        | string        | A timestamp. Strings constant are allow to input timestamps as dates, see [Working with dates](https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates) below for more information. Datestamps with format `YYYY-MM-DD HH:MM:SS.SSS` are returned. |
-| `timeuuid`  | string                 | string        | Type 1 UUID. See [Constants](https://cassandra.apache.org/doc/old/CQL-3.0.html#constants) for the UUID format |
-| `tinyint`   | integer, string        | integer       | String must be valid 8 bit integer                           |
-| `tuple`     | list, string           | list          | Uses JSON’s native list representation                       |
-| `UDT`       | map, string            | map           | Uses JSON’s native map representation with field names as keys |
-| `uuid`      | string                 | string        | See [Constants](https://cassandra.apache.org/doc/old/CQL-3.0.html#constants) for the UUID format |
-| `varchar`   | string                 | string        | Uses JSON’s `\u` character escape                            |
-| `varint`    | integer, string        | integer       | Variable length; may overflow 32 or 64 bit integers in client-side decoder |
+| `timeuuid`  | string                 | string        | Type 1 UUID. See [Constants](https://cassandra.apache.org/doc/old/CQL-3.0.html#constants) for the UUID format                                                                                                                                           |
+| `tinyint`   | integer, string        | integer       | String must be valid 8 bit integer                                                                                                                                                                                                                      |
+| `tuple`     | list, string           | list          | Uses JSON’s native list representation                                                                                                                                                                                                                  |
+| `UDT`       | map, string            | map           | Uses JSON’s native map representation with field names as keys                                                                                                                                                                                          |
+| `uuid`      | string                 | string        | See [Constants](https://cassandra.apache.org/doc/old/CQL-3.0.html#constants) for the UUID format                                                                                                                                                        |
+| `varchar`   | string                 | string        | Uses JSON’s `\u` character escape                                                                                                                                                                                                                       |
+| `varint`    | integer, string        | integer       | Variable length; may overflow 32 or 64 bit integers in client-side decoder                                                                                                                                                                              |
 
-###  fromJson() 函数
+### fromJson() 函数
 
  `fromJson()` 与 `INSERT JSON` 类似，但只会返回一列的值。它只能用于 `INSERT` 的 `VALUES` 子句中，或者作为 `UPDATE`、 `DELETE` 或 `SELECT` 语句中的其中一列值。比如，它不能用于 `SELECT` 语句中的 `<select-clause>`子句。
 
@@ -1464,131 +1464,131 @@ Cassandra 会尽可能地以原生 JSON 表现去展现或接收数据。Cassand
 
 CQL 的关键字区分保留和非保留的。保留关键字不可以作为标识符，但可以使用双引号括起来用作标识符。而非保留关键字只在特定的上下文中具有特定的含义，否则可以用作标识符。
 
-| 关键字         | 是否保留？ |
-| -------------- | ---------- |
-| `ADD`          | yes        |
-| `AGGREGATE`    | no         |
-| `ALL`          | no         |
-| `ALLOW`        | yes        |
-| `ALTER`        | yes        |
-| `AND`          | yes        |
-| `APPLY`        | yes        |
-| `AS`           | no         |
-| `ASC`          | yes        |
-| `ASCII`        | no         |
-| `AUTHORIZE`    | yes        |
-| `BATCH`        | yes        |
-| `BEGIN`        | yes        |
-| `BIGINT`       | no         |
-| `BLOB`         | no         |
-| `BOOLEAN`      | no         |
-| `BY`           | yes        |
-| `CALLED`       | no         |
-| `CLUSTERING`   | no         |
-| `COLUMNFAMILY` | yes        |
-| `COMPACT`      | no         |
-| `CONTAINS`     | no         |
-| `COUNT`        | no         |
-| `COUNTER`      | no         |
-| `CREATE`       | yes        |
-| `CUSTOM`       | no         |
-| `DATE`         | no         |
-| `DECIMAL`      | no         |
-| `DELETE`       | yes        |
-| `DESC`         | yes        |
-| `DESCRIBE`     | yes        |
-| `DISTINCT`     | no         |
-| `DOUBLE`       | no         |
-| `DROP`         | yes        |
-| `ENTRIES`      | yes        |
-| `EXECUTE`      | yes        |
-| `EXISTS`       | no         |
-| `FILTERING`    | no         |
-| `FINALFUNC`    | no         |
-| `FLOAT`        | no         |
-| `FROM`         | yes        |
-| `FROZEN`       | no         |
-| `FULL`         | yes        |
-| `FUNCTION`     | no         |
-| `FUNCTIONS`    | no         |
-| `GRANT`        | yes        |
-| `IF`           | yes        |
-| `IN`           | yes        |
-| `INDEX`        | yes        |
-| `INET`         | no         |
-| `INFINITY`     | yes        |
-| `INITCOND`     | no         |
-| `INPUT`        | no         |
-| `INSERT`       | yes        |
-| `INT`          | no         |
-| `INTO`         | yes        |
-| `JSON`         | no         |
-| `KEY`          | no         |
-| `KEYS`         | no         |
-| `KEYSPACE`     | yes        |
-| `KEYSPACES`    | no         |
-| `LANGUAGE`     | no         |
-| `LIMIT`        | yes        |
-| `LIST`         | no         |
-| `LOGIN`        | no         |
-| `MAP`          | no         |
-| `MODIFY`       | yes        |
-| `NAN`          | yes        |
-| `NOLOGIN`      | no         |
-| `NORECURSIVE`  | yes        |
-| `NOSUPERUSER`  | no         |
-| `NOT`          | yes        |
-| `NULL`         | yes        |
-| `OF`           | yes        |
-| `ON`           | yes        |
-| `OPTIONS`      | no         |
-| `OR`           | yes        |
-| `ORDER`        | yes        |
-| `PASSWORD`     | no         |
-| `PERMISSION`   | no         |
-| `PERMISSIONS`  | no         |
-| `PRIMARY`      | yes        |
-| `RENAME`       | yes        |
-| `REPLACE`      | yes        |
-| `RETURNS`      | no         |
-| `REVOKE`       | yes        |
-| `ROLE`         | no         |
-| `ROLES`        | no         |
-| `SCHEMA`       | yes        |
-| `SELECT`       | yes        |
-| `SET`          | yes        |
-| `SFUNC`        | no         |
-| `SMALLINT`     | no         |
-| `STATIC`       | no         |
-| `STORAGE`      | no         |
-| `STYPE`        | no         |
-| `SUPERUSER`    | no         |
-| `TABLE`        | yes        |
-| `TEXT`         | no         |
-| `TIME`         | no         |
-| `TIMESTAMP`    | no         |
-| `TIMEUUID`     | no         |
-| `TINYINT`      | no         |
-| `TO`           | yes        |
-| `TOKEN`        | yes        |
-| `TRIGGER`      | no         |
-| `TRUNCATE`     | yes        |
-| `TTL`          | no         |
-| `TUPLE`        | no         |
-| `TYPE`         | no         |
-| `UNLOGGED`     | yes        |
-| `UPDATE`       | yes        |
-| `USE`          | yes        |
-| `USER`         | no         |
-| `USERS`        | no         |
-| `USING`        | yes        |
-| `UUID`         | no         |
-| `VALUES`       | no         |
-| `VARCHAR`      | no         |
-| `VARINT`       | no         |
-| `WHERE`        | yes        |
-| `WITH`         | yes        |
-| `WRITETIME`    | no         |
+| 关键字            | 是否保留？ |
+| -------------- | ----- |
+| `ADD`          | yes   |
+| `AGGREGATE`    | no    |
+| `ALL`          | no    |
+| `ALLOW`        | yes   |
+| `ALTER`        | yes   |
+| `AND`          | yes   |
+| `APPLY`        | yes   |
+| `AS`           | no    |
+| `ASC`          | yes   |
+| `ASCII`        | no    |
+| `AUTHORIZE`    | yes   |
+| `BATCH`        | yes   |
+| `BEGIN`        | yes   |
+| `BIGINT`       | no    |
+| `BLOB`         | no    |
+| `BOOLEAN`      | no    |
+| `BY`           | yes   |
+| `CALLED`       | no    |
+| `CLUSTERING`   | no    |
+| `COLUMNFAMILY` | yes   |
+| `COMPACT`      | no    |
+| `CONTAINS`     | no    |
+| `COUNT`        | no    |
+| `COUNTER`      | no    |
+| `CREATE`       | yes   |
+| `CUSTOM`       | no    |
+| `DATE`         | no    |
+| `DECIMAL`      | no    |
+| `DELETE`       | yes   |
+| `DESC`         | yes   |
+| `DESCRIBE`     | yes   |
+| `DISTINCT`     | no    |
+| `DOUBLE`       | no    |
+| `DROP`         | yes   |
+| `ENTRIES`      | yes   |
+| `EXECUTE`      | yes   |
+| `EXISTS`       | no    |
+| `FILTERING`    | no    |
+| `FINALFUNC`    | no    |
+| `FLOAT`        | no    |
+| `FROM`         | yes   |
+| `FROZEN`       | no    |
+| `FULL`         | yes   |
+| `FUNCTION`     | no    |
+| `FUNCTIONS`    | no    |
+| `GRANT`        | yes   |
+| `IF`           | yes   |
+| `IN`           | yes   |
+| `INDEX`        | yes   |
+| `INET`         | no    |
+| `INFINITY`     | yes   |
+| `INITCOND`     | no    |
+| `INPUT`        | no    |
+| `INSERT`       | yes   |
+| `INT`          | no    |
+| `INTO`         | yes   |
+| `JSON`         | no    |
+| `KEY`          | no    |
+| `KEYS`         | no    |
+| `KEYSPACE`     | yes   |
+| `KEYSPACES`    | no    |
+| `LANGUAGE`     | no    |
+| `LIMIT`        | yes   |
+| `LIST`         | no    |
+| `LOGIN`        | no    |
+| `MAP`          | no    |
+| `MODIFY`       | yes   |
+| `NAN`          | yes   |
+| `NOLOGIN`      | no    |
+| `NORECURSIVE`  | yes   |
+| `NOSUPERUSER`  | no    |
+| `NOT`          | yes   |
+| `NULL`         | yes   |
+| `OF`           | yes   |
+| `ON`           | yes   |
+| `OPTIONS`      | no    |
+| `OR`           | yes   |
+| `ORDER`        | yes   |
+| `PASSWORD`     | no    |
+| `PERMISSION`   | no    |
+| `PERMISSIONS`  | no    |
+| `PRIMARY`      | yes   |
+| `RENAME`       | yes   |
+| `REPLACE`      | yes   |
+| `RETURNS`      | no    |
+| `REVOKE`       | yes   |
+| `ROLE`         | no    |
+| `ROLES`        | no    |
+| `SCHEMA`       | yes   |
+| `SELECT`       | yes   |
+| `SET`          | yes   |
+| `SFUNC`        | no    |
+| `SMALLINT`     | no    |
+| `STATIC`       | no    |
+| `STORAGE`      | no    |
+| `STYPE`        | no    |
+| `SUPERUSER`    | no    |
+| `TABLE`        | yes   |
+| `TEXT`         | no    |
+| `TIME`         | no    |
+| `TIMESTAMP`    | no    |
+| `TIMEUUID`     | no    |
+| `TINYINT`      | no    |
+| `TO`           | yes   |
+| `TOKEN`        | yes   |
+| `TRIGGER`      | no    |
+| `TRUNCATE`     | yes   |
+| `TTL`          | no    |
+| `TUPLE`        | no    |
+| `TYPE`         | no    |
+| `UNLOGGED`     | yes   |
+| `UPDATE`       | yes   |
+| `USE`          | yes   |
+| `USER`         | no    |
+| `USERS`        | no    |
+| `USING`        | yes   |
+| `UUID`         | no    |
+| `VALUES`       | no    |
+| `VARCHAR`      | no    |
+| `VARINT`       | no    |
+| `WHERE`        | yes   |
+| `WITH`         | yes   |
+| `WRITETIME`    | no    |
 
 ## 附录B：CQL 保留类型
 

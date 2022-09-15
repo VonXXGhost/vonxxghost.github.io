@@ -2,22 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://vonxxghost.xyz/categories/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/tags/coding/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/post/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/tags/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/categories/tech/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/post/2022-09-15-%E9%BB%98%E8%AE%A4%E5%80%BC%E5%BA%94%E4%BF%9D%E6%8C%81%E4%B8%AD%E7%AB%8B/</loc>
+    <lastmod>2022-09-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://vonxxghost.xyz/post/2022-05-25-anitama%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB/</loc>
     <lastmod>2022-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://vonxxghost.xyz/categories/</loc>
-    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://vonxxghost.xyz/categories/home/</loc>
-    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/post/</loc>
-    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/tags/</loc>
-    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/</loc>
     <lastmod>2022-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/</loc>
@@ -42,12 +54,6 @@
     <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/post/2021-04-17-kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2sql%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/</loc>
-    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/categories/tech/</loc>
-    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/post/2021-02-10-2021%E5%86%AC%E5%AD%A3%E7%95%AA%E6%9D%82%E8%B0%88/</loc>

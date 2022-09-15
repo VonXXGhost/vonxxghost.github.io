@@ -6,7 +6,16 @@
     <description>Recent content in Posts on V-ISLAND</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让默认值保持中立</title>
+      <link>https://vonxxghost.xyz/post/2022-09-15-%E9%BB%98%E8%AE%A4%E5%80%BC%E5%BA%94%E4%BF%9D%E6%8C%81%E4%B8%AD%E7%AB%8B/</link>
+      <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vonxxghost.xyz/post/2022-09-15-%E9%BB%98%E8%AE%A4%E5%80%BC%E5%BA%94%E4%BF%9D%E6%8C%81%E4%B8%AD%E7%AB%8B/</guid>
+      <description>&lt;p&gt;在计算机领域，“默认值”是一个同时存在于理想与非理想之间，常见而又深邃的概念。有的时候它代表着一种理想的大多数，通过假设使用者的一般使用情景来替 coder 剩下几个字符的编码量；有的时候它又代表着一种脱离理想的现实，在程序不能正确处理得到结果的时候，依然能存在一个可以被后继程序正常处理的值，使得整个流程的健壮性得以维持。合理的默认值设定对于越大规模的软件工程来说越为重要，一个不合理的右值可能会使得众多后来的使用者们发狂，so，在敲下等于号之后，我们应该对这个即将设下的默认值思考些什么？&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>anitama发表文章迁移本站</title>
       <link>https://vonxxghost.xyz/post/2022-05-25-anitama%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB/</link>
