@@ -9,6 +9,7 @@
 - bangumi：[https://bgm.tv/user/a582192766](https://bgm.tv/user/a582192766)
 - 微博：[https://weibo.com/p/1005052547947530](https://weibo.com/p/1005052547947530)
 - 知乎：[https://www.zhihu.com/people/VonXXGhost](https://www.zhihu.com/people/VonXXGhost)
+- B站：[https://space.bilibili.com/211493](https://space.bilibili.com/211493)
 
 ### As a fan
 
