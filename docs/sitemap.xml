@@ -2,22 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://vonxxghost.xyz/categories/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/categories/home/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/post/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/tags/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/post/2023-06-16-%E4%B8%80%E6%97%B6%E5%85%B4%E8%B5%B7%E7%9A%84%E4%BA%BA%E7%94%9F%E5%9B%9E%E5%BF%86%E5%BD%95/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vonxxghost.xyz/tags/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2023-06-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://vonxxghost.xyz/post/2022-12-26-2022%E5%B9%B4%E7%B3%BB%E5%88%97%E5%8A%A8%E7%94%BB%E5%8D%95%E9%9B%86%E5%8D%81%E9%80%89/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/categories/anime/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/categories/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/post/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/tags/</loc>
-    <lastmod>2022-12-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/</loc>
     <lastmod>2022-12-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/tags/%E5%8A%A8%E7%94%BB/</loc>
@@ -48,9 +57,6 @@
     <lastmod>2022-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/post/2022-05-25-anitama%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB/</loc>
-    <lastmod>2022-05-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://vonxxghost.xyz/categories/home/</loc>
     <lastmod>2022-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vonxxghost.xyz/tags/%E9%87%8C%E7%A8%8B%E7%A2%91/</loc>
