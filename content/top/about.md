@@ -19,7 +19,7 @@
 - 最喜欢的脚本家：綾奈ゆにこ
 - 最喜欢的演出家：安藤尚也
 - 喜欢的作画：没有哪个最喜欢的，アクションより芝居。
-- 喜欢的音乐：日系同人电音以及关系比较近的JPOP，比如电音部、Tano*C 等，比较喜欢的风格有 **Garage**、DnB、Progressive、Psy、Bounce、UKHC、Hardstyle……
+- 喜欢的音乐：日系同人电音以及关系比较近的JPOP，比如电音部、Tano*C 等，比较喜欢的风格有 Garage、Future Bass、DnB、Progressive、Psy、Bounce、UKHC、Hardstyle……
 - 曾经沉迷过一段时间彩虹为首的 vtuber，现在偶尔无聊也会看点切片。直播方面现在更关注在 CPi 朋友圈这块
 - 人都会有 Like or Hate，但显露出戾气除了发泄情绪不会有任何的意义，所以还是多谈点“有爱”之物吧
 
