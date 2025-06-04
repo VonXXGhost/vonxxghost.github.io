@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="https://vonxxghost.xyz/img/home-bg.jpg">
-    <meta property="twitter:image" content="https://vonxxghost.xyz/img/home-bg.jpg" />
+    <meta property="og:image" content="https://vonxxghost.xyz//img/home-bg.jpg">
+    <meta property="twitter:image" content="https://vonxxghost.xyz//img/home-bg.jpg" />
     
 
     
@@ -102,10 +102,6 @@
                         <li><a href="/top/about/">ABOUT</a></li>
                     
 
-                    
-		    <li>
-                        <a href="/search"><i class="fa fa-search"></i></a>
-		    </li>
                     
                 </ul>
             </div>
@@ -280,31 +276,31 @@
 </span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">AND</span> <span style="color:#ff79c6">durable_writes</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
 </span></span></code></pre></div><p>顶级的键空间，可以理解为RDB中的“库”，定义了一个副本策略（<em>replication strategy</em>）和一些表的配置。</p>
 <table>
-<thead>
-<tr>
-<th>name</th>
-<th>kind</th>
-<th>必需</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>replication</code></td>
-<td><em>map</em></td>
-<td>yes</td>
-<td></td>
-<td>键空间的副本策略和选项</td>
-</tr>
-<tr>
-<td><code>durable_writes</code></td>
-<td><em>simple</em></td>
-<td>no</td>
-<td>true</td>
-<td>是否对该键空间上的更新使用commit日志</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>name</th>
+          <th>kind</th>
+          <th>必需</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>replication</code></td>
+          <td><em>map</em></td>
+          <td>yes</td>
+          <td></td>
+          <td>键空间的副本策略和选项</td>
+      </tr>
+      <tr>
+          <td><code>durable_writes</code></td>
+          <td><em>simple</em></td>
+          <td>no</td>
+          <td>true</td>
+          <td>是否对该键空间上的更新使用commit日志</td>
+      </tr>
+  </tbody>
 </table>
 <p><code>replication</code> 参数至少必须包含一个 <code>class</code> 子选项，定义要使用的副本策略。Cassandra 默认支持以下几种：</p>
 <ul>
@@ -395,217 +391,217 @@
 <p><code>CLUSTERING ORDER</code>：允许定义行在硬盘中的排序。注意这项设置会影响 <code>SELECT</code> 的 <code>ORDER BY</code> 选项。</p>
 <p>以下表格显示了其他支持的 <code>&lt;property&gt;</code>：</p>
 <table>
-<thead>
-<tr>
-<th>option</th>
-<th>kind</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>comment</code></td>
-<td><em>simple</em></td>
-<td>none</td>
-<td>注释。</td>
-</tr>
-<tr>
-<td><code>read_repair_chance</code></td>
-<td><em>simple</em></td>
-<td>0.1</td>
-<td>为读取修复而查询额外节点（例如超过一致性级别所需的节点）的概率。</td>
-</tr>
-<tr>
-<td><code>dclocal_read_repair_chance</code></td>
-<td><em>simple</em></td>
-<td>0</td>
-<td>为读取修复而查询属于同一数据中心的额外节点（例如多于一致性级别所需的节点）的概率。</td>
-</tr>
-<tr>
-<td><code>gc_grace_seconds</code></td>
-<td><em>simple</em></td>
-<td>864000</td>
-<td>垃圾收集墓碑（删除标记）之前等待的时间。</td>
-</tr>
-<tr>
-<td><code>bloom_filter_fp_chance</code></td>
-<td><em>simple</em></td>
-<td>0.00075</td>
-<td>SSTable布隆过滤器的目标误判率。将参考此值调整布隆过滤器的大小。</td>
-</tr>
-<tr>
-<td><code>default_time_to_live</code></td>
-<td><em>simple</em></td>
-<td>0</td>
-<td>一张表的默认TTL秒数。</td>
-</tr>
-<tr>
-<td><code>compaction</code></td>
-<td><em>map</em></td>
-<td><em>see below</em></td>
-<td>压实选项，见下文。</td>
-</tr>
-<tr>
-<td><code>compression</code></td>
-<td><em>map</em></td>
-<td><em>see below</em></td>
-<td>压缩选项，见下文。</td>
-</tr>
-<tr>
-<td><code>caching</code></td>
-<td><em>map</em></td>
-<td><em>see below</em></td>
-<td>缓存选项，见下文。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>option</th>
+          <th>kind</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>comment</code></td>
+          <td><em>simple</em></td>
+          <td>none</td>
+          <td>注释。</td>
+      </tr>
+      <tr>
+          <td><code>read_repair_chance</code></td>
+          <td><em>simple</em></td>
+          <td>0.1</td>
+          <td>为读取修复而查询额外节点（例如超过一致性级别所需的节点）的概率。</td>
+      </tr>
+      <tr>
+          <td><code>dclocal_read_repair_chance</code></td>
+          <td><em>simple</em></td>
+          <td>0</td>
+          <td>为读取修复而查询属于同一数据中心的额外节点（例如多于一致性级别所需的节点）的概率。</td>
+      </tr>
+      <tr>
+          <td><code>gc_grace_seconds</code></td>
+          <td><em>simple</em></td>
+          <td>864000</td>
+          <td>垃圾收集墓碑（删除标记）之前等待的时间。</td>
+      </tr>
+      <tr>
+          <td><code>bloom_filter_fp_chance</code></td>
+          <td><em>simple</em></td>
+          <td>0.00075</td>
+          <td>SSTable布隆过滤器的目标误判率。将参考此值调整布隆过滤器的大小。</td>
+      </tr>
+      <tr>
+          <td><code>default_time_to_live</code></td>
+          <td><em>simple</em></td>
+          <td>0</td>
+          <td>一张表的默认TTL秒数。</td>
+      </tr>
+      <tr>
+          <td><code>compaction</code></td>
+          <td><em>map</em></td>
+          <td><em>see below</em></td>
+          <td>压实选项，见下文。</td>
+      </tr>
+      <tr>
+          <td><code>compression</code></td>
+          <td><em>map</em></td>
+          <td><em>see below</em></td>
+          <td>压缩选项，见下文。</td>
+      </tr>
+      <tr>
+          <td><code>caching</code></td>
+          <td><em>map</em></td>
+          <td><em>see below</em></td>
+          <td>缓存选项，见下文。</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="compaction-options">Compaction options</h4>
 <p>至少需要定义 <code>class</code> 子选项，定义了要使用的压实策略。默认支持<code>'SizeTieredCompactionStrategy'</code>, <code>'LeveledCompactionStrategy'</code> 和 <code>'DateTieredCompactionStrategy'</code>。可以通过将完整类名指定为字符串常量来提供自定义策略。其余的子选项取决于所选的类。默认类支持的子选项包括：</p>
 <table>
-<thead>
-<tr>
-<th>option</th>
-<th>supported compaction strategy</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>enabled</code></td>
-<td><em>all</em></td>
-<td>true</td>
-<td>A boolean denoting whether compaction should be enabled or not.</td>
-</tr>
-<tr>
-<td><code>tombstone_threshold</code></td>
-<td><em>all</em></td>
-<td>0.2</td>
-<td>A ratio such that if a sstable has more than this ratio of gcable tombstones over all contained columns, the sstable will be compacted (with no other sstables) for the purpose of purging those tombstones.</td>
-</tr>
-<tr>
-<td><code>tombstone_compaction_interval</code></td>
-<td><em>all</em></td>
-<td>1 day</td>
-<td>The minimum time to wait after an sstable creation time before considering it for “tombstone compaction”, where “tombstone compaction” is the compaction triggered if the sstable has more gcable tombstones than <code>tombstone_threshold</code>.</td>
-</tr>
-<tr>
-<td><code>unchecked_tombstone_compaction</code></td>
-<td><em>all</em></td>
-<td>false</td>
-<td>Setting this to true enables more aggressive tombstone compactions – single sstable tombstone compactions will run without checking how likely it is that they will be successful.</td>
-</tr>
-<tr>
-<td><code>min_sstable_size</code></td>
-<td>SizeTieredCompactionStrategy</td>
-<td>50MB</td>
-<td>The size tiered strategy groups SSTables to compact in buckets. A bucket groups SSTables that differs from less than 50% in size. However, for small sizes, this would result in a bucketing that is too fine grained. <code>min_sstable_size</code> defines a size threshold (in bytes) below which all SSTables belong to one unique bucket</td>
-</tr>
-<tr>
-<td><code>min_threshold</code></td>
-<td>SizeTieredCompactionStrategy</td>
-<td>4</td>
-<td>Minimum number of SSTables needed to start a minor compaction.</td>
-</tr>
-<tr>
-<td><code>max_threshold</code></td>
-<td>SizeTieredCompactionStrategy</td>
-<td>32</td>
-<td>Maximum number of SSTables processed by one minor compaction.</td>
-</tr>
-<tr>
-<td><code>bucket_low</code></td>
-<td>SizeTieredCompactionStrategy</td>
-<td>0.5</td>
-<td>Size tiered consider sstables to be within the same bucket if their size is within [average_size * <code>bucket_low</code>, average_size * <code>bucket_high</code> ] (i.e the default groups sstable whose sizes diverges by at most 50%)</td>
-</tr>
-<tr>
-<td><code>bucket_high</code></td>
-<td>SizeTieredCompactionStrategy</td>
-<td>1.5</td>
-<td>Size tiered consider sstables to be within the same bucket if their size is within [average_size * <code>bucket_low</code>, average_size * <code>bucket_high</code> ] (i.e the default groups sstable whose sizes diverges by at most 50%).</td>
-</tr>
-<tr>
-<td><code>sstable_size_in_mb</code></td>
-<td>LeveledCompactionStrategy</td>
-<td>5MB</td>
-<td>The target size (in MB) for sstables in the leveled strategy. Note that while sstable sizes should stay less or equal to <code>sstable_size_in_mb</code>, it is possible to exceptionally have a larger sstable as during compaction, data for a given partition key are never split into 2 sstables</td>
-</tr>
-<tr>
-<td><code>timestamp_resolution</code></td>
-<td>DateTieredCompactionStrategy</td>
-<td>MICROSECONDS</td>
-<td>The timestamp resolution used when inserting data, could be MILLISECONDS, MICROSECONDS etc (should be understandable by Java TimeUnit) - don’t change this unless you do mutations with USING TIMESTAMP (or equivalent directly in the client)</td>
-</tr>
-<tr>
-<td><code>base_time_seconds</code></td>
-<td>DateTieredCompactionStrategy</td>
-<td>60</td>
-<td>The base size of the time windows.</td>
-</tr>
-<tr>
-<td><code>max_sstable_age_days</code></td>
-<td>DateTieredCompactionStrategy</td>
-<td>365</td>
-<td>SSTables only containing data that is older than this will never be compacted.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>option</th>
+          <th>supported compaction strategy</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>enabled</code></td>
+          <td><em>all</em></td>
+          <td>true</td>
+          <td>A boolean denoting whether compaction should be enabled or not.</td>
+      </tr>
+      <tr>
+          <td><code>tombstone_threshold</code></td>
+          <td><em>all</em></td>
+          <td>0.2</td>
+          <td>A ratio such that if a sstable has more than this ratio of gcable tombstones over all contained columns, the sstable will be compacted (with no other sstables) for the purpose of purging those tombstones.</td>
+      </tr>
+      <tr>
+          <td><code>tombstone_compaction_interval</code></td>
+          <td><em>all</em></td>
+          <td>1 day</td>
+          <td>The minimum time to wait after an sstable creation time before considering it for “tombstone compaction”, where “tombstone compaction” is the compaction triggered if the sstable has more gcable tombstones than <code>tombstone_threshold</code>.</td>
+      </tr>
+      <tr>
+          <td><code>unchecked_tombstone_compaction</code></td>
+          <td><em>all</em></td>
+          <td>false</td>
+          <td>Setting this to true enables more aggressive tombstone compactions – single sstable tombstone compactions will run without checking how likely it is that they will be successful.</td>
+      </tr>
+      <tr>
+          <td><code>min_sstable_size</code></td>
+          <td>SizeTieredCompactionStrategy</td>
+          <td>50MB</td>
+          <td>The size tiered strategy groups SSTables to compact in buckets. A bucket groups SSTables that differs from less than 50% in size. However, for small sizes, this would result in a bucketing that is too fine grained. <code>min_sstable_size</code> defines a size threshold (in bytes) below which all SSTables belong to one unique bucket</td>
+      </tr>
+      <tr>
+          <td><code>min_threshold</code></td>
+          <td>SizeTieredCompactionStrategy</td>
+          <td>4</td>
+          <td>Minimum number of SSTables needed to start a minor compaction.</td>
+      </tr>
+      <tr>
+          <td><code>max_threshold</code></td>
+          <td>SizeTieredCompactionStrategy</td>
+          <td>32</td>
+          <td>Maximum number of SSTables processed by one minor compaction.</td>
+      </tr>
+      <tr>
+          <td><code>bucket_low</code></td>
+          <td>SizeTieredCompactionStrategy</td>
+          <td>0.5</td>
+          <td>Size tiered consider sstables to be within the same bucket if their size is within [average_size * <code>bucket_low</code>, average_size * <code>bucket_high</code> ] (i.e the default groups sstable whose sizes diverges by at most 50%)</td>
+      </tr>
+      <tr>
+          <td><code>bucket_high</code></td>
+          <td>SizeTieredCompactionStrategy</td>
+          <td>1.5</td>
+          <td>Size tiered consider sstables to be within the same bucket if their size is within [average_size * <code>bucket_low</code>, average_size * <code>bucket_high</code> ] (i.e the default groups sstable whose sizes diverges by at most 50%).</td>
+      </tr>
+      <tr>
+          <td><code>sstable_size_in_mb</code></td>
+          <td>LeveledCompactionStrategy</td>
+          <td>5MB</td>
+          <td>The target size (in MB) for sstables in the leveled strategy. Note that while sstable sizes should stay less or equal to <code>sstable_size_in_mb</code>, it is possible to exceptionally have a larger sstable as during compaction, data for a given partition key are never split into 2 sstables</td>
+      </tr>
+      <tr>
+          <td><code>timestamp_resolution</code></td>
+          <td>DateTieredCompactionStrategy</td>
+          <td>MICROSECONDS</td>
+          <td>The timestamp resolution used when inserting data, could be MILLISECONDS, MICROSECONDS etc (should be understandable by Java TimeUnit) - don’t change this unless you do mutations with USING TIMESTAMP (or equivalent directly in the client)</td>
+      </tr>
+      <tr>
+          <td><code>base_time_seconds</code></td>
+          <td>DateTieredCompactionStrategy</td>
+          <td>60</td>
+          <td>The base size of the time windows.</td>
+      </tr>
+      <tr>
+          <td><code>max_sstable_age_days</code></td>
+          <td>DateTieredCompactionStrategy</td>
+          <td>365</td>
+          <td>SSTables only containing data that is older than this will never be compacted.</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="compression-options">Compression options</h4>
 <p>有以下这些子选项：</p>
 <table>
-<thead>
-<tr>
-<th>option</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>class</code></td>
-<td>LZ4Compressor</td>
-<td>The compression algorithm to use. Default compressor are: LZ4Compressor, SnappyCompressor and DeflateCompressor. Use <code>'enabled' : false</code> to disable compression. Custom compressor can be provided by specifying the full class name as a <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#constants">string constant</a>.</td>
-</tr>
-<tr>
-<td><code>enabled</code></td>
-<td>true</td>
-<td>By default compression is enabled. To disable it, set <code>enabled</code> to <code>false</code></td>
-</tr>
-<tr>
-<td><code>chunk_length_in_kb</code></td>
-<td>64KB</td>
-<td>On disk SSTables are compressed by block (to allow random reads). This defines the size (in KB) of said block. Bigger values may improve the compression rate, but increases the minimum size of data to be read from disk for a read</td>
-</tr>
-<tr>
-<td><code>crc_check_chance</code></td>
-<td>1.0</td>
-<td>When compression is enabled, each compressed block includes a checksum of that block for the purpose of detecting disk bitrot and avoiding the propagation of corruption to other replica. This option defines the probability with which those checksums are checked during read. By default they are always checked. Set to 0 to disable checksum checking and to 0.5 for instance to check them every other read</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>option</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>class</code></td>
+          <td>LZ4Compressor</td>
+          <td>The compression algorithm to use. Default compressor are: LZ4Compressor, SnappyCompressor and DeflateCompressor. Use <code>'enabled' : false</code> to disable compression. Custom compressor can be provided by specifying the full class name as a <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#constants">string constant</a>.</td>
+      </tr>
+      <tr>
+          <td><code>enabled</code></td>
+          <td>true</td>
+          <td>By default compression is enabled. To disable it, set <code>enabled</code> to <code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>chunk_length_in_kb</code></td>
+          <td>64KB</td>
+          <td>On disk SSTables are compressed by block (to allow random reads). This defines the size (in KB) of said block. Bigger values may improve the compression rate, but increases the minimum size of data to be read from disk for a read</td>
+      </tr>
+      <tr>
+          <td><code>crc_check_chance</code></td>
+          <td>1.0</td>
+          <td>When compression is enabled, each compressed block includes a checksum of that block for the purpose of detecting disk bitrot and avoiding the propagation of corruption to other replica. This option defines the probability with which those checksums are checked during read. By default they are always checked. Set to 0 to disable checksum checking and to 0.5 for instance to check them every other read</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="caching-options">Caching options</h4>
 <table>
-<thead>
-<tr>
-<th>option</th>
-<th>default</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>keys</code></td>
-<td>ALL</td>
-<td>Whether to cache keys (“key cache”) for this table. Valid values are: <code>ALL</code> and <code>NONE</code>.</td>
-</tr>
-<tr>
-<td><code>rows_per_partition</code></td>
-<td>NONE</td>
-<td>The amount of rows to cache per partition (“row cache”). If an integer <code>n</code> is specified, the first <code>n</code> queried rows of a partition will be cached. Other possible options are <code>ALL</code>, to cache all rows of a queried partition, or <code>NONE</code> to disable row caching.</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>option</th>
+          <th>default</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>keys</code></td>
+          <td>ALL</td>
+          <td>Whether to cache keys (“key cache”) for this table. Valid values are: <code>ALL</code> and <code>NONE</code>.</td>
+      </tr>
+      <tr>
+          <td><code>rows_per_partition</code></td>
+          <td>NONE</td>
+          <td>The amount of rows to cache per partition (“row cache”). If an integer <code>n</code> is specified, the first <code>n</code> queried rows of a partition will be cached. Other possible options are <code>ALL</code>, to cache all rows of a queried partition, or <code>NONE</code> to disable row caching.</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="其他注意事项">其他注意事项</h4>
 <ul>
@@ -753,16 +749,16 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">RETURNS</span> <span style="color:#8be9fd;font-style:italic">text</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">LANGUAGE</span> <span style="color:#8be9fd;font-style:italic">java</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">AS</span> <span style="color:#f1fa8c">$$</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#6272a4">// some Java code
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#f1fa8c">$$</span>;
+</span></span><span style="display:flex;"><span>       <span style="color:#6272a4">// some Java code</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$$</span>;
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">FUNCTION</span> akeyspace.fname <span style="color:#ff79c6">IF</span> <span style="color:#ff79c6">NOT</span> <span style="color:#ff79c6">EXISTS</span>
 </span></span><span style="display:flex;"><span>    ( someArg <span style="color:#8be9fd;font-style:italic">int</span> )
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">CALLED</span> <span style="color:#ff79c6">ON</span> <span style="color:#ff79c6">NULL</span> <span style="color:#ff79c6">INPUT</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">RETURNS</span> <span style="color:#8be9fd;font-style:italic">text</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">LANGUAGE</span> <span style="color:#8be9fd;font-style:italic">java</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">AS</span> <span style="color:#f1fa8c">$$</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#6272a4">// some Java code
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#f1fa8c">$$</span>;
+</span></span><span style="display:flex;"><span>       <span style="color:#6272a4">// some Java code</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">$$</span>;
 </span></span></code></pre></div><p>暂略。</p>
 <h3 id="drop-function-删除函数">DROP FUNCTION 删除函数</h3>
 <p><em>Syntax:</em></p>
@@ -1111,115 +1107,115 @@
 </code></pre><p>注意原始类型是关键词并且也是不区分大小写的。不过它们并不是保留字。</p>
 <p>下表给出了原始类型的附加信息以及其支持的常量类型：</p>
 <table>
-<thead>
-<tr>
-<th>type</th>
-<th>constants supported</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ascii</code></td>
-<td>strings</td>
-<td>ASCII character string</td>
-</tr>
-<tr>
-<td><code>bigint</code></td>
-<td>integers</td>
-<td>64-bit signed long</td>
-</tr>
-<tr>
-<td><code>blob</code></td>
-<td>blobs</td>
-<td>Arbitrary bytes (no validation)</td>
-</tr>
-<tr>
-<td><code>boolean</code></td>
-<td>booleans</td>
-<td>true or false</td>
-</tr>
-<tr>
-<td><code>counter</code></td>
-<td>integers</td>
-<td>Counter column (64-bit signed value). See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#counters">Counters</a> for details</td>
-</tr>
-<tr>
-<td><code>date</code></td>
-<td>integers, strings</td>
-<td>A date (with no corresponding time value). See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates">Working with dates</a> below for more information.</td>
-</tr>
-<tr>
-<td><code>decimal</code></td>
-<td>integers, floats</td>
-<td>Variable-precision decimal</td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td>integers</td>
-<td>64-bit IEEE-754 floating point</td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>integers, floats</td>
-<td>32-bit IEEE-754 floating point</td>
-</tr>
-<tr>
-<td><code>inet</code></td>
-<td>strings</td>
-<td>An IP address. It can be either 4 bytes long (IPv4) or 16 bytes long (IPv6). There is no <code>inet</code> constant, IP address should be inputed as strings</td>
-</tr>
-<tr>
-<td><code>int</code></td>
-<td>integers</td>
-<td>32-bit signed int</td>
-</tr>
-<tr>
-<td><code>smallint</code></td>
-<td>integers</td>
-<td>16-bit signed int</td>
-</tr>
-<tr>
-<td><code>text</code></td>
-<td>strings</td>
-<td>UTF8 encoded string</td>
-</tr>
-<tr>
-<td><code>time</code></td>
-<td>integers, strings</td>
-<td>A time with nanosecond precision. See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtime">Working with time</a> below for more information.</td>
-</tr>
-<tr>
-<td><code>timestamp</code></td>
-<td>integers, strings</td>
-<td>A timestamp. Strings constant are allow to input timestamps as dates, see <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtimestamps">Working with timestamps</a> below for more information.</td>
-</tr>
-<tr>
-<td><code>timeuuid</code></td>
-<td>uuids</td>
-<td>Type 1 UUID. This is generally used as a “conflict-free” timestamp. Also see the <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#timeuuidFun">functions on Timeuuid</a></td>
-</tr>
-<tr>
-<td><code>tinyint</code></td>
-<td>integers</td>
-<td>8-bit signed int</td>
-</tr>
-<tr>
-<td><code>uuid</code></td>
-<td>uuids</td>
-<td>Type 1 or type 4 UUID</td>
-</tr>
-<tr>
-<td><code>varchar</code></td>
-<td>strings</td>
-<td>UTF8 encoded string</td>
-</tr>
-<tr>
-<td><code>varint</code></td>
-<td>integers</td>
-<td>Arbitrary-precision integer</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>type</th>
+          <th>constants supported</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ascii</code></td>
+          <td>strings</td>
+          <td>ASCII character string</td>
+      </tr>
+      <tr>
+          <td><code>bigint</code></td>
+          <td>integers</td>
+          <td>64-bit signed long</td>
+      </tr>
+      <tr>
+          <td><code>blob</code></td>
+          <td>blobs</td>
+          <td>Arbitrary bytes (no validation)</td>
+      </tr>
+      <tr>
+          <td><code>boolean</code></td>
+          <td>booleans</td>
+          <td>true or false</td>
+      </tr>
+      <tr>
+          <td><code>counter</code></td>
+          <td>integers</td>
+          <td>Counter column (64-bit signed value). See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#counters">Counters</a> for details</td>
+      </tr>
+      <tr>
+          <td><code>date</code></td>
+          <td>integers, strings</td>
+          <td>A date (with no corresponding time value). See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates">Working with dates</a> below for more information.</td>
+      </tr>
+      <tr>
+          <td><code>decimal</code></td>
+          <td>integers, floats</td>
+          <td>Variable-precision decimal</td>
+      </tr>
+      <tr>
+          <td><code>double</code></td>
+          <td>integers</td>
+          <td>64-bit IEEE-754 floating point</td>
+      </tr>
+      <tr>
+          <td><code>float</code></td>
+          <td>integers, floats</td>
+          <td>32-bit IEEE-754 floating point</td>
+      </tr>
+      <tr>
+          <td><code>inet</code></td>
+          <td>strings</td>
+          <td>An IP address. It can be either 4 bytes long (IPv4) or 16 bytes long (IPv6). There is no <code>inet</code> constant, IP address should be inputed as strings</td>
+      </tr>
+      <tr>
+          <td><code>int</code></td>
+          <td>integers</td>
+          <td>32-bit signed int</td>
+      </tr>
+      <tr>
+          <td><code>smallint</code></td>
+          <td>integers</td>
+          <td>16-bit signed int</td>
+      </tr>
+      <tr>
+          <td><code>text</code></td>
+          <td>strings</td>
+          <td>UTF8 encoded string</td>
+      </tr>
+      <tr>
+          <td><code>time</code></td>
+          <td>integers, strings</td>
+          <td>A time with nanosecond precision. See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtime">Working with time</a> below for more information.</td>
+      </tr>
+      <tr>
+          <td><code>timestamp</code></td>
+          <td>integers, strings</td>
+          <td>A timestamp. Strings constant are allow to input timestamps as dates, see <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingtimestamps">Working with timestamps</a> below for more information.</td>
+      </tr>
+      <tr>
+          <td><code>timeuuid</code></td>
+          <td>uuids</td>
+          <td>Type 1 UUID. This is generally used as a “conflict-free” timestamp. Also see the <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#timeuuidFun">functions on Timeuuid</a></td>
+      </tr>
+      <tr>
+          <td><code>tinyint</code></td>
+          <td>integers</td>
+          <td>8-bit signed int</td>
+      </tr>
+      <tr>
+          <td><code>uuid</code></td>
+          <td>uuids</td>
+          <td>Type 1 or type 4 UUID</td>
+      </tr>
+      <tr>
+          <td><code>varchar</code></td>
+          <td>strings</td>
+          <td>UTF8 encoded string</td>
+      </tr>
+      <tr>
+          <td><code>varint</code></td>
+          <td>integers</td>
+          <td>Arbitrary-precision integer</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="关于时间戳-timestamps">关于时间戳 timestamps</h3>
 <p><code>timestamp</code> 类型由一个代表 January 1 1970 at 00:00:00 GMT. 以来经过的毫秒数的64位有符号整数编码。</p>
@@ -1368,60 +1364,60 @@
 <h3 id="时间转换函数">时间转换函数</h3>
 <p>有一系列函数用于转换  <code>timeuuid</code>、 <code>timestamp</code>  或 <code>date</code> 类型值为另一种  <code>native</code>  类型。</p>
 <table>
-<thead>
-<tr>
-<th>function name</th>
-<th>input type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>toDate</code></td>
-<td><code>timeuuid</code></td>
-<td>Converts the <code>timeuuid</code> argument into a <code>date</code> type</td>
-</tr>
-<tr>
-<td><code>toDate</code></td>
-<td><code>timestamp</code></td>
-<td>Converts the <code>timestamp</code> argument into a <code>date</code> type</td>
-</tr>
-<tr>
-<td><code>toTimestamp</code></td>
-<td><code>timeuuid</code></td>
-<td>Converts the <code>timeuuid</code> argument into a <code>timestamp</code> type</td>
-</tr>
-<tr>
-<td><code>toTimestamp</code></td>
-<td><code>date</code></td>
-<td>Converts the <code>date</code> argument into a <code>timestamp</code> type</td>
-</tr>
-<tr>
-<td><code>toUnixTimestamp</code></td>
-<td><code>timeuuid</code></td>
-<td>Converts the <code>timeuuid</code> argument into a <code>bigInt</code> raw value</td>
-</tr>
-<tr>
-<td><code>toUnixTimestamp</code></td>
-<td><code>timestamp</code></td>
-<td>Converts the <code>timestamp</code> argument into a <code>bigInt</code> raw value</td>
-</tr>
-<tr>
-<td><code>toUnixTimestamp</code></td>
-<td><code>date</code></td>
-<td>Converts the <code>date</code> argument into a <code>bigInt</code> raw value</td>
-</tr>
-<tr>
-<td><code>dateOf</code></td>
-<td><code>timeuuid</code></td>
-<td>Similar to <code>toTimestamp(timeuuid)</code> (DEPRECATED)</td>
-</tr>
-<tr>
-<td><code>unixTimestampOf</code></td>
-<td><code>timeuuid</code></td>
-<td>Similar to <code>toUnixTimestamp(timeuuid)</code> (DEPRECATED)</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>function name</th>
+          <th>input type</th>
+          <th>description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>toDate</code></td>
+          <td><code>timeuuid</code></td>
+          <td>Converts the <code>timeuuid</code> argument into a <code>date</code> type</td>
+      </tr>
+      <tr>
+          <td><code>toDate</code></td>
+          <td><code>timestamp</code></td>
+          <td>Converts the <code>timestamp</code> argument into a <code>date</code> type</td>
+      </tr>
+      <tr>
+          <td><code>toTimestamp</code></td>
+          <td><code>timeuuid</code></td>
+          <td>Converts the <code>timeuuid</code> argument into a <code>timestamp</code> type</td>
+      </tr>
+      <tr>
+          <td><code>toTimestamp</code></td>
+          <td><code>date</code></td>
+          <td>Converts the <code>date</code> argument into a <code>timestamp</code> type</td>
+      </tr>
+      <tr>
+          <td><code>toUnixTimestamp</code></td>
+          <td><code>timeuuid</code></td>
+          <td>Converts the <code>timeuuid</code> argument into a <code>bigInt</code> raw value</td>
+      </tr>
+      <tr>
+          <td><code>toUnixTimestamp</code></td>
+          <td><code>timestamp</code></td>
+          <td>Converts the <code>timestamp</code> argument into a <code>bigInt</code> raw value</td>
+      </tr>
+      <tr>
+          <td><code>toUnixTimestamp</code></td>
+          <td><code>date</code></td>
+          <td>Converts the <code>date</code> argument into a <code>bigInt</code> raw value</td>
+      </tr>
+      <tr>
+          <td><code>dateOf</code></td>
+          <td><code>timeuuid</code></td>
+          <td>Similar to <code>toTimestamp(timeuuid)</code> (DEPRECATED)</td>
+      </tr>
+      <tr>
+          <td><code>unixTimestampOf</code></td>
+          <td><code>timeuuid</code></td>
+          <td>Similar to <code>toUnixTimestamp(timeuuid)</code> (DEPRECATED)</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="blob转换函数">Blob转换函数</h3>
 <p>对于所有 CQL3 所支持的本地类型（除了<code>blob</code>)，<code>typeAsBlob</code> 函数接受一个 <code>type</code> 参数并返回一个 <code>blob</code> 值。相反地，函数 <code>blobAsType</code> 接受一个 64 位 <code>blob</code> 参数，将其转换为一个 <code>bigint</code> 值。例如， <code>bigintAsBlob(3)</code> 返回 <code>0x0000000000000003</code> ， <code>blobAsBigint(0x0000000000000003)</code> 返回 <code>3</code>.</p>
@@ -1459,160 +1455,160 @@
 <p>Cassandra 会尽可能地以原生 JSON 表现去展现或接收数据。Cassandra 对于所有单字段类型接受匹配 CQL 文本格式地字符串表现。比如浮点数、整型、UUID、date，都可以使用 CQL 文本字符串来表现。而对于复合类型，如 集合、元组、用户自定义类型等，则一定会被表现为原生 JSON 集合（map 或 list）或者 JSON 编码的集合字符串表现。</p>
 <p>下表展示了 Cassandra 可以接受的 <code>INSERT JSON</code> 值（包括 <code>fromJson()</code> 的参数），以及 Cassandra 在使用 <code>SELECT JSON</code> 语句和 <code>fromJson()</code> 函数会返回的数据格式。（PS：后面那个应该是 <code>toJson()</code> 吧）</p>
 <table>
-<thead>
-<tr>
-<th>type</th>
-<th>formats accepted</th>
-<th>return format</th>
-<th>notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ascii</code></td>
-<td>string</td>
-<td>string</td>
-<td>Uses JSON’s <code>\u</code> character escape</td>
-</tr>
-<tr>
-<td><code>bigint</code></td>
-<td>integer, string</td>
-<td>integer</td>
-<td>String must be valid 64 bit integer</td>
-</tr>
-<tr>
-<td><code>blob</code></td>
-<td>string</td>
-<td>string</td>
-<td>String should be 0x followed by an even number of hex digits</td>
-</tr>
-<tr>
-<td><code>boolean</code></td>
-<td>boolean, string</td>
-<td>boolean</td>
-<td>String must be “true” or &ldquo;false&rdquo;</td>
-</tr>
-<tr>
-<td><code>date</code></td>
-<td>string</td>
-<td>string</td>
-<td>Date in format <code>YYYY-MM-DD</code>, timezone UTC</td>
-</tr>
-<tr>
-<td><code>decimal</code></td>
-<td>integer, float, string</td>
-<td>float</td>
-<td>May exceed 32 or 64-bit IEEE-754 floating point precision in client-side decoder</td>
-</tr>
-<tr>
-<td><code>double</code></td>
-<td>integer, float, string</td>
-<td>float</td>
-<td>String must be valid integer or float</td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>integer, float, string</td>
-<td>float</td>
-<td>String must be valid integer or float</td>
-</tr>
-<tr>
-<td><code>inet</code></td>
-<td>string</td>
-<td>string</td>
-<td>IPv4 or IPv6 address</td>
-</tr>
-<tr>
-<td><code>int</code></td>
-<td>integer, string</td>
-<td>integer</td>
-<td>String must be valid 32 bit integer</td>
-</tr>
-<tr>
-<td><code>list</code></td>
-<td>list, string</td>
-<td>list</td>
-<td>Uses JSON’s native list representation</td>
-</tr>
-<tr>
-<td><code>map</code></td>
-<td>map, string</td>
-<td>map</td>
-<td>Uses JSON’s native map representation</td>
-</tr>
-<tr>
-<td><code>smallint</code></td>
-<td>integer, string</td>
-<td>integer</td>
-<td>String must be valid 16 bit integer</td>
-</tr>
-<tr>
-<td><code>set</code></td>
-<td>list, string</td>
-<td>list</td>
-<td>Uses JSON’s native list representation</td>
-</tr>
-<tr>
-<td><code>text</code></td>
-<td>string</td>
-<td>string</td>
-<td>Uses JSON’s <code>\u</code> character escape</td>
-</tr>
-<tr>
-<td><code>time</code></td>
-<td>string</td>
-<td>string</td>
-<td>Time of day in format <code>HH-MM-SS[.fffffffff]</code></td>
-</tr>
-<tr>
-<td><code>timestamp</code></td>
-<td>integer, string</td>
-<td>string</td>
-<td>A timestamp. Strings constant are allow to input timestamps as dates, see <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates">Working with dates</a> below for more information. Datestamps with format <code>YYYY-MM-DD HH:MM:SS.SSS</code> are returned.</td>
-</tr>
-<tr>
-<td><code>timeuuid</code></td>
-<td>string</td>
-<td>string</td>
-<td>Type 1 UUID. See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#constants">Constants</a> for the UUID format</td>
-</tr>
-<tr>
-<td><code>tinyint</code></td>
-<td>integer, string</td>
-<td>integer</td>
-<td>String must be valid 8 bit integer</td>
-</tr>
-<tr>
-<td><code>tuple</code></td>
-<td>list, string</td>
-<td>list</td>
-<td>Uses JSON’s native list representation</td>
-</tr>
-<tr>
-<td><code>UDT</code></td>
-<td>map, string</td>
-<td>map</td>
-<td>Uses JSON’s native map representation with field names as keys</td>
-</tr>
-<tr>
-<td><code>uuid</code></td>
-<td>string</td>
-<td>string</td>
-<td>See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#constants">Constants</a> for the UUID format</td>
-</tr>
-<tr>
-<td><code>varchar</code></td>
-<td>string</td>
-<td>string</td>
-<td>Uses JSON’s <code>\u</code> character escape</td>
-</tr>
-<tr>
-<td><code>varint</code></td>
-<td>integer, string</td>
-<td>integer</td>
-<td>Variable length; may overflow 32 or 64 bit integers in client-side decoder</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>type</th>
+          <th>formats accepted</th>
+          <th>return format</th>
+          <th>notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ascii</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>Uses JSON’s <code>\u</code> character escape</td>
+      </tr>
+      <tr>
+          <td><code>bigint</code></td>
+          <td>integer, string</td>
+          <td>integer</td>
+          <td>String must be valid 64 bit integer</td>
+      </tr>
+      <tr>
+          <td><code>blob</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>String should be 0x followed by an even number of hex digits</td>
+      </tr>
+      <tr>
+          <td><code>boolean</code></td>
+          <td>boolean, string</td>
+          <td>boolean</td>
+          <td>String must be “true” or &ldquo;false&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>date</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>Date in format <code>YYYY-MM-DD</code>, timezone UTC</td>
+      </tr>
+      <tr>
+          <td><code>decimal</code></td>
+          <td>integer, float, string</td>
+          <td>float</td>
+          <td>May exceed 32 or 64-bit IEEE-754 floating point precision in client-side decoder</td>
+      </tr>
+      <tr>
+          <td><code>double</code></td>
+          <td>integer, float, string</td>
+          <td>float</td>
+          <td>String must be valid integer or float</td>
+      </tr>
+      <tr>
+          <td><code>float</code></td>
+          <td>integer, float, string</td>
+          <td>float</td>
+          <td>String must be valid integer or float</td>
+      </tr>
+      <tr>
+          <td><code>inet</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>IPv4 or IPv6 address</td>
+      </tr>
+      <tr>
+          <td><code>int</code></td>
+          <td>integer, string</td>
+          <td>integer</td>
+          <td>String must be valid 32 bit integer</td>
+      </tr>
+      <tr>
+          <td><code>list</code></td>
+          <td>list, string</td>
+          <td>list</td>
+          <td>Uses JSON’s native list representation</td>
+      </tr>
+      <tr>
+          <td><code>map</code></td>
+          <td>map, string</td>
+          <td>map</td>
+          <td>Uses JSON’s native map representation</td>
+      </tr>
+      <tr>
+          <td><code>smallint</code></td>
+          <td>integer, string</td>
+          <td>integer</td>
+          <td>String must be valid 16 bit integer</td>
+      </tr>
+      <tr>
+          <td><code>set</code></td>
+          <td>list, string</td>
+          <td>list</td>
+          <td>Uses JSON’s native list representation</td>
+      </tr>
+      <tr>
+          <td><code>text</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>Uses JSON’s <code>\u</code> character escape</td>
+      </tr>
+      <tr>
+          <td><code>time</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>Time of day in format <code>HH-MM-SS[.fffffffff]</code></td>
+      </tr>
+      <tr>
+          <td><code>timestamp</code></td>
+          <td>integer, string</td>
+          <td>string</td>
+          <td>A timestamp. Strings constant are allow to input timestamps as dates, see <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#usingdates">Working with dates</a> below for more information. Datestamps with format <code>YYYY-MM-DD HH:MM:SS.SSS</code> are returned.</td>
+      </tr>
+      <tr>
+          <td><code>timeuuid</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>Type 1 UUID. See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#constants">Constants</a> for the UUID format</td>
+      </tr>
+      <tr>
+          <td><code>tinyint</code></td>
+          <td>integer, string</td>
+          <td>integer</td>
+          <td>String must be valid 8 bit integer</td>
+      </tr>
+      <tr>
+          <td><code>tuple</code></td>
+          <td>list, string</td>
+          <td>list</td>
+          <td>Uses JSON’s native list representation</td>
+      </tr>
+      <tr>
+          <td><code>UDT</code></td>
+          <td>map, string</td>
+          <td>map</td>
+          <td>Uses JSON’s native map representation with field names as keys</td>
+      </tr>
+      <tr>
+          <td><code>uuid</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>See <a href="https://cassandra.apache.org/doc/old/CQL-3.0.html#constants">Constants</a> for the UUID format</td>
+      </tr>
+      <tr>
+          <td><code>varchar</code></td>
+          <td>string</td>
+          <td>string</td>
+          <td>Uses JSON’s <code>\u</code> character escape</td>
+      </tr>
+      <tr>
+          <td><code>varint</code></td>
+          <td>integer, string</td>
+          <td>integer</td>
+          <td>Variable length; may overflow 32 or 64 bit integers in client-side decoder</td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="fromjson-函数">fromJson() 函数</h3>
 <p><code>fromJson()</code> 与 <code>INSERT JSON</code> 类似，但只会返回一列的值。它只能用于 <code>INSERT</code> 的 <code>VALUES</code> 子句中，或者作为 <code>UPDATE</code>、 <code>DELETE</code> 或 <code>SELECT</code> 语句中的其中一列值。比如，它不能用于 <code>SELECT</code> 语句中的 <code>&lt;select-clause&gt;</code>子句。</p>
@@ -1621,538 +1617,538 @@
 <h2 id="附录acql-关键字">附录A：CQL 关键字</h2>
 <p>CQL 的关键字区分保留和非保留的。保留关键字不可以作为标识符，但可以使用双引号括起来用作标识符。而非保留关键字只在特定的上下文中具有特定的含义，否则可以用作标识符。</p>
 <table>
-<thead>
-<tr>
-<th>关键字</th>
-<th>是否保留？</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ADD</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>AGGREGATE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>ALL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>ALLOW</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>ALTER</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>AND</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>APPLY</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>AS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>ASC</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>ASCII</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>AUTHORIZE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>BATCH</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>BEGIN</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>BIGINT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>BLOB</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>BOOLEAN</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>BY</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>CALLED</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>CLUSTERING</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>COLUMNFAMILY</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>COMPACT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>CONTAINS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>COUNT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>COUNTER</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>CREATE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>CUSTOM</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>DATE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>DECIMAL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>DELETE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>DESC</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>DESCRIBE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>DISTINCT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>DOUBLE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>DROP</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>ENTRIES</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>EXECUTE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>EXISTS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>FILTERING</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>FINALFUNC</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>FLOAT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>FROM</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>FROZEN</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>FULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>FUNCTION</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>FUNCTIONS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>GRANT</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>IF</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>IN</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>INDEX</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>INET</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>INFINITY</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>INITCOND</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>INPUT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>INSERT</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>INT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>INTO</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>JSON</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>KEY</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>KEYS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>KEYSPACE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>KEYSPACES</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>LANGUAGE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>LIMIT</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>LIST</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>LOGIN</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>MAP</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>MODIFY</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NAN</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NOLOGIN</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NORECURSIVE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NOSUPERUSER</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>NOT</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>NULL</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>OF</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>ON</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>OPTIONS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>OR</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>ORDER</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>PASSWORD</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>PERMISSION</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>PERMISSIONS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>PRIMARY</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>RENAME</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>REPLACE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>RETURNS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>REVOKE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>ROLE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>ROLES</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>SCHEMA</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>SELECT</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>SET</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>SFUNC</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>SMALLINT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>STATIC</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>STORAGE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>STYPE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>SUPERUSER</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TABLE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>TEXT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TIME</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TIMESTAMP</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TIMEUUID</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TINYINT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TO</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>TOKEN</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>TRIGGER</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TRUNCATE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>TTL</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TUPLE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>TYPE</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>UNLOGGED</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>UPDATE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>USE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>USER</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>USERS</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>USING</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>UUID</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>VALUES</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>VARCHAR</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>VARINT</code></td>
-<td>no</td>
-</tr>
-<tr>
-<td><code>WHERE</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>WITH</code></td>
-<td>yes</td>
-</tr>
-<tr>
-<td><code>WRITETIME</code></td>
-<td>no</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>关键字</th>
+          <th>是否保留？</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ADD</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>AGGREGATE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>ALL</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>ALLOW</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>ALTER</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>AND</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>APPLY</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>AS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>ASC</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>ASCII</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>AUTHORIZE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>BATCH</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>BEGIN</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>BIGINT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>BLOB</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>BOOLEAN</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>BY</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>CALLED</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>CLUSTERING</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>COLUMNFAMILY</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>COMPACT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>CONTAINS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>COUNT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>COUNTER</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>CREATE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>CUSTOM</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>DATE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>DECIMAL</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>DELETE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>DESC</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>DESCRIBE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>DISTINCT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>DOUBLE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>DROP</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>ENTRIES</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>EXECUTE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>EXISTS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>FILTERING</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>FINALFUNC</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>FLOAT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>FROM</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>FROZEN</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>FULL</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>FUNCTION</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>FUNCTIONS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>GRANT</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>IF</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>IN</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>INDEX</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>INET</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>INFINITY</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>INITCOND</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>INPUT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>INSERT</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>INT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>INTO</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>JSON</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>KEY</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>KEYS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>KEYSPACE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>KEYSPACES</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>LANGUAGE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>LIMIT</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>LIST</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>LOGIN</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>MAP</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>MODIFY</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>NAN</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>NOLOGIN</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>NORECURSIVE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>NOSUPERUSER</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>NOT</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>NULL</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>OF</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>ON</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>OPTIONS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>OR</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>ORDER</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>PASSWORD</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>PERMISSION</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>PERMISSIONS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>PRIMARY</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>RENAME</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>REPLACE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>RETURNS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>REVOKE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>ROLE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>ROLES</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>SCHEMA</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>SELECT</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>SET</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>SFUNC</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>SMALLINT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>STATIC</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>STORAGE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>STYPE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>SUPERUSER</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TABLE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>TEXT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TIME</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TIMESTAMP</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TIMEUUID</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TINYINT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TO</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>TOKEN</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>TRIGGER</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TRUNCATE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>TTL</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TUPLE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>TYPE</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>UNLOGGED</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>UPDATE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>USE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>USER</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>USERS</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>USING</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>UUID</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>VALUES</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>VARCHAR</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>VARINT</code></td>
+          <td>no</td>
+      </tr>
+      <tr>
+          <td><code>WHERE</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>WITH</code></td>
+          <td>yes</td>
+      </tr>
+      <tr>
+          <td><code>WRITETIME</code></td>
+          <td>no</td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="附录bcql-保留类型">附录B：CQL 保留类型</h2>
 <p>以下类型暂时还没有被 CQL 实际使用，但它们被保留以供未来可能的使用需要。用户自定义类型的名字不应该与保留类型相同。</p>
 <table>
-<thead>
-<tr>
-<th>type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>bitstring</code></td>
-</tr>
-<tr>
-<td><code>byte</code></td>
-</tr>
-<tr>
-<td><code>complex</code></td>
-</tr>
-<tr>
-<td><code>date</code></td>
-</tr>
-<tr>
-<td><code>enum</code></td>
-</tr>
-<tr>
-<td><code>interval</code></td>
-</tr>
-<tr>
-<td><code>macaddr</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>type</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>bitstring</code></td>
+      </tr>
+      <tr>
+          <td><code>byte</code></td>
+      </tr>
+      <tr>
+          <td><code>complex</code></td>
+      </tr>
+      <tr>
+          <td><code>date</code></td>
+      </tr>
+      <tr>
+          <td><code>enum</code></td>
+      </tr>
+      <tr>
+          <td><code>interval</code></td>
+      </tr>
+      <tr>
+          <td><code>macaddr</code></td>
+      </tr>
+  </tbody>
 </table>
 
                 
@@ -2173,7 +2169,6 @@
                     
                 </ul>
                 
-
             </div>
 
             
@@ -2394,8 +2389,6 @@
         if($nav) FastClick.attach($nav);
     })
 </script>
-
-
 
 
 

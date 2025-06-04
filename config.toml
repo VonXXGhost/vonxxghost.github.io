@@ -7,9 +7,11 @@ languageCode = "zh-cn"
 disqusShortname = ""
 googleAnalytics = ""
 preserveTaxonomyNames = true
-paginate = 15 #frontpage pagination
 hasCJKLanguage = true
 publishDir = "docs"
+
+[pagination]
+pagerSize = 15
 
 [outputs]
 home = ["HTML", "RSS", "Algolia"]
@@ -33,7 +35,7 @@ home = ["HTML", "RSS", "Algolia"]
 #  leancloud_app_key = ""
 
   # algolia site search
-  algolia_search = true
+  algolia_search = false
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""
@@ -118,7 +120,7 @@ notAlternative = true
 
 [params.algolia]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-params = ["categories", "tags"] 
+params = ["categories", "tags"]
 
 [markup]
   defaultMarkdownHandler = "goldmark"

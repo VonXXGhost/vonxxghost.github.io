@@ -15,7 +15,7 @@
         </value>
       </option>
     </AndroidXmlCodeStyleSettings>
-    <JSCodeStyleSettings version="0">
+    <JSCodeStyleSettings version="$Gson$">
       <option name="INDENT_CHAINED_CALLS" value="false" />
     </JSCodeStyleSettings>
     <JavaCodeStyleSettings>
@@ -27,6 +27,7 @@
       </option>
       <option name="IMPORT_LAYOUT_TABLE">
         <value>
+          <package name="" withSubpackages="true" static="false" module="true" />
           <package name="" withSubpackages="true" static="true" />
           <emptyLine />
           <package name="" withSubpackages="true" static="false" />
@@ -38,7 +39,7 @@
       <option name="CODE_STYLE_DEFAULTS" value="KOTLIN_OFFICIAL" />
     </JetCodeStyleSettings>
     <Objective-C>
-      <option name="INDENT_NAMESPACE_MEMBERS" value="0" />
+      <option name="INDENT_NAMESPACE_MEMBERS" value="$Gson$" />
       <option name="INDENT_C_STRUCT_MEMBERS" value="2" />
       <option name="INDENT_CLASS_MEMBERS" value="2" />
       <option name="INDENT_VISIBILITY_KEYWORDS" value="1" />
@@ -82,7 +83,7 @@
     <ScalaCodeStyleSettings>
       <option name="MULTILINE_STRING_CLOSING_QUOTES_ON_NEW_LINE" value="true" />
     </ScalaCodeStyleSettings>
-    <TypeScriptCodeStyleSettings version="0">
+    <TypeScriptCodeStyleSettings version="$Gson$">
       <option name="INDENT_CHAINED_CALLS" value="false" />
     </TypeScriptCodeStyleSettings>
     <XML>
@@ -175,11 +176,11 @@
     <codeStyleSettings language="ObjectiveC">
       <option name="RIGHT_MARGIN" value="80" />
       <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
-      <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
-      <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
-      <option name="BLANK_LINES_AROUND_CLASS" value="0" />
-      <option name="BLANK_LINES_AROUND_METHOD" value="0" />
-      <option name="BLANK_LINES_AROUND_METHOD_IN_INTERFACE" value="0" />
+      <option name="BLANK_LINES_BEFORE_IMPORTS" value="$Gson$" />
+      <option name="BLANK_LINES_AFTER_IMPORTS" value="$Gson$" />
+      <option name="BLANK_LINES_AROUND_CLASS" value="$Gson$" />
+      <option name="BLANK_LINES_AROUND_METHOD" value="$Gson$" />
+      <option name="BLANK_LINES_AROUND_METHOD_IN_INTERFACE" value="$Gson$" />
       <option name="ALIGN_MULTILINE_BINARY_OPERATION" value="false" />
       <option name="BINARY_OPERATION_SIGN_ON_NEXT_LINE" value="true" />
       <option name="FOR_STATEMENT_WRAP" value="1" />

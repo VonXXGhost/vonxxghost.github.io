@@ -3,7 +3,6 @@ title: "Kettle循环字面替换SQL模板字段名"
 subtitle: ""
 excerpt: "Kettle循环字面替换SQL模板字段名"
 date: 2021-04-17
-published: true 
 tags:
     - 技术
     - Kettle

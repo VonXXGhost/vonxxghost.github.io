@@ -4,53 +4,44 @@
     <title>Home on V-ISLAND</title>
     <link>https://vonxxghost.xyz/categories/home/</link>
     <description>Recent content in Home on V-ISLAND</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/categories/home/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vonxxghost.xyz/categories/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>又一个虚无的2024年</title>
       <link>https://vonxxghost.xyz/post/2024-12-30-%E5%8F%88%E4%B8%80%E4%B8%AA%E8%99%9A%E6%97%A0%E7%9A%842024%E5%B9%B4/</link>
       <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2024-12-30-%E5%8F%88%E4%B8%80%E4%B8%AA%E8%99%9A%E6%97%A0%E7%9A%842024%E5%B9%B4/</guid>
       <description>&lt;p&gt;2024年转眼就结束了，年初时看的跨年直播总觉得仍然历历在目，侧面也说明了对自己来说今年确实是比较虚无、缺少变化的一年，虽然每年到最后似乎都差不多吧。今年的新番普遍不尽人意，也没有多少非常突出的单回，因此今年就放弃年十的挑选了，作为代替简单写写今年各方各面的个人回顾吧。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>一时兴起的人生回忆录</title>
       <link>https://vonxxghost.xyz/post/2023-06-16-%E4%B8%80%E6%97%B6%E5%85%B4%E8%B5%B7%E7%9A%84%E4%BA%BA%E7%94%9F%E5%9B%9E%E5%BF%86%E5%BD%95/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2023-06-16-%E4%B8%80%E6%97%B6%E5%85%B4%E8%B5%B7%E7%9A%84%E4%BA%BA%E7%94%9F%E5%9B%9E%E5%BF%86%E5%BD%95/</guid>
       <description>&lt;p&gt;也不知道是不是每年一搬家的劳累与不安定感的原因，以及最喜欢的声优突然宣布结婚了的冲击，最近突然又变得有点感伤。社畜的时间过得实在太快了，一下子又一个三年过去，不知道其他行业的情况如何，至少三年在码农这行应该是公认的一个关键时间点。想了想似乎自己很少会长篇大论地去说些有关自己现实生活的东西（主要没可以聊的对象和机会），不如就趁着这个时间点、趁着情感酝酿得还比较丰满的时候，回顾记录一下自己从小以来的每一个三年吧。哎，聊这些感觉自己真的就成了个中年人了，应该也不会有什么人感兴趣流水账吧。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>anitama发表文章迁移本站</title>
       <link>https://vonxxghost.xyz/post/2022-05-25-anitama%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB/</link>
       <pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2022-05-25-anitama%E6%96%87%E7%AB%A0%E8%BF%81%E7%A7%BB/</guid>
       <description>&lt;p&gt;最近几天将以前发表在 anitama 上的文章基本都迁移回了本站了，自此自己比较核心的输出文章都存在本站当中了。顺便也借此机会回忆总结下 anitama 时期有关自己的一些成长变化。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>——网站重构——</title>
       <link>https://vonxxghost.xyz/post/2020-10-12-%E7%BD%91%E7%AB%99%E9%87%8D%E6%9E%84/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2020-10-12-%E7%BD%91%E7%AB%99%E9%87%8D%E6%9E%84/</guid>
       <description>&lt;p&gt;这两天把网站重构了一下，感觉比以前舒服多了。话说后来我才发现原来用的那个主题是真的满大街的人都在用……虽然现在也是用的别人的主题小改而成的就是了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>——网站开设——</title>
       <link>https://vonxxghost.xyz/post/2017-12-12-%E7%BD%91%E7%AB%99%E5%BC%80%E8%AE%BE/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2017-12-12-%E7%BD%91%E7%AB%99%E5%BC%80%E8%AE%BE/</guid>
-      <description>网站开设 弄了两天总算基本搭建好了，总之以此纪念。晚点再将旧blog文章迁移至此。本文日期以前的皆为旧blog的搬运。 今のアイコン↓</description>
+      <description>&lt;h3 id=&#34;网站开设&#34;&gt;网站开设&lt;/h3&gt;&#xA;&lt;p&gt;弄了两天总算基本搭建好了，总之以此纪念。晚点再将旧blog文章迁移至此。本文日期以前的皆为旧blog的搬运。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;今のアイコン↓&lt;br&gt;&#xA;&#xD;&#xA;  &lt;img src=&#34;https://w1.sinaimg.cn/large/97de980agy1fmeelfjnsnj208e080mxq.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

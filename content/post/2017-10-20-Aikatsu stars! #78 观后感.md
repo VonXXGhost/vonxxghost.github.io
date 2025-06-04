@@ -3,7 +3,6 @@ title: "Aikatsu stars!#78 观后感"
 subtitle: ""
 excerpt: "Aikatsu stars!#78 观后感"
 date: 2017-10-20
-published: true 
 tags:
     - 动画
     - 演出

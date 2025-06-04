@@ -4,7 +4,6 @@ subtitle: ""
 excerpt: "potplayer半全屏化(?)的自动排列触发问题"
 description: "potplayer半全屏化(?)的自动排列触发问题"
 date: 2018-04-27
-published: true 
 tags:
     - 软件
     - 技术

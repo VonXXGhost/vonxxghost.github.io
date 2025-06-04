@@ -3,7 +3,6 @@ title:      "初心者向TV动画OP/ED staff表解读指南"
 subtitle:   ""
 excerpt: "初心者向TV动画OP/ED staff表解读指南"
 date:       2018-07-24
-published: true 
 tags:
     - 动画
     - 资料

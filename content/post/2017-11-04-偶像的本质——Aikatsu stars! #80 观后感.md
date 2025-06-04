@@ -4,7 +4,6 @@ subtitle: "Aikatsu stars!#80 观后感"
 excerpt: "偶像的本质——Aikatsu stars!#80 观后感"
 description: "偶像的本质——Aikatsu stars!#80 观后感"
 date: 2017-11-04
-published: true 
 tags:
     - 动画
 categories: [ Anime ]

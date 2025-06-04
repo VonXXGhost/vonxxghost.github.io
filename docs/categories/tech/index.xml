@@ -4,62 +4,58 @@
     <title>Tech on V-ISLAND</title>
     <link>https://vonxxghost.xyz/categories/tech/</link>
     <description>Recent content in Tech on V-ISLAND</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://vonxxghost.xyz/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vonxxghost.xyz/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人用「沉浸式翻译」配置</title>
+      <link>https://vonxxghost.xyz/post/2025-06-03-%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://vonxxghost.xyz/post/2025-06-03-%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91%E9%85%8D%E7%BD%AE/</guid>
+      <description>&lt;p&gt;随时更新，尝试在翻译质量和token消耗上找到个比较好的平衡点配置，代金券用完之后token烧钱太心痛了。目前使用的 API 是火山的 DeepSeek-V3。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>最近几个月折腾音乐文件（mp3、aac）的一些记录</title>
       <link>https://vonxxghost.xyz/post/2024-01-24-%E6%9C%80%E8%BF%91%E5%87%A0%E4%B8%AA%E6%9C%88%E6%8A%98%E8%85%BE%E9%9F%B3%E4%B9%90%E6%96%87%E4%BB%B6mp3aac%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Wed, 24 Jan 2024 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2024-01-24-%E6%9C%80%E8%BF%91%E5%87%A0%E4%B8%AA%E6%9C%88%E6%8A%98%E8%85%BE%E9%9F%B3%E4%B9%90%E6%96%87%E4%BB%B6mp3aac%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/</guid>
       <description>&lt;p&gt;作为一个在移动互联网兴起之前便常常混迹于各种论坛或BT分享站中寻找各类 ACG 资源下载的，不敢自称老至少不算年轻的网民，自打从家里有了电脑以来便一直有着维护本地曲库的习惯，每当在网络上什么地方听到对胃口的歌时，都会尽量想办法找到高音质 mp3 文件下回来存到电脑硬盘以及后来的各种移动设备当中。早年间还没有重视起版权和流媒体概念时，很多 mp3 都下载自酷我、网易云这些网络音乐软件，由于文件来源鱼龙混杂，假码率、假无损的情况非常常见，一个无损或 320k mp3 内部其实是 128k 质量并不奇怪。十多年以来我都没有太在意过这个问题，因为自己的设备水平一直以来都比较低端，听歌的频率也低，连无损都是两三年前才开始收的，直到现在上班听歌比较多和最近几个月对自己的音频设备进行了一波升级，与此同时找到了一些无损资源途径，我想现在正是直面这个老问题的最佳时机了——是时候对本地音源进行全面的音质检查升级了！&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>让默认值保持中立</title>
       <link>https://vonxxghost.xyz/post/2022-09-15-%E9%BB%98%E8%AE%A4%E5%80%BC%E5%BA%94%E4%BF%9D%E6%8C%81%E4%B8%AD%E7%AB%8B/</link>
       <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2022-09-15-%E9%BB%98%E8%AE%A4%E5%80%BC%E5%BA%94%E4%BF%9D%E6%8C%81%E4%B8%AD%E7%AB%8B/</guid>
       <description>&lt;p&gt;在计算机领域，“默认值”是一个同时存在于理想与非理想之间，常见而又深邃的概念。有的时候它代表着一种理想的大多数，通过假设使用者的一般使用情景来替 coder 剩下几个字符的编码量；有的时候它又代表着一种脱离理想的现实，在程序不能正确处理得到结果的时候，依然能存在一个可以被后继程序正常处理的值，使得整个流程的健壮性得以维持。合理的默认值设定对于越大规模的软件工程来说越为重要，一个不合理的右值可能会使得众多后来的使用者们发狂，so，在敲下等于号之后，我们应该对这个即将设下的默认值思考些什么？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Kettle循环字面替换SQL模板字段名</title>
       <link>https://vonxxghost.xyz/post/2021-04-17-kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2sql%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/</link>
       <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2021-04-17-kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2sql%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/</guid>
       <description>&lt;p&gt;近日遇到的一个需求，需要对 10+ 张表的所有字段做定期的统计分析，将几张表的统计结果汇总到单独一张汇报表里，并且尽量基于 Kettle 完成。因此，需要在 Kettle 的“表输入”组件中，实现 SQL 模板字面替换变量值的功能，也就是能实现 &lt;code&gt;SELECT ${field} from table where ${field} &amp;gt; 0&lt;/code&gt; 这种替换，而并非自动处理成字符串的一般占位符替换： &lt;code&gt;SELECT field FROM table where id = ?&lt;/code&gt;，并且这个变量值是可以循环赋值的，一次流程要跑几百上千条这种对应不同字段名模板。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Cassandra CQL3文档</title>
       <link>https://vonxxghost.xyz/post/2021-01-14-cassandra-cql3%E6%96%87%E6%A1%A3/</link>
       <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2021-01-14-cassandra-cql3%E6%96%87%E6%A1%A3/</guid>
       <description>&lt;p&gt;摘抄翻译自&lt;a href=&#34;https://cassandra.apache.org/doc/old/CQL-3.0.html&#34;&gt;官网文档&lt;/a&gt;。部分为机翻润色。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>potplayer半全屏化(?)的自动排列触发问题</title>
       <link>https://vonxxghost.xyz/post/2018-04-27-potplayer%E5%8D%8A%E5%85%A8%E5%B1%8F%E5%8C%96%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8E%92%E5%88%97%E8%A7%A6%E5%8F%91%E9%97%AE%E9%A2%98/</link>
       <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2018-04-27-potplayer%E5%8D%8A%E5%85%A8%E5%B1%8F%E5%8C%96%E7%9A%84%E8%87%AA%E5%8A%A8%E6%8E%92%E5%88%97%E8%A7%A6%E5%8F%91%E9%97%AE%E9%A2%98/</guid>
-      <description>简述 首先先解释一下标题的半全屏化是什么。因为个人习惯需要，电脑显示区域总是分成两部分，左边为主工作区，右边留下一小部分放置其他窗口，如qq之</description>
+      <description>&lt;h2 id=&#34;简述&#34;&gt;简述&lt;/h2&gt;&#xA;&lt;p&gt;首先先解释一下标题的半全屏化是什么。因为个人习惯需要，电脑显示区域总是分成两部分，左边为主工作区，右边留下一小部分放置其他窗口，如qq之类的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>sakugabooru微博机器人是如何运作的</title>
       <link>https://vonxxghost.xyz/post/2018-04-08-sakugabooru%E5%BE%AE%E5%8D%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84/</link>
       <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://vonxxghost.xyz/post/2018-04-08-sakugabooru%E5%BE%AE%E5%8D%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E4%BD%9C%E7%9A%84/</guid>
       <description>&lt;p&gt;首先得先说明，虽然笔者大概地看过源代码，但笔者并没有参与程序的编写，我是半年前才开始帮忙管理诸如tag翻译之类的琐事的。这里仅简单地给想了解的人讲解一下这个机器人的运行处理流程。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

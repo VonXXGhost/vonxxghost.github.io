@@ -3,7 +3,6 @@ title:      "TV动画staff表解读指南ver2.0"
 subtitle:   ""
 excerpt: "TV动画staff表解读指南ver2.0"
 date:       2019-09-15
-published: true 
 tags:
     - 动画
     - 资料
