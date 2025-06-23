@@ -6,8 +6,15 @@
     <description>Recent content in Categories on V-ISLAND</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://vonxxghost.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anime</title>
+      <link>https://vonxxghost.xyz/categories/anime/</link>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://vonxxghost.xyz/categories/anime/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Tech</title>
       <link>https://vonxxghost.xyz/categories/tech/</link>
@@ -20,13 +27,6 @@
       <link>https://vonxxghost.xyz/categories/home/</link>
       <pubDate>Mon, 30 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/categories/home/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Anime</title>
-      <link>https://vonxxghost.xyz/categories/anime/</link>
-      <pubDate>Sat, 30 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://vonxxghost.xyz/categories/anime/</guid>
       <description></description>
     </item>
   </channel>
