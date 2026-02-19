@@ -51,4 +51,6 @@
 
 ## 音乐
 
-- [\[Garage\]二次元车库流行-原曲向SET](https://www.bilibili.com/video/BV1C5dqYWEMS/) - 第一次做的garage主题SET，详情看评论。
+- [\[Garage\]二次元车库流行-原曲向SET](https://www.bilibili.com/video/BV1C5dqYWEMS/)
+- [\[DnB\]二次元D&B流行-原曲向SET](https://www.bilibili.com/video/BV1s9enziEr9/)
+- [\[Genreless\]某一般杂食电子二次元的2025mix](https://www.bilibili.com/video/BV1jJqqBRETq)

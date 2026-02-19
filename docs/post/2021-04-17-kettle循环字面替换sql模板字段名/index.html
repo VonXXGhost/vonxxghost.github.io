@@ -207,7 +207,8 @@
 <h2 id="实现">实现</h2>
 <h3 id="tldr">TL;DR</h3>
 <blockquote>
-<p>将赋值过程拆分成“字段名输出”和“SQL模板替换执行”两个 ktr 转换，在 kjb 作业层串联起来，通过结果记录传递 + “设置变量”的方式达到串行循环赋值变量的效果，进而可以正常地对 SQL 模板进行变量的字面替换。</p></blockquote>
+<p>将赋值过程拆分成“字段名输出”和“SQL模板替换执行”两个 ktr 转换，在 kjb 作业层串联起来，通过结果记录传递 + “设置变量”的方式达到串行循环赋值变量的效果，进而可以正常地对 SQL 模板进行变量的字面替换。</p>
+</blockquote>
 <h3 id="作业的整体结构">作业的整体结构</h3>
 <p>
   <img src="/imgs/2021-04-17-Kettle%E5%BE%AA%E7%8E%AF%E5%AD%97%E9%9D%A2%E6%9B%BF%E6%8D%A2SQL%E6%A8%A1%E6%9D%BF%E5%AD%97%E6%AE%B5%E5%90%8D/image-20210418193814332.png" alt="image-20210418193814332">
@@ -252,7 +253,8 @@
 
 </p>
 <blockquote>
-<p>示例，实际上我要跑的 SQL 比这个还要多一些东西</p></blockquote>
+<p>示例，实际上我要跑的 SQL 比这个还要多一些东西</p>
+</blockquote>
 <p>SQL 的表输入开始执行真正的 ETL 步骤，关键点是要勾上“替换 SQL 语句里的变量”，把前面设置的环境变量替换进来。此外，这里的“从步骤插入数据”是不需要配置的，因为对于这个转换步骤本身来说，它的输入值只有一行数据，循环执行是在父层的作业层实现的。</p>
 <p>最后一步数据写入常规操作也不必多说了。</p>
 <p>整个流程就是这样子，还是相当简单的，不然我也没法一天内就研究出来。而这套流程的缺陷也是很明显的——完全串行执行，失去了自带的并行执行的优点。但是因为作业本身是可以并行跑的，因此可以通过拆分字段输出步骤的逻辑同样地来达到并行执行的效果，不算太麻烦不过总归本无必要。</p>
@@ -443,7 +445,7 @@
             
              </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy; V-ISLAND 2025
+                    Copyright &copy; V-ISLAND 2026
                     <br>
                     <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
                     <iframe
