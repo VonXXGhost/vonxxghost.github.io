@@ -204,15 +204,15 @@
 <p>默认值在中文语境当中是一个比较广泛的概念，常见的语义大致上可分为三种：对象/属性/变量初始值（initial value）、函数方法默认参数（default parameter）、处理失败时的异常降级值（fallback  value）。接下来每一种情况我都想简单聊一聊，不过中心思想都是同一个——让你的默认值保持中立，除非你明确知道你在做什么。</p>
 <p>何为中立的默认值？首先，其不应该是一个诸如 <code>Int.MaxValue</code> 这样的极端值；其次，其不能和普通的业务值有过大的含义交集，理想情况下，默认值应该完全独立于业务值的范围。只有符合这两点条件，默认值才能是中立的，它不持有任何立场、不代表任何其他的含义，它仅仅作为它自己、作为一个独立概念而存在。</p>
 <p>先看看初始值的场合。对于普通的函数内部变量来说，其生命周期短暂，随着函数的每次调用朝生暮死，coder 对其持有 100% 的掌控权，所以想定义成什么都毫无所谓，只要函数功能正确即可，这是对中立要求最宽松的情景。然而对于对象属性的初始值，就需要稍微留意一点了，因为即便提供了值的修改方法，对于不关心特定属性的使用方来说，往往就会让这个默认值保持不变。如果默认值设置得不合理的话，这种时候就会容易衍生出一些比较隐晦的问题。假设我们现在存在一个坐标类定义如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Coordinates</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Coordinates</span> {
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">var</span> longitude = <span style="color:#bd93f9">0.0</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">var</span> latitude = <span style="color:#bd93f9">0.0</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>然后我们有这么一段逻辑：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">get</span>_coordinates(): Coordinates {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">get</span>_coordinates(): Coordinates {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">val</span> coord = new Coordinates()
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">val</span> sensor_value = invoke_sensor() <span style="color:#6272a4">// 从传感器获得坐标信息
-</span></span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (sensor_value <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span>) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (sensor_value <span style="color:#ff79c6">!=</span> <span style="color:#ff79c6">null</span>) {
 </span></span><span style="display:flex;"><span>        coord.longitude = parse_sensor_longitude(sensor_value)
 </span></span><span style="display:flex;"><span>        coord.latitude = parse_sensor_latitude(sensor_value)
 </span></span><span style="display:flex;"><span>    }
@@ -221,10 +221,10 @@
 </span></span></code></pre></div><p>不是很严谨，但很常见的直觉性写法。按照这个逻辑，如果传感器在某一时刻故障或者信号弱，<code>sensor_value</code> 值为空，那么本函数将会返回一个持有默认值的坐标对象。然后这个对象可能会入数据库，可能会被序列化传输到其他地方，然后终有一天某人看着这堆数据，纠结 <code>0,0</code> 是不是一个合法数据——因为地球上真的存在这个坐标！也正是因为被处理成这个坐标的错误数据太多了，甚至催生出了 <a href="https://blogs.loc.gov/maps/2016/04/the-geographical-oddity-of-null-island/">Null Island</a> 这一半架空的地理概念。</p>
 <p>这组默认值与正常的数据范围产生了重叠，因此它并不是一个足够中立的选择。在条件允许的情况下，<code>null</code>（有的语言也叫 <code>Option</code> 或 <code>None</code>，anyway you know）是最好的，任何一门现代语言都有天然的表示“没有”的方式，那为何不这么做呢？而对于一些更倾向于基础类型而非包装/指针类型的低级语言，或者一些不方便直接使用空值的序列化等场景，我们依然可以退而求其次，既然坐标的数值范围是 <code>[-180,180]</code>，那么选择一个范围外的数字作为程序上的约束，比如 200、1000，不也能解决问题吗？当然了，如果考虑不周的下游程序只能接受一个合法的坐标值，那 0 也是一个迫不得已的选择，至少它定位在海洋，并且直观地异常。</p>
 <p>对于上面这段逻辑，我们还可以加入 fallback 值从而清楚指出得到的是一个错误值。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">get</span>_coordinates(): Coordinates {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff79c6">fun</span> <span style="color:#50fa7b">get</span>_coordinates(): Coordinates {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">val</span> coord = new Coordinates()
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">val</span> sensor_value = invoke_sensor() <span style="color:#6272a4">// 从传感器获得坐标信息
-</span></span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (sensor_value <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span>) {
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (sensor_value <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span>) {
 </span></span><span style="display:flex;"><span>        coord.longitude = -<span style="color:#bd93f9">1000</span>
 </span></span><span style="display:flex;"><span>        coord.latitude = -<span style="color:#bd93f9">1000</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> coord

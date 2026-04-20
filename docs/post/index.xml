@@ -6,8 +6,15 @@
     <description>Recent content in Posts on V-ISLAND</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://vonxxghost.xyz/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的哲学人格/立场</title>
+      <link>https://vonxxghost.xyz/post/2026-04-20-%E6%88%91%E7%9A%84%E5%93%B2%E5%AD%A6%E4%BA%BA%E6%A0%BC%E7%AB%8B%E5%9C%BA/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://vonxxghost.xyz/post/2026-04-20-%E6%88%91%E7%9A%84%E5%93%B2%E5%AD%A6%E4%BA%BA%E6%A0%BC%E7%AB%8B%E5%9C%BA/</guid>
+      <description>&lt;p&gt;前天群里刷到个哲学立场测试就顺手做了下，虽然不太懂哲学但感觉结果槽点很大，后来又想起来不如直接让gemini给我出份题答。&#xA;最后的结果描述自我感觉还是很准的，干脆贴上来当作自我介绍的一部分吧。虽然MBTI已经成为了一种时尚潮流，但我觉得这种自己选择的标签化对于简单了解一个人仍然是具有参考意义的。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>由Y字路开始的联想</title>
       <link>https://vonxxghost.xyz/post/2026-02-19-%E7%94%B1y%E5%AD%97%E8%B7%AF%E5%BC%80%E5%A7%8B%E7%9A%84%E8%81%94%E6%83%B3/</link>
@@ -34,7 +41,7 @@
       <link>https://vonxxghost.xyz/post/2025-06-03-%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Tue, 03 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2025-06-03-%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91%E9%85%8D%E7%BD%AE/</guid>
-      <description>&lt;p&gt;随时更新，尝试在翻译质量和token消耗上找到个比较好的平衡点配置，代金券用完之后token烧钱太心痛了。目前使用的 API 是火山的 DeepSeek-V3。&lt;/p&gt;</description>
+      <description>&lt;p&gt;随时更新，尝试在翻译质量和token消耗上找到个比较好的平衡点配置，代金券用完之后token烧钱太心痛了。&#xA;目前使用的 API 是美团的 &lt;a href=&#34;https://longcat.chat/&#34;&gt;LongCat-Flash-Lite&lt;/a&gt;，免费、快速，但翻译质量一般，需要质量时使用火山的 DeepSeek-V3.2。&lt;/p&gt;</description>
     </item>
     <item>
       <title>又一个虚无的2024年</title>
@@ -230,7 +237,7 @@
       <link>https://vonxxghost.xyz/post/2018-04-24-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%2338~%2350/</link>
       <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2018-04-24-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%2338~%2350/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;第38話「ストロベリーパフェ♪」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：大野木寛&lt;br&gt;&#xA;絵コンテ：川口敬一郎&lt;br&gt;&#xA;演出：境南寿三郎&lt;br&gt;&#xA;作画監督：野口寛明、高田洋一&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;　　大野木写日常戏实在太厉害了，神回。&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;第38話「ストロベリーパフェ♪」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：大野木寛&lt;br&gt;&#xA;絵コンテ：川口敬一郎&lt;br&gt;&#xA;演出：境南寿三郎&lt;br&gt;&#xA;作画監督：野口寛明、高田洋一&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;　　大野木写日常戏实在太厉害了，神回。&lt;/p&gt;</description>
     </item>
     <item>
       <title>sakugabooru微博机器人是如何运作的</title>
@@ -244,7 +251,7 @@
       <link>https://vonxxghost.xyz/post/2018-02-11-2018%E5%B9%B4%E6%BC%94%E5%87%BA%E7%90%90%E7%A2%8Ememo/</link>
       <pubDate>Sun, 11 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2018-02-11-2018%E5%B9%B4%E6%BC%94%E5%87%BA%E7%90%90%E7%A2%8Ememo/</guid>
-      <description>&lt;p&gt;用于简单记录看片时的一些琐碎的演出相关的想法。多图杀猫，刷不出图多刷新几次。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;スロウスタート　#6 絵コンテ：大畑清隆、橋本裕之 / 演出：相浦和也&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://wx1.sinaimg.cn/large/97de980agy1foch6kp3fvj216q080aqt.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;单卡内以太阳的普通形式和像素形式连接了“绝佳的借住天气”和“带了游戏机”两个台词点，使得逻辑不仅由台词连接还由画面进行了直接关联。中间收手起手的动作对应着两种太阳的更替，手划逆时针太阳划顺时针出界面，像素太阳与手略有速度差地顺时针进画面。这也能平滑地让游戏机进入画面。&lt;/p&gt;</description>
+      <description>&lt;p&gt;用于简单记录看片时的一些琐碎的演出相关的想法。多图杀猫，刷不出图多刷新几次。&lt;/p&gt;&#xA;&lt;h2 id=&#34;2月&#34;&gt;2月&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;スロウスタート　#6 絵コンテ：大畑清隆、橋本裕之 / 演出：相浦和也&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xD;&#xA;  &lt;img src=&#34;https://wx1.sinaimg.cn/large/97de980agy1foch6kp3fvj216q080aqt.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;单卡内以太阳的普通形式和像素形式连接了“绝佳的借住天气”和“带了游戏机”两个台词点，使得逻辑不仅由台词连接还由画面进行了直接关联。中间收手起手的动作对应着两种太阳的更替，手划逆时针太阳划顺时针出界面，像素太阳与手略有速度差地顺时针进画面。这也能平滑地让游戏机进入画面。&lt;/p&gt;</description>
     </item>
     <item>
       <title>演出活动的一番星（下）</title>
@@ -265,7 +272,7 @@
       <link>https://vonxxghost.xyz/post/2018-01-08-2017%E5%B9%B4%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E5%8D%95%E5%9B%9E%E5%8D%81%E9%80%89/</link>
       <pubDate>Mon, 08 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2018-01-08-2017%E5%B9%B4%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E5%8D%95%E5%9B%9E%E5%8D%81%E9%80%89/</guid>
-      <description>&lt;h2 id=&#34;アイカツスターズ49一番星になれ03月23日&#34;&gt;アイカツスターズ!　#49「一番星になれ！」03月23日&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：柿原優子 / 絵コンテ·演出：伊藤良太 / 作画監督：鈴木萌　田村里美&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://wx1.sinaimg.cn/mw690/97de980agy1fn8xt66qh7j20rs0fmwfm.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;　　&lt;a href=&#34;https://weibo.com/ttarticle/p/show?id=2309404088903781988610&#34;&gt;详细说明&lt;/a&gt;。当时也是没预料到这居然是伊藤在17年做的唯一一集偶活……一年目最后连续的演出良回，其中伊藤的算是表现最佳的一集了吧，小梦和姬前辈的关系刻画得真好。&lt;/p&gt;&#xA;&lt;h2 id=&#34;アイカツスターズ51パーフェクトアイドル-エルザ04月06日&#34;&gt;アイカツスターズ!　#51「パーフェクトアイドル エルザ」04月06日&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：柿原優子 / 絵コンテ·演出：安藤尚也 / 作画監督：宮谷里沙&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;アイカツスターズ49一番星になれ03月23日&#34;&gt;アイカツスターズ!　#49「一番星になれ！」03月23日&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：柿原優子 / 絵コンテ·演出：伊藤良太 / 作画監督：鈴木萌　田村里美&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xD;&#xA;  &lt;img src=&#34;https://wx1.sinaimg.cn/mw690/97de980agy1fn8xt66qh7j20rs0fmwfm.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;　　&lt;a href=&#34;https://weibo.com/ttarticle/p/show?id=2309404088903781988610&#34;&gt;详细说明&lt;/a&gt;。当时也是没预料到这居然是伊藤在17年做的唯一一集偶活……一年目最后连续的演出良回，其中伊藤的算是表现最佳的一集了吧，小梦和姬前辈的关系刻画得真好。&lt;/p&gt;&#xA;&lt;h2 id=&#34;アイカツスターズ51パーフェクトアイドル-エルザ04月06日&#34;&gt;アイカツスターズ!　#51「パーフェクトアイドル エルザ」04月06日&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：柿原優子 / 絵コンテ·演出：安藤尚也 / 作画監督：宮谷里沙&lt;/p&gt;</description>
     </item>
     <item>
       <title>話数単位で選ぶ、2017年TVアニメ10選</title>
@@ -279,14 +286,14 @@
       <link>https://vonxxghost.xyz/post/2017-12-12-%E7%BD%91%E7%AB%99%E5%BC%80%E8%AE%BE/</link>
       <pubDate>Tue, 12 Dec 2017 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2017-12-12-%E7%BD%91%E7%AB%99%E5%BC%80%E8%AE%BE/</guid>
-      <description>&lt;h3 id=&#34;网站开设&#34;&gt;网站开设&lt;/h3&gt;&#xA;&lt;p&gt;弄了两天总算基本搭建好了，总之以此纪念。晚点再将旧blog文章迁移至此。本文日期以前的皆为旧blog的搬运。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;今のアイコン↓&lt;br&gt;&#xA;&#xA;  &lt;img src=&#34;https://w1.sinaimg.cn/large/97de980agy1fmeelfjnsnj208e080mxq.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;网站开设&#34;&gt;网站开设&lt;/h3&gt;&#xA;&lt;p&gt;弄了两天总算基本搭建好了，总之以此纪念。晚点再将旧blog文章迁移至此。本文日期以前的皆为旧blog的搬运。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;今のアイコン↓&lt;br&gt;&#xA;&#xD;&#xA;  &lt;img src=&#34;https://w1.sinaimg.cn/large/97de980agy1fmeelfjnsnj208e080mxq.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>偶像的本质</title>
       <link>https://vonxxghost.xyz/post/2017-11-04-%E5%81%B6%E5%83%8F%E7%9A%84%E6%9C%AC%E8%B4%A8/</link>
       <pubDate>Sat, 04 Nov 2017 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2017-11-04-%E5%81%B6%E5%83%8F%E7%9A%84%E6%9C%AC%E8%B4%A8/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;第80話「騎咲レイの誓い！」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：成田良美&lt;br&gt;&#xA;絵コンテ：戸部敦夫&lt;br&gt;&#xA;演出：イムガヒ&lt;br&gt;&#xA;作画監督：山本脩斗、吉田和香子、秋津達哉&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;!-- more --&gt;&#xD;&#xA;&lt;p&gt;　　这集看得真的很激动，很久很久没有这么因动画激动过了。レイ的角色塑造一直都非常地本质直接不模糊。这集包括以前野村的脚本回都是如此。全篇贯彻着非常规偶像的主题，偶像是为了粉丝？为了自己？的确这都是很常见不如说正常偶像作品里的仅有的思考方式，但レイ很清楚的表明了自己的偶像身份仅仅是为了艾尔莎。但仅仅如此是不够的，这集从另一个角度还诠释了偶像的本质，那就是独特的人格魅力，本集观众的存在意义便是在此，从被偶像背叛的感情到逆转为再次对偶像的崇拜，偶像之所以能被众人所深深地吸引不是因为偶像自己的目标，而是因为偶像带给粉丝的人格魅力的感动。レイ通过舞台一出清楚向全世界表明了自己的忠诚和骑士身份，由此她的形象不仅仅局限于是一个帅气的模特，更是进化到了一个忠诚尽力的典型骑士形象。&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;第80話「騎咲レイの誓い！」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：成田良美&lt;br&gt;&#xA;絵コンテ：戸部敦夫&lt;br&gt;&#xA;演出：イムガヒ&lt;br&gt;&#xA;作画監督：山本脩斗、吉田和香子、秋津達哉&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;!-- more --&gt;&#xD;&#xA;&lt;p&gt;　　这集看得真的很激动，很久很久没有这么因动画激动过了。レイ的角色塑造一直都非常地本质直接不模糊。这集包括以前野村的脚本回都是如此。全篇贯彻着非常规偶像的主题，偶像是为了粉丝？为了自己？的确这都是很常见不如说正常偶像作品里的仅有的思考方式，但レイ很清楚的表明了自己的偶像身份仅仅是为了艾尔莎。但仅仅如此是不够的，这集从另一个角度还诠释了偶像的本质，那就是独特的人格魅力，本集观众的存在意义便是在此，从被偶像背叛的感情到逆转为再次对偶像的崇拜，偶像之所以能被众人所深深地吸引不是因为偶像自己的目标，而是因为偶像带给粉丝的人格魅力的感动。レイ通过舞台一出清楚向全世界表明了自己的忠诚和骑士身份，由此她的形象不仅仅局限于是一个帅气的模特，更是进化到了一个忠诚尽力的典型骑士形象。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Aikatsu stars!#78 观后感</title>
@@ -321,7 +328,7 @@
       <link>https://vonxxghost.xyz/post/2017-06-25-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%2326~%2337/</link>
       <pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2017-06-25-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%2326~%2337/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;第26話「さくらの季節」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：山田由香&lt;br&gt;&#xA;絵コンテ：増田敏彦&lt;br&gt;&#xA;演出：宮原秀二&lt;br&gt;&#xA;作画監督：緒方健一郎、菊地功一&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;https://wx1.sinaimg.cn/large/97de980agy1fgwpw6wcihj215q0ngwj3.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;　　OPED更换，新角色出场，正式突入一年目后半阶段。&lt;br&gt;&#xA;　　为什么草莓这一代没有一对一的前辈带……草莓的回忆段安排得不大好，有点太长了。演出作画都强差人意……不过后面的上影之类的挺值得留意的。&lt;br&gt;&#xA;　　OP2「ダイヤモンドハッピー」的总体感觉继承了ED1「カレンダーガール」，充满活力的前进感。画面上以漫画式网点背景为基调，整体镜头设计以静止为主，效果说不上有多好不过还是挺有新意的。值得一提的还有NC中村丰一原，听说二原是秀次。&lt;br&gt;&#xA;　　新插曲「同じ地球のしあわせに」风格比较少见，歌词曲风都是文艺风，不过也的确比较贴合北大路的形象。&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;第26話「さくらの季節」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：山田由香&lt;br&gt;&#xA;絵コンテ：増田敏彦&lt;br&gt;&#xA;演出：宮原秀二&lt;br&gt;&#xA;作画監督：緒方健一郎、菊地功一&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xD;&#xA;  &lt;img src=&#34;https://wx1.sinaimg.cn/large/97de980agy1fgwpw6wcihj215q0ngwj3.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;　　OPED更换，新角色出场，正式突入一年目后半阶段。&lt;br&gt;&#xA;　　为什么草莓这一代没有一对一的前辈带……草莓的回忆段安排得不大好，有点太长了。演出作画都强差人意……不过后面的上影之类的挺值得留意的。&lt;br&gt;&#xA;　　OP2「ダイヤモンドハッピー」的总体感觉继承了ED1「カレンダーガール」，充满活力的前进感。画面上以漫画式网点背景为基调，整体镜头设计以静止为主，效果说不上有多好不过还是挺有新意的。值得一提的还有NC中村丰一原，听说二原是秀次。&lt;br&gt;&#xA;　　新插曲「同じ地球のしあわせに」风格比较少见，歌词曲风都是文艺风，不过也的确比较贴合北大路的形象。&lt;/p&gt;</description>
     </item>
     <item>
       <title>作画圈的改变</title>
@@ -335,21 +342,21 @@
       <link>https://vonxxghost.xyz/post/2017-06-11-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%2313~%2325/</link>
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2017-06-11-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%2313~%2325/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;第13話「カロリーの悲劇!」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：大知慶一郎&lt;br&gt;&#xA;絵コンテ：増田敏彦&lt;br&gt;&#xA;演出：のがみかずお&lt;br&gt;&#xA;作画監督：野口寛明、高田洋一&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fgfa38za9ej215i0ncq9g.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;br&gt;&#xA;　　这集定位类似于第7话，通过一件反面的事件作为教训，从而让主角走向更高一层的台阶。然后这两集所选取的方面题材都挺有教育意义，本话主题“不能放纵自己”主要是针对小友，但第7话的“不能沉迷网络世界 多关注身边的人”即使是对大人而言也是十分值得去理解的。不过就自己而言这集给我留下的印象更加深刻些，因为草莓ver.肥宅实在是太令人印象深刻了……&lt;br&gt;&#xA;　　整体而言这集也非常有趣，回到学院后乙女一直在充当着诱惑、对比的位置，之后也很难得的在换装间(?)有特殊的剧情。凉川烤红薯的地方也很喜欢。&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;第13話「カロリーの悲劇!」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：大知慶一郎&lt;br&gt;&#xA;絵コンテ：増田敏彦&lt;br&gt;&#xA;演出：のがみかずお&lt;br&gt;&#xA;作画監督：野口寛明、高田洋一&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&#xD;&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fgfa38za9ej215i0ncq9g.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xA;　　这集定位类似于第7话，通过一件反面的事件作为教训，从而让主角走向更高一层的台阶。然后这两集所选取的方面题材都挺有教育意义，本话主题“不能放纵自己”主要是针对小友，但第7话的“不能沉迷网络世界 多关注身边的人”即使是对大人而言也是十分值得去理解的。不过就自己而言这集给我留下的印象更加深刻些，因为草莓ver.肥宅实在是太令人印象深刻了……&lt;br&gt;&#xA;　　整体而言这集也非常有趣，回到学院后乙女一直在充当着诱惑、对比的位置，之后也很难得的在换装间(?)有特殊的剧情。凉川烤红薯的地方也很喜欢。&lt;/p&gt;</description>
     </item>
     <item>
       <title>江泽京诗郎</title>
       <link>https://vonxxghost.xyz/post/2017-06-04-%E6%B1%9F%E6%B3%BD%E4%BA%AC%E8%AF%97%E9%83%8E/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2017-06-04-%E6%B1%9F%E6%B3%BD%E4%BA%AC%E8%AF%97%E9%83%8E/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;鉴于作画wiki内容不是很全所以在这做些补充。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;br/&gt;&#xD;&#xA;&lt;p&gt;　　被多次誉为新世代最强的存在。与ちな同世代&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，大概是1995、96年生。根据资料可猜测2011年入学都立国立高等学校，2014年就读武蔵野美術大学油絵学科油絵専攻。&lt;/p&gt;&#xA;&lt;p&gt;　　最早因三者三叶中的竹内风格作画受到瞩目，此后出现频率虽然很低但往往都有着出类拔萃的表现。仅仅出现过四话TVA就已被建立作画wiki条目。&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;鉴于作画wiki内容不是很全所以在这做些补充。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;br/&gt;&#xD;&#xA;&lt;p&gt;　　被多次誉为新世代最强的存在。与ちな同世代&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;，大概是1995、96年生。根据资料可猜测2011年入学都立国立高等学校，2014年就读武蔵野美術大学油絵学科油絵専攻。&lt;/p&gt;&#xA;&lt;p&gt;　　最早因三者三叶中的竹内风格作画受到瞩目，此后出现频率虽然很低但往往都有着出类拔萃的表现。仅仅出现过四话TVA就已被建立作画wiki条目。&lt;/p&gt;</description>
     </item>
     <item>
       <title>「偶像活动」一年目 复习感想#1~#12</title>
       <link>https://vonxxghost.xyz/post/2017-05-29-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%231~%2312/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       <guid>https://vonxxghost.xyz/post/2017-05-29-%E5%81%B6%E5%83%8F%E6%B4%BB%E5%8A%A8%E4%B8%80%E5%B9%B4%E7%9B%AE-%E5%A4%8D%E4%B9%A0%E6%84%9F%E6%83%B3-%231~%2312/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;第1話「私がアイドルになっても?」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：加藤陽一&lt;br&gt;&#xA;絵コンテ：木村隆一&lt;br&gt;&#xA;演出：亀井治&lt;br&gt;&#xA;作画監督：白井裕美子、高田洋一&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;　　短短的一句「アイカツ 始まります」开场白也是挺不习惯的w开场白的音效过于花俏，应该是这时候还没有完全掌握偶活的定位所在吧，面向低龄观众的话第一感觉也的确该这么配。Cut 7作为草莓形象代表之一的饭勺出现。第一话avant真是简单粗暴的王道开场词啊，实话说，草莓这造型说没考虑过当偶像我是不信的（ry&lt;br&gt;&#xA;　　OP1「Signalize!」我一直都不怎么喜欢，旋律问题……画面前半也是王道组成，一卡介绍一人的形式，后面的草莓四连击绝赞，橙绿蓝粉四种基调配合四种与颜色相应风格的装饰，偶活史上第一个神级镜头！？还有一点挺关键的就是全手绘live。&#xA;  &lt;img src=&#34;http://wx2.sinaimg.cn/large/97de980agy1fg089ubrnvj21gm0sgqv5.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;br&gt;&#xA;　　&lt;a href=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0a5illykj21hc0u0akt.jpg&#34;&gt;这卡LO&lt;/a&gt;有问题吧，房间哪有这么大。不过这强调效果也确实达到了。木村隆一book用的也挺多的。&lt;br&gt;&#xA;　　经典表情：&#xA;&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0achj3glj20zk0k04ed.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;br&gt;&#xA;　　第一集的3D建模实在惨不忍睹，美月这live演出也没表现出其所应该有的气场。不过live上的进步速度都是有目共睹的，这上面的吐槽就只在第一集说说了。&lt;br&gt;&#xA;　　草莓这张好可爱&amp;rsquo;∀&amp;rsquo;*)&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0askbc6zj21170kx4qp.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;br&gt;&#xA;　　从A part就能看出加藤阳一的脚本相当稳健成熟，开头的母女对谈梦想，再到后面一系列引出偶像的话题，在短短的A part里就完成了草莓思想的逐层转变。开头的母女对谈对应B part母亲鼓励女儿，围绕主题的剧情进展毫无停滞。&lt;br&gt;&#xA;　　葵和草莓的训练段原画三浦？美月这句“快点爬到我的位置来吧”可谓是整个无印系列的根源点……最后很自然地给了兰的出场，完全一副总要被攻略下来的样子wwwED1很喜欢，转盘的画面表现也挺有意思的。最后想说，能登的妈妈配的真的好啊！&lt;br&gt;&#xA;　　格言名句：&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0bmzcr78j21570mxkjl.jpg&#34; alt=&#34;&#34;&gt;&#xA;&#xA;&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;第1話「私がアイドルになっても?」&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;脚本：加藤陽一&lt;br&gt;&#xA;絵コンテ：木村隆一&lt;br&gt;&#xA;演出：亀井治&lt;br&gt;&#xA;作画監督：白井裕美子、高田洋一&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;　　短短的一句「アイカツ 始まります」开场白也是挺不习惯的w开场白的音效过于花俏，应该是这时候还没有完全掌握偶活的定位所在吧，面向低龄观众的话第一感觉也的确该这么配。Cut 7作为草莓形象代表之一的饭勺出现。第一话avant真是简单粗暴的王道开场词啊，实话说，草莓这造型说没考虑过当偶像我是不信的（ry&lt;br&gt;&#xA;　　OP1「Signalize!」我一直都不怎么喜欢，旋律问题……画面前半也是王道组成，一卡介绍一人的形式，后面的草莓四连击绝赞，橙绿蓝粉四种基调配合四种与颜色相应风格的装饰，偶活史上第一个神级镜头！？还有一点挺关键的就是全手绘live。&#xD;&#xA;  &lt;img src=&#34;http://wx2.sinaimg.cn/large/97de980agy1fg089ubrnvj21gm0sgqv5.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xA;　　&lt;a href=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0a5illykj21hc0u0akt.jpg&#34;&gt;这卡LO&lt;/a&gt;有问题吧，房间哪有这么大。不过这强调效果也确实达到了。木村隆一book用的也挺多的。&lt;br&gt;&#xA;　　经典表情：&#xA;&#xD;&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0achj3glj20zk0k04ed.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xA;　　第一集的3D建模实在惨不忍睹，美月这live演出也没表现出其所应该有的气场。不过live上的进步速度都是有目共睹的，这上面的吐槽就只在第一集说说了。&lt;br&gt;&#xA;　　草莓这张好可爱&amp;rsquo;∀&amp;rsquo;*)&#xD;&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0askbc6zj21170kx4qp.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;br&gt;&#xA;　　从A part就能看出加藤阳一的脚本相当稳健成熟，开头的母女对谈梦想，再到后面一系列引出偶像的话题，在短短的A part里就完成了草莓思想的逐层转变。开头的母女对谈对应B part母亲鼓励女儿，围绕主题的剧情进展毫无停滞。&lt;br&gt;&#xA;　　葵和草莓的训练段原画三浦？美月这句“快点爬到我的位置来吧”可谓是整个无印系列的根源点……最后很自然地给了兰的出场，完全一副总要被攻略下来的样子wwwED1很喜欢，转盘的画面表现也挺有意思的。最后想说，能登的妈妈配的真的好啊！&lt;br&gt;&#xA;　　格言名句：&#xD;&#xA;  &lt;img src=&#34;http://ww1.sinaimg.cn/large/97de980agy1fg0bmzcr78j21570mxkjl.jpg&#34; alt=&#34;&#34;&gt;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>偶像活动出色演出回分析</title>
